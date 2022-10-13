@@ -64,9 +64,13 @@ tc2.Units = 'Celsius';
 % For a quick summary of the channel type
 tc1
 
+%% Get the CAN Database
+cd ../Databases/
+db = canDatabase("TMS_NODE2.dbc")
 
 %% Start the CAN Channel
 canch = canChannel("Vector", "VN1610 1", 1);
+canch.Database = 
 start(canch);
 
 %% Start TMS
