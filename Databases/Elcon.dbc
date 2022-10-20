@@ -36,12 +36,12 @@ BS_:
 BU_: BCA CCS BMS Motor_Controller
 
 
-BO_ 2550588916 Message_1: 8 Vector__XXX
+BO_ 2550592741 Message_1: 8 CCS
  SG_ Control : 32|8@1+ (1,0) [0|1] "" Vector__XXX
  SG_ Max_Allow_Charge_Current : 16|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
  SG_ Max_Allow_Charge_Terminal_Volt : 0|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
 
-BO_ 2566869221 Message_2: 8 Vector__XXX
+BO_ 2566869221 Message_2: 8 CCS
  SG_ Status_Flags : 32|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ Out_Current : 16|16@1+ (0.1,0) [0|6553.5] "A" Vector__XXX
  SG_ Out_Voltage : 0|16@1+ (0.1,0) [0|6553.5] "V" Vector__XXX
@@ -125,6 +125,6 @@ BA_ "NmStationAddress" BU_ BCA 80;
 BA_ "NmStationAddress" BU_ CCS 229;
 BA_ "NmStationAddress" BU_ BMS 244;
 BA_ "NmStationAddress" BU_ Motor_Controller 239;
-BA_ "VFrameFormat" BO_ 2550588916 3;
+BA_ "VFrameFormat" BO_ 2550592741 3;
 BA_ "VFrameFormat" BO_ 2566869221 3;
 
