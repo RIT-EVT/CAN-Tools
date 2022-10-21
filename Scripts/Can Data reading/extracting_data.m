@@ -2,6 +2,9 @@ signalTimetable1 = canSignalTimetable(blfData, "N1_TPDO2");
 signalTimetable2 = canSignalTimetable(blfData, "N1_TPDO1");
 signalTimetable3 = canSignalTimetable(blfData, "N1_TPDO0");
 %signalTimetable4 = canSignalTimetable(blfData, "N10_TPDO0");
+signalTimetable1.Time=signalTimetable1.Time + binf.StartTime;
+signalTimetable2.Time=signalTimetable2.Time + binf.StartTime;
+signalTimetable3.Time=signalTimetable3.Time + binf.StartTime;
 
 
 subplot(4, 1, 1)
