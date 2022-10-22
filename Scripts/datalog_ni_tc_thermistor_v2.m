@@ -8,13 +8,13 @@
 close all
 clear
 %%
-test_date = "10/10/22"
-test_description = "First test with the voltage set up. There is the two channels with the voltage connected to the test board with the channel 0 (Supply voltage to the divider) and channel 1 (Divided voltage). These are connected to the NI Daq"
-test_description = "This has the thermistor that will be used on the actual TMS board"
-test_description3 = "Then there's two thermocouple also connected to the NI Daq"
-test_description4 = "There is another thermistor connected directly to the thermometer."
-test_description5 = "The tests LJ ran the temperatures were off about 5 degrees even though the water was boiling at 100 degrees"
-test_description6 = "This is set up with the hot plate and the pan."
+test_date = "10/18/22"
+% test_description = "First test with the voltage set up. There is the two channels with the voltage connected to the test board with the channel 0 (Supply voltage to the divider) and channel 1 (Divided voltage). These are connected to the NI Daq"
+% test_description = "This has the thermistor that will be used on the actual TMS board"
+% test_description3 = "Then there's two thermocouple also connected to the NI Daq"
+% test_description4 = "There is another thermistor connected directly to the thermometer."
+% test_description5 = "The tests LJ ran the temperatures were off about 5 degrees even though the water was boiling at 100 degrees"
+% test_description6 = "This is set up with the hot plate and the pan."
 
 %% Discover Devices that Support Thermocouples 
 % To discover a device that supports Thermocouples, click the name of the
@@ -32,7 +32,7 @@ devices(3)
 s = daq.createSession('ni');
 addAnalogInputChannel(s,'cDAQ1Mod5',0, 'Thermocouple'); % TC 1
 addAnalogInputChannel(s,'cDAQ1Mod5',1, 'Thermocouple'); % TC 2
-% addAnalogInputChannel(s,'cDAQ1Mod5',2, 'Thermocouple');
+
 addAnalogInputChannel(s,'cDAQ1Mod1',0, 'Voltage'); % Power Supply 3V3 rail
 addAnalogInputChannel(s,'cDAQ1Mod1',1, 'Voltage'); % Thermistor 1 control
 
@@ -69,8 +69,10 @@ cd ../Databases/
 db = canDatabase("TMS_NODE2.dbc")
 
 %% Start the CAN Channel
-canch = canChannel("Vector", "VN1610 1", 1);
-canch.Database = 
+% canch = canChannel("Vector", "VN1610 1", 1);
+canch = canChannel("PEAK-System", "PCAN_USBBUS1 1", 1);
+
+canch.Database = db;
 start(canch);
 
 %% Start TMS
@@ -96,3 +98,7 @@ plot(time, data)
 ylim([10,110])
 xlabel('Time (secs)');
 ylabel('Temperature (Celsius)');
+
+cd ../Logs
+filename = "TMS-" + date()
+save filename
