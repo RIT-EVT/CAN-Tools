@@ -10,7 +10,7 @@ canData.Time = canData.Time + mdfObj.InitialTimestamp - hours(4);
 msgTimetable = canFDMessageTimetable(canData, canDB);
 
 signalTimetable = canSignalTimetable(msgTimetable);
-signalTimetable1 = canSignalTimetable(msgTimetable, "N1_TPDO2");
+signalTimetable1 = canSignalTimetable(msgTimetable, "N1_TPDO2"); %change to N1_TPDO2 for timetable name .ie
 signalTimetable2 = canSignalTimetable(msgTimetable, "N1_TPDO1");
 signalTimetable3 = canSignalTimetable(msgTimetable, "N1_TPDO0");
 signalTimetable4 = canSignalTimetable(msgTimetable, "N10_TPDO0");
