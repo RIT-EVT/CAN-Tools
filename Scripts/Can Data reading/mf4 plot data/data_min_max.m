@@ -7,16 +7,13 @@
 [maxValueEA, maxidxEA] = max(signalTimetable1.Electrical_angle);
 [minValueEA, minidxEA] = min(signalTimetable1.Electrical_angle);
 
-signalTimetable1.Time(maxidxCTAV)
 
-minmaxtable1 = ["","Time", "Value", "Unit";
-               "max",string(signalTimetable1.Time(maxidxCTAV)), string(maxValueCTAV),"Torque";
-               "min",string(signalTimetable1.Time(minidxCTAV)), string(minValueCTAV),"";
-               "max",string(signalTimetable2.Time(maxidxDC)), string(maxValueDC), "Voltage";
-               "min",string(signalTimetable2.Time(minidxDC)), string(minValueDC),"";
-               "max",string(signalTimetable1.Time(maxidxEA)), string(maxValueEA), "Angle"; 
-               "min",string(signalTimetable1.Time(minidxEA)), string(minValueEA),"";
-               "max",string(signalTimetable1.Time(maxidxPA)), string(maxValuePA),"Postion";
-               "min",string(signalTimetable1.Time(minidxPA)), string(minValuePA),"";
-
-];
+minmaxtable1 = ["Unit","Time", "Value", "";
+               "Torque",string(signalTimetable1.Time(maxidxCTAV)), string(maxValueCTAV),"Max";
+               "",string(signalTimetable1.Time(minidxCTAV)), string(minValueCTAV),"Min";
+               "Voltage",string(signalTimetable2.Time(maxidxDC)), string(maxValueDC), "Max";
+               "",string(signalTimetable2.Time(minidxDC)), string(minValueDC),"Min";
+               "Angle",string(signalTimetable1.Time(maxidxEA)), string(maxValueEA), "Max"; 
+               "",string(signalTimetable1.Time(minidxEA)), string(minValueEA),"Min";
+               "Postion",string(signalTimetable1.Time(maxidxPA)), string(maxValuePA),"Max";
+               "",string(signalTimetable1.Time(minidxPA)), string(minValuePA),"Min";];
