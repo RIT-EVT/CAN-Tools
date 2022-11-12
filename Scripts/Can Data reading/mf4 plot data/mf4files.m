@@ -1,3 +1,4 @@
+clear all;
 mdfFinalize("00000001.MF4");
 
 mdfObj = mdf("00000001.MF4");

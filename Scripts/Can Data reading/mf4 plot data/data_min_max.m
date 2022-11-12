@@ -1,29 +1,43 @@
-[maxValueCTAV, maxidxCTAV] = max(signalTimetable1.Current_Torque_Actual_Value);
-[minValueCTAV, minidxCTAV] = min(signalTimetable1.Current_Torque_Actual_Value);
-[maxValuePA, maxidxPA] = max(signalTimetable1.Phase_A_current);
-[minValuePA, minidxPA] = min(signalTimetable1.Phase_A_current);
-[maxValueDC, maxidxDC] = max(signalTimetable2.DC_link_circuit_voltage);
-[minValueDC, minidxDC] = min(signalTimetable2.DC_link_circuit_voltage);
-[maxValueEA, maxidxEA] = max(signalTimetable1.Electrical_angle);
-[minValueEA, minidxEA] = min(signalTimetable1.Electrical_angle);
+if ~isempty(signalTimetable1) 
+    [maxValueCTAV, maxidxCTAV] = max(signalTimetable1.Current_Torque_Actual_Value);
+    [minValueCTAV, minidxCTAV] = min(signalTimetable1.Current_Torque_Actual_Value);
+    [maxValuePA, maxidxPA] = max(signalTimetable1.Phase_A_current);
+    [minValuePA, minidxPA] = min(signalTimetable1.Phase_A_current);
+    [maxValueEA, maxidxEA] = max(signalTimetable1.Electrical_angle);
+    [minValueEA, minidxEA] = min(signalTimetable1.Electrical_angle);
+end
+
+if ~isempty(signalTimetable2)
+    [maxValueDC, maxidxDC] = max(signalTimetable2.DC_link_circuit_voltage);
+    [minValueDC, minidxDC] = min(signalTimetable2.DC_link_circuit_voltage);
+end
+
+if ~isempty(signalTimetable4)
 [maxValueTemp1, maxidTemp1] = max(signalTimetable4.Temp_1);
 [minValueTemp1, minidxTemp1] = min(signalTimetable4.Temp_1);
 [maxValueTemp2, maxidTemp2] = max(signalTimetable4.Temp_2);
 [minValueTemp2, minidxTemp2] = min(signalTimetable4.Temp_2);
+end
+
+if ~isempty(signalTimetable5)
 [maxValueTemp3, maxidTemp3] = max(signalTimetable5.Temp_3);
 [minValueTemp3, minidxTemp3] = min(signalTimetable5.Temp_3);
 [maxValueTemp4, maxidTemp4] = max(signalTimetable5.Temp_4);
 [minValueTemp4, minidxTemp4] = min(signalTimetable5.Temp_4);
+end
 
+if ~isempty(signalTimetable6)
 [maxValueVolt1, maxidVolt1] = max(signalTimetable6.Volt_1);
 [minValueVolt1, minidxVolt1] = min(signalTimetable6.Volt_1);
 [maxValueVolt2, maxidVolt2] = max(signalTimetable6.Volt_2);
 [minValueVolt2, minidxVolt2] = min(signalTimetable6.Volt_2);
+end
+if ~isempty(signalTimetable7)
 [maxValueVolt3, maxidVolt3] = max(signalTimetable7.Volt_3);
 [minValueVolt3, minidxVolt3] = min(signalTimetable7.Volt_3);
 [maxValueVolt4, maxidVolt4] = max(signalTimetable7.Volt_4);
 [minValueVolt4, minidxVolt4] = min(signalTimetable7.Volt_4);
-
+end
 minmaxtable1 = ["Unit","Time", "Value", "";
                "Torque",string(signalTimetable1.Time(maxidxCTAV)), string(maxValueCTAV),"Max";
                "",string(signalTimetable1.Time(minidxCTAV)), string(minValueCTAV),"Min";

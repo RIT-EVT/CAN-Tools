@@ -1,7 +1,11 @@
-[maxValueCTAV, maxidxCTAV] = max(signalTimetable1.Current_Torque_Actual_Value);
-[minValueCTAV, minidxCTAV] = min(signalTimetable1.Current_Torque_Actual_Value);
+if signalTimetable1 ~= null
+    [maxValueCTAV, maxidxCTAV] = max(signalTimetable1.Current_Torque_Actual_Value);
+    [minValueCTAV, minidxCTAV] = min(signalTimetable1.Current_Torque_Actual_Value);
+
+    
 [maxValuePA, maxidxPA] = max(signalTimetable1.Phase_A_current);
 [minValuePA, minidxPA] = min(signalTimetable1.Phase_A_current);
+
 [maxValueDC, maxidxDC] = max(signalTimetable2.DC_link_circuit_voltage);
 [minValueDC, minidxDC] = min(signalTimetable2.DC_link_circuit_voltage);
 [maxValueEA, maxidxEA] = max(signalTimetable1.Electrical_angle);
@@ -44,6 +48,13 @@ minmaxtable2 = ["Unit","Time", "Value", "";
                 "Fahrenheit", string(signalTimetable5.Time(minidxTemp4)), string(minValueTemp4/1000), "Min";
                ];
 minmaxtable3 = ["Unit","Time", "Value", "";
-               "Volts", string(signalTimetable6.time())
+               "Volts", string(signalTimetable6.Time(maxidVolt1)), string(maxValueVolt1/1000), "Max";
+               "Volts", string(signalTimetable6.Time(minidxVolt1)), string(minValueVolt1/1000), "Min";
+               "Volts", string(signalTimetable6.Time(maxidVolt2)), string(maxValueVolt2/1000), "Max";
+               "Volts", string(signalTimetable6.Time(minidxVolt2)), string(minValueVolt2/1000), "Min";
+               "Volts", string(signalTimetable7.Time(maxidVolt3)), string(maxValueVolt3/1000), "Max";
+               "Volts", string(signalTimetable7.Time(minidxVolt3)), string(minValueVolt3/1000), "Min";
+               "Volts", string(signalTimetable7.Time(maxidVolt4)), string(maxValueVolt4/1000), "Max";
+               "Volts", string(signalTimetable7.Time(minidxVolt4)), string(minValueVolt4/1000), "Min";
                ];
 
