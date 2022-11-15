@@ -1,14 +1,14 @@
-signalTimetable1 = canSignalTimetable(blfData, "N1_TPDO2");
+N1_TPDO2 = canSignalTimetable(blfData, "N1_TPDO2");
 signalTimetable2 = canSignalTimetable(blfData, "N1_TPDO1");
 signalTimetable3 = canSignalTimetable(blfData, "N1_TPDO0");
 %signalTimetable4 = canSignalTimetable(blfData, "N10_TPDO0");
-signalTimetable1.Time=signalTimetable1.Time + binf.StartTime;
+N1_TPDO2.Time=N1_TPDO2.Time + binf.StartTime;
 signalTimetable2.Time=signalTimetable2.Time + binf.StartTime;
 signalTimetable3.Time=signalTimetable3.Time + binf.StartTime;
 
 
 subplot(4, 1, 1)
-plot(signalTimetable1.Time, signalTimetable1.Current_Torque_Actual_Value/1000, "r")
+plot(signalTimetable1.Time, N1_TPDO2.Current_Torque_Actual_Value/1000, "r")
 title("{\itCurrent Torque Actual Value} Signal from {\itN1 TPDO2} Message", "FontWeight", "bold")
 % xlabel("Timestamp")
 ylabel("Torque")
@@ -18,7 +18,7 @@ title("{\itDC link circuit voltage} Signal from {\itN1 TPDO1} Message", "FontWei
 % xlabel("Timestamp")
 ylabel("Voltage")
 subplot(4, 1, 3)
-plot(signalTimetable1.Time, signalTimetable1.Electrical_angle, "y")
+plot(signalTimetable1.Time, N1_TPDO2.Electrical_angle, "y")
 title("{\itElectrical angle} Signal from {\itN1 TPDO2} Message", "FontWeight", "bold")
 xlabel("Timestamp")
 ylabel("Angle")
