@@ -33,16 +33,8 @@ NS_ :
 
 BS_:
 
-BU_: VirtualNMTMaster BMS_Battery_1 TMS Inverter
+BU_: VirtualNMTMaster PVC BMS_Battery_1 TMS Inverter
 
-
-BO_ 1160 N10_TPDO3: 8 TMS
- SG_ Volt_4 : 32|32@1+ (1,0) [0|4294967295] "" Vector__XXX
- SG_ Volt_3 : 0|32@1+ (1,0) [0|4294967295] "" Vector__XXX
-
-BO_ 904 N10_TPDO2: 8 TMS
- SG_ Volt_2 : 32|32@1+ (1,0) [0|4294967295] "V" Vector__XXX
- SG_ Volt_1 : 0|32@1+ (1,0) [0|4294967295] "V" Vector__XXX
 
 BO_ 1813 HBGuard_021: 1 BMS_Battery_1
  SG_ Toggle : 7|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -70,17 +62,43 @@ BO_ 149 EMCY_021: 8 BMS_Battery_1
  SG_ ErrorRegisterGeneric : 16|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1802 HBGuard_010: 1 TMS
+BO_ 1802 HBGuard_010: 1 PVC
  SG_ Toggle : 7|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ State : 0|7@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1418 SSDO_010: 8 TMS
+BO_ 1418 SSDO_010: 8 PVC
  SG_ SCS M : 5|3@1+ (1,0) [0|6] "" Vector__XXX
 
 BO_ 1546 CSDO_010: 8 Vector__XXX
+ SG_ CCS M : 5|3@1+ (1,0) [0|6] ""  PVC
+
+BO_ 138 EMCY_010: 8 PVC
+ SG_ ManufacturerSpecific5 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacturerSpecific4 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacturerSpecific3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacturerSpecific2 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacturerSpecific1 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterManufSpecific : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterReserved : 22|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterProfileSpecific : 21|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterCommunication : 20|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterTemperature : 19|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterVoltage : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterCurrent : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterGeneric : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1800 HBGuard_008: 1 TMS
+ SG_ Toggle : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ State : 0|7@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1416 SSDO_008: 8 TMS
+ SG_ SCS M : 5|3@1+ (1,0) [0|6] "" Vector__XXX
+
+BO_ 1544 CSDO_008: 8 Vector__XXX
  SG_ CCS M : 5|3@1+ (1,0) [0|6] ""  TMS
 
-BO_ 138 EMCY_010: 8 TMS
+BO_ 136 EMCY_008: 8 TMS
  SG_ ManufacturerSpecific5 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ManufacturerSpecific4 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ManufacturerSpecific3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -105,6 +123,22 @@ BO_ 1409 SSDO_001: 8 Inverter
 
 BO_ 1537 CSDO_001: 8 Vector__XXX
  SG_ CCS M : 5|3@1+ (1,0) [0|6] ""  Inverter
+
+BO_ 129 EMCY_001: 8 Inverter
+ SG_ ManufacturerSpecific5 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacturerSpecific4 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacturerSpecific3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacturerSpecific2 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacturerSpecific1 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterManufSpecific : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterReserved : 22|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterProfileSpecific : 21|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterCommunication : 20|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterTemperature : 19|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterVoltage : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterCurrent : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterGeneric : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1919 HBGuard_127: 1 Vector__XXX
  SG_ Toggle : 7|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -2914,30 +2948,6 @@ BO_ 137 EMCY_009: 8 Vector__XXX
  SG_ ErrorRegisterGeneric : 16|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1800 HBGuard_008: 1 Vector__XXX
- SG_ Toggle : 7|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ State : 0|7@1+ (1,0) [0|0] "" Vector__XXX
-
-BO_ 1416 SSDO_008: 8 Vector__XXX
-
-BO_ 1544 CSDO_008: 8 Vector__XXX
-
-BO_ 136 EMCY_008: 8 Vector__XXX
- SG_ ManufacturerSpecific5 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ManufacturerSpecific4 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ManufacturerSpecific3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ManufacturerSpecific2 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ManufacturerSpecific1 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterManufSpecific : 23|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterReserved : 22|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterProfileSpecific : 21|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterCommunication : 20|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterTemperature : 19|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterVoltage : 18|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterCurrent : 17|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterGeneric : 16|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
-
 BO_ 1799 HBGuard_007: 1 Vector__XXX
  SG_ Toggle : 7|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ State : 0|7@1+ (1,0) [0|0] "" Vector__XXX
@@ -3146,21 +3156,7 @@ BO_ 2020 LSS_S: 8 Vector__XXX
  SG_ LSS_CfgNodeID_ErrCode m17 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ LSS_S_CS M : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1 EMCY_001: 8 Inverter
- SG_ ManufacturerSpecific5 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ManufacturerSpecific4 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ManufacturerSpecific3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ManufacturerSpecific2 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ManufacturerSpecific1 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterManufSpecific : 23|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterReserved : 22|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterProfileSpecific : 21|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterCommunication : 20|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterTemperature : 19|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterVoltage : 18|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterCurrent : 17|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterGeneric : 16|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 1 GFC: 0 Vector__XXX
 
 BO_ 1173 N21_TPDO3: 5 BMS_Battery_1
  SG_ SIG2 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -3186,35 +3182,26 @@ BO_ 405 N21_TPDO0: 8 BMS_Battery_1
  SG_ BMS_Min_Cell_Voltage : 16|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ BMS_Battery_Voltage : 0|16@1- (1,0) [0|0] "" Vector__XXX
 
-BO_ 648 N10_TPDO1: 8 TMS
+BO_ 650 N10_TPDO1: 6 PVC
+ SG_ Baseplate_temperature : 32|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Output_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Input_voltage : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 394 N10_TPDO0: 3 PVC
+ SG_ Statusword : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ I_O_status : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1160 N8_TPDO3: 8 TMS
+ SG_ Voltage_Sensor_4 : 32|32@1+ (1,0) [0|494967295] "" Vector__XXX
+ SG_ Voltage_Sensor_3 : 0|32@1+ (1,0) [0|494967295] "" Vector__XXX
+
+BO_ 648 N8_TPDO1: 8 TMS
  SG_ Temp_4 : 32|32@1+ (1,0) [0|494967295] "" Vector__XXX
  SG_ Temp_3 : 0|32@1+ (1,0) [0|494967295] "" Vector__XXX
 
-BO_ 392 N10_TPDO0: 8 TMS
+BO_ 392 N8_TPDO0: 8 TMS
  SG_ Temp_2 : 32|32@1+ (1,0) [0|494967295] "" Vector__XXX
  SG_ Temp_1 : 0|32@1+ (1,0) [0|494967295] "" Vector__XXX
-
-BO_ 1153 N1_TPDO3: 7 Inverter
- SG_ Velocity_actual_value : 24|32@1- (1,0) [0|0] "" Vector__XXX
- SG_ Number_of_entries : 16|8@1+ (1,0) [0|255] "" Vector__XXX
- SG_ Torque_regulator_out : 0|16@1- (1,0) [0|0] "" Vector__XXX
-
-BO_ 897 N1_TPDO2: 6 Inverter
- SG_ Phase_A_current : 32|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ Electrical_angle : 16|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ Current_Torque_Actual_Value : 0|16@1- (1,0) [0|0] "" Vector__XXX
-
-BO_ 641 N1_TPDO1: 8 Inverter
- SG_ Current_demand : 48|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ Logic_power_supply_voltage : 32|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ DC_link_circuit_voltage : 16|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ Motor_temperature : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Controller_temperature : 0|8@1+ (1,0) [0|0] "" Vector__XXX
-
-BO_ 385 N1_TPDO0: 8 Inverter
- SG_ Torque_actual_value : 48|16@1- (1,0) [0|0] "" Vector__XXX
- SG_ Position_actual_value : 16|32@1- (1,0) [0|0] "" Vector__XXX
- SG_ Statusword : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
 
 
 
@@ -3327,7 +3314,7 @@ BA_DEF_DEF_  "CO_NVSEGMENT43" "";
 BA_DEF_DEF_  "CO_NVSEGMENT44" "";
 BA_DEF_DEF_  "CO_NVSEGMENT45" "";
 BA_DEF_DEF_  "OptionLoadDCF" 0;
-BA_DEF_DEF_  "GenMsgSendType" "";
+BA_DEF_DEF_  "GenMsgSendType" "(null)";
 BA_DEF_DEF_  "GenMsgDelayTime" 0;
 BA_DEF_DEF_  "GenMsgCycleTime" 0;
 BA_DEF_DEF_  "GenSigStartValue" 0;
@@ -3338,155 +3325,203 @@ BA_DEF_DEF_  "GeneratedBy" "";
 BA_DEF_DEF_  "CANopenApplProfile" 301;
 BA_DEF_DEF_  "ProtocolType" "CANopen";
 BA_DEF_DEF_  "AUTOGENERATION" 0;
-BA_ "AUTOGENERATION" 1;
-BA_ "ProtocolType" "CANopen";
-BA_ "CANopenApplProfile" 301;
-BA_ "GeneratedBy" "Vector ProCANopen";
 BA_ "OptionLoadDCF" 0;
-BA_ "CO_NVSEGMENT45" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT44" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT43" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT42" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT41" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT40" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT39" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT38" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT37" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT36" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT35" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT34" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT33" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT32" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT31" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT30" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT29" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT28" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT27" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT26" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT25" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT24" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT23" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT22" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT21" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT20" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT19" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT18" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT17" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT16" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT15" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT14" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT13" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT12" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT11" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT10" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT9" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT8" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT7" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT6" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT5" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT4" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT3" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT2" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT1" BU_ BMS_Battery_1 "";
-BA_ "CO_NVSEGMENT0" BU_ BMS_Battery_1 "";
-BA_ "CO_DCF" BU_ BMS_Battery_1 "..\D021.DCF";
+BA_ "GeneratedBy" "Vector ProCANopen";
+BA_ "CANopenApplProfile" 301;
+BA_ "ProtocolType" "CANopen";
+BA_ "AUTOGENERATION" 1;
+BA_ "CO_ID" BU_ PVC 10;
+BA_ "CO_DCF" BU_ PVC "..\D010.DCF";
+BA_ "CO_NVSEGMENT0" BU_ PVC "";
+BA_ "CO_NVSEGMENT1" BU_ PVC "";
+BA_ "CO_NVSEGMENT2" BU_ PVC "";
+BA_ "CO_NVSEGMENT3" BU_ PVC "";
+BA_ "CO_NVSEGMENT4" BU_ PVC "";
+BA_ "CO_NVSEGMENT5" BU_ PVC "";
+BA_ "CO_NVSEGMENT6" BU_ PVC "";
+BA_ "CO_NVSEGMENT7" BU_ PVC "";
+BA_ "CO_NVSEGMENT8" BU_ PVC "";
+BA_ "CO_NVSEGMENT9" BU_ PVC "";
+BA_ "CO_NVSEGMENT10" BU_ PVC "";
+BA_ "CO_NVSEGMENT11" BU_ PVC "";
+BA_ "CO_NVSEGMENT12" BU_ PVC "";
+BA_ "CO_NVSEGMENT13" BU_ PVC "";
+BA_ "CO_NVSEGMENT14" BU_ PVC "";
+BA_ "CO_NVSEGMENT15" BU_ PVC "";
+BA_ "CO_NVSEGMENT16" BU_ PVC "";
+BA_ "CO_NVSEGMENT17" BU_ PVC "";
+BA_ "CO_NVSEGMENT18" BU_ PVC "";
+BA_ "CO_NVSEGMENT19" BU_ PVC "";
+BA_ "CO_NVSEGMENT20" BU_ PVC "";
+BA_ "CO_NVSEGMENT21" BU_ PVC "";
+BA_ "CO_NVSEGMENT22" BU_ PVC "";
+BA_ "CO_NVSEGMENT23" BU_ PVC "";
+BA_ "CO_NVSEGMENT24" BU_ PVC "";
+BA_ "CO_NVSEGMENT25" BU_ PVC "";
+BA_ "CO_NVSEGMENT26" BU_ PVC "";
+BA_ "CO_NVSEGMENT27" BU_ PVC "";
+BA_ "CO_NVSEGMENT28" BU_ PVC "";
+BA_ "CO_NVSEGMENT29" BU_ PVC "";
+BA_ "CO_NVSEGMENT30" BU_ PVC "";
+BA_ "CO_NVSEGMENT31" BU_ PVC "";
+BA_ "CO_NVSEGMENT32" BU_ PVC "";
+BA_ "CO_NVSEGMENT33" BU_ PVC "";
+BA_ "CO_NVSEGMENT34" BU_ PVC "";
+BA_ "CO_NVSEGMENT35" BU_ PVC "";
+BA_ "CO_NVSEGMENT36" BU_ PVC "";
+BA_ "CO_NVSEGMENT37" BU_ PVC "";
+BA_ "CO_NVSEGMENT38" BU_ PVC "";
+BA_ "CO_NVSEGMENT39" BU_ PVC "";
+BA_ "CO_NVSEGMENT40" BU_ PVC "";
+BA_ "CO_NVSEGMENT41" BU_ PVC "";
+BA_ "CO_NVSEGMENT42" BU_ PVC "";
+BA_ "CO_NVSEGMENT43" BU_ PVC "";
+BA_ "CO_NVSEGMENT44" BU_ PVC "";
+BA_ "CO_NVSEGMENT45" BU_ PVC "";
 BA_ "CO_ID" BU_ BMS_Battery_1 21;
-BA_ "CO_ID" BU_ TMS 10;
-BA_ "CO_DCF" BU_ TMS "..\D010.DCF";
-BA_ "CO_NVSEGMENT0" BU_ TMS "";
-BA_ "CO_NVSEGMENT1" BU_ TMS "";
-BA_ "CO_NVSEGMENT2" BU_ TMS "";
-BA_ "CO_NVSEGMENT3" BU_ TMS "";
-BA_ "CO_NVSEGMENT4" BU_ TMS "";
-BA_ "CO_NVSEGMENT5" BU_ TMS "";
-BA_ "CO_NVSEGMENT6" BU_ TMS "";
-BA_ "CO_NVSEGMENT7" BU_ TMS "";
-BA_ "CO_NVSEGMENT8" BU_ TMS "";
-BA_ "CO_NVSEGMENT9" BU_ TMS "";
-BA_ "CO_NVSEGMENT10" BU_ TMS "";
-BA_ "CO_NVSEGMENT11" BU_ TMS "";
-BA_ "CO_NVSEGMENT12" BU_ TMS "";
-BA_ "CO_NVSEGMENT13" BU_ TMS "";
-BA_ "CO_NVSEGMENT14" BU_ TMS "";
-BA_ "CO_NVSEGMENT15" BU_ TMS "";
-BA_ "CO_NVSEGMENT16" BU_ TMS "";
-BA_ "CO_NVSEGMENT17" BU_ TMS "";
-BA_ "CO_NVSEGMENT18" BU_ TMS "";
-BA_ "CO_NVSEGMENT19" BU_ TMS "";
-BA_ "CO_NVSEGMENT20" BU_ TMS "";
-BA_ "CO_NVSEGMENT21" BU_ TMS "";
-BA_ "CO_NVSEGMENT22" BU_ TMS "";
-BA_ "CO_NVSEGMENT23" BU_ TMS "";
-BA_ "CO_NVSEGMENT24" BU_ TMS "";
-BA_ "CO_NVSEGMENT25" BU_ TMS "";
-BA_ "CO_NVSEGMENT26" BU_ TMS "";
-BA_ "CO_NVSEGMENT27" BU_ TMS "";
-BA_ "CO_NVSEGMENT28" BU_ TMS "";
-BA_ "CO_NVSEGMENT29" BU_ TMS "";
-BA_ "CO_NVSEGMENT30" BU_ TMS "";
-BA_ "CO_NVSEGMENT31" BU_ TMS "";
-BA_ "CO_NVSEGMENT32" BU_ TMS "";
-BA_ "CO_NVSEGMENT33" BU_ TMS "";
-BA_ "CO_NVSEGMENT34" BU_ TMS "";
-BA_ "CO_NVSEGMENT35" BU_ TMS "";
-BA_ "CO_NVSEGMENT36" BU_ TMS "";
-BA_ "CO_NVSEGMENT37" BU_ TMS "";
-BA_ "CO_NVSEGMENT38" BU_ TMS "";
-BA_ "CO_NVSEGMENT39" BU_ TMS "";
-BA_ "CO_NVSEGMENT40" BU_ TMS "";
-BA_ "CO_NVSEGMENT41" BU_ TMS "";
-BA_ "CO_NVSEGMENT42" BU_ TMS "";
-BA_ "CO_NVSEGMENT43" BU_ TMS "";
-BA_ "CO_NVSEGMENT44" BU_ TMS "";
+BA_ "CO_DCF" BU_ BMS_Battery_1 "..\D021.DCF";
+BA_ "CO_NVSEGMENT0" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT1" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT2" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT3" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT4" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT5" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT6" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT7" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT8" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT9" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT10" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT11" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT12" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT13" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT14" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT15" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT16" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT17" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT18" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT19" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT20" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT21" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT22" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT23" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT24" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT25" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT26" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT27" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT28" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT29" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT30" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT31" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT32" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT33" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT34" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT35" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT36" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT37" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT38" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT39" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT40" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT41" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT42" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT43" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT44" BU_ BMS_Battery_1 "";
+BA_ "CO_NVSEGMENT45" BU_ BMS_Battery_1 "";
 BA_ "CO_NVSEGMENT45" BU_ TMS "";
-BA_ "CO_ID" BU_ Inverter 1;
-BA_ "CO_DCF" BU_ Inverter "..\eds_node_1.DCF";
-BA_ "CO_NVSEGMENT0" BU_ Inverter "";
-BA_ "CO_NVSEGMENT1" BU_ Inverter "";
-BA_ "CO_NVSEGMENT2" BU_ Inverter "";
-BA_ "CO_NVSEGMENT3" BU_ Inverter "";
-BA_ "CO_NVSEGMENT4" BU_ Inverter "";
-BA_ "CO_NVSEGMENT5" BU_ Inverter "";
-BA_ "CO_NVSEGMENT6" BU_ Inverter "";
-BA_ "CO_NVSEGMENT7" BU_ Inverter "";
-BA_ "CO_NVSEGMENT8" BU_ Inverter "";
-BA_ "CO_NVSEGMENT9" BU_ Inverter "";
-BA_ "CO_NVSEGMENT10" BU_ Inverter "";
-BA_ "CO_NVSEGMENT11" BU_ Inverter "";
-BA_ "CO_NVSEGMENT12" BU_ Inverter "";
-BA_ "CO_NVSEGMENT13" BU_ Inverter "";
-BA_ "CO_NVSEGMENT14" BU_ Inverter "";
-BA_ "CO_NVSEGMENT15" BU_ Inverter "";
-BA_ "CO_NVSEGMENT16" BU_ Inverter "";
-BA_ "CO_NVSEGMENT17" BU_ Inverter "";
-BA_ "CO_NVSEGMENT18" BU_ Inverter "";
-BA_ "CO_NVSEGMENT19" BU_ Inverter "";
-BA_ "CO_NVSEGMENT20" BU_ Inverter "";
-BA_ "CO_NVSEGMENT21" BU_ Inverter "";
-BA_ "CO_NVSEGMENT22" BU_ Inverter "";
-BA_ "CO_NVSEGMENT23" BU_ Inverter "";
-BA_ "CO_NVSEGMENT24" BU_ Inverter "";
-BA_ "CO_NVSEGMENT25" BU_ Inverter "";
-BA_ "CO_NVSEGMENT26" BU_ Inverter "";
-BA_ "CO_NVSEGMENT27" BU_ Inverter "";
-BA_ "CO_NVSEGMENT28" BU_ Inverter "";
-BA_ "CO_NVSEGMENT29" BU_ Inverter "";
-BA_ "CO_NVSEGMENT30" BU_ Inverter "";
-BA_ "CO_NVSEGMENT31" BU_ Inverter "";
-BA_ "CO_NVSEGMENT32" BU_ Inverter "";
-BA_ "CO_NVSEGMENT33" BU_ Inverter "";
-BA_ "CO_NVSEGMENT34" BU_ Inverter "";
-BA_ "CO_NVSEGMENT35" BU_ Inverter "";
-BA_ "CO_NVSEGMENT36" BU_ Inverter "";
-BA_ "CO_NVSEGMENT37" BU_ Inverter "";
-BA_ "CO_NVSEGMENT38" BU_ Inverter "";
-BA_ "CO_NVSEGMENT39" BU_ Inverter "";
-BA_ "CO_NVSEGMENT40" BU_ Inverter "";
-BA_ "CO_NVSEGMENT41" BU_ Inverter "";
-BA_ "CO_NVSEGMENT42" BU_ Inverter "";
-BA_ "CO_NVSEGMENT43" BU_ Inverter "";
-BA_ "CO_NVSEGMENT44" BU_ Inverter "";
+BA_ "CO_NVSEGMENT44" BU_ TMS "";
+BA_ "CO_NVSEGMENT43" BU_ TMS "";
+BA_ "CO_NVSEGMENT42" BU_ TMS "";
+BA_ "CO_NVSEGMENT41" BU_ TMS "";
+BA_ "CO_NVSEGMENT40" BU_ TMS "";
+BA_ "CO_NVSEGMENT39" BU_ TMS "";
+BA_ "CO_NVSEGMENT38" BU_ TMS "";
+BA_ "CO_NVSEGMENT37" BU_ TMS "";
+BA_ "CO_NVSEGMENT36" BU_ TMS "";
+BA_ "CO_NVSEGMENT35" BU_ TMS "";
+BA_ "CO_NVSEGMENT34" BU_ TMS "";
+BA_ "CO_NVSEGMENT33" BU_ TMS "";
+BA_ "CO_NVSEGMENT32" BU_ TMS "";
+BA_ "CO_NVSEGMENT31" BU_ TMS "";
+BA_ "CO_NVSEGMENT30" BU_ TMS "";
+BA_ "CO_NVSEGMENT29" BU_ TMS "";
+BA_ "CO_NVSEGMENT28" BU_ TMS "";
+BA_ "CO_NVSEGMENT27" BU_ TMS "";
+BA_ "CO_NVSEGMENT26" BU_ TMS "";
+BA_ "CO_NVSEGMENT25" BU_ TMS "";
+BA_ "CO_NVSEGMENT24" BU_ TMS "";
+BA_ "CO_NVSEGMENT23" BU_ TMS "";
+BA_ "CO_NVSEGMENT22" BU_ TMS "";
+BA_ "CO_NVSEGMENT21" BU_ TMS "";
+BA_ "CO_NVSEGMENT20" BU_ TMS "";
+BA_ "CO_NVSEGMENT19" BU_ TMS "";
+BA_ "CO_NVSEGMENT18" BU_ TMS "";
+BA_ "CO_NVSEGMENT17" BU_ TMS "";
+BA_ "CO_NVSEGMENT16" BU_ TMS "";
+BA_ "CO_NVSEGMENT15" BU_ TMS "";
+BA_ "CO_NVSEGMENT14" BU_ TMS "";
+BA_ "CO_NVSEGMENT13" BU_ TMS "";
+BA_ "CO_NVSEGMENT12" BU_ TMS "";
+BA_ "CO_NVSEGMENT11" BU_ TMS "";
+BA_ "CO_NVSEGMENT10" BU_ TMS "";
+BA_ "CO_NVSEGMENT9" BU_ TMS "";
+BA_ "CO_NVSEGMENT8" BU_ TMS "";
+BA_ "CO_NVSEGMENT7" BU_ TMS "";
+BA_ "CO_NVSEGMENT6" BU_ TMS "";
+BA_ "CO_NVSEGMENT5" BU_ TMS "";
+BA_ "CO_NVSEGMENT4" BU_ TMS "";
+BA_ "CO_NVSEGMENT3" BU_ TMS "";
+BA_ "CO_NVSEGMENT2" BU_ TMS "";
+BA_ "CO_NVSEGMENT1" BU_ TMS "";
+BA_ "CO_NVSEGMENT0" BU_ TMS "";
+BA_ "CO_DCF" BU_ TMS "..\D008.DCF";
+BA_ "CO_ID" BU_ TMS 8;
 BA_ "CO_NVSEGMENT45" BU_ Inverter "";
+BA_ "CO_NVSEGMENT44" BU_ Inverter "";
+BA_ "CO_NVSEGMENT43" BU_ Inverter "";
+BA_ "CO_NVSEGMENT42" BU_ Inverter "";
+BA_ "CO_NVSEGMENT41" BU_ Inverter "";
+BA_ "CO_NVSEGMENT40" BU_ Inverter "";
+BA_ "CO_NVSEGMENT39" BU_ Inverter "";
+BA_ "CO_NVSEGMENT38" BU_ Inverter "";
+BA_ "CO_NVSEGMENT37" BU_ Inverter "";
+BA_ "CO_NVSEGMENT36" BU_ Inverter "";
+BA_ "CO_NVSEGMENT35" BU_ Inverter "";
+BA_ "CO_NVSEGMENT34" BU_ Inverter "";
+BA_ "CO_NVSEGMENT33" BU_ Inverter "";
+BA_ "CO_NVSEGMENT32" BU_ Inverter "";
+BA_ "CO_NVSEGMENT31" BU_ Inverter "";
+BA_ "CO_NVSEGMENT30" BU_ Inverter "";
+BA_ "CO_NVSEGMENT29" BU_ Inverter "";
+BA_ "CO_NVSEGMENT28" BU_ Inverter "";
+BA_ "CO_NVSEGMENT27" BU_ Inverter "";
+BA_ "CO_NVSEGMENT26" BU_ Inverter "";
+BA_ "CO_NVSEGMENT25" BU_ Inverter "";
+BA_ "CO_NVSEGMENT24" BU_ Inverter "";
+BA_ "CO_NVSEGMENT23" BU_ Inverter "";
+BA_ "CO_NVSEGMENT22" BU_ Inverter "";
+BA_ "CO_NVSEGMENT21" BU_ Inverter "";
+BA_ "CO_NVSEGMENT20" BU_ Inverter "";
+BA_ "CO_NVSEGMENT19" BU_ Inverter "";
+BA_ "CO_NVSEGMENT18" BU_ Inverter "";
+BA_ "CO_NVSEGMENT17" BU_ Inverter "";
+BA_ "CO_NVSEGMENT16" BU_ Inverter "";
+BA_ "CO_NVSEGMENT15" BU_ Inverter "";
+BA_ "CO_NVSEGMENT14" BU_ Inverter "";
+BA_ "CO_NVSEGMENT13" BU_ Inverter "";
+BA_ "CO_NVSEGMENT12" BU_ Inverter "";
+BA_ "CO_NVSEGMENT11" BU_ Inverter "";
+BA_ "CO_NVSEGMENT10" BU_ Inverter "";
+BA_ "CO_NVSEGMENT9" BU_ Inverter "";
+BA_ "CO_NVSEGMENT8" BU_ Inverter "";
+BA_ "CO_NVSEGMENT7" BU_ Inverter "";
+BA_ "CO_NVSEGMENT6" BU_ Inverter "";
+BA_ "CO_NVSEGMENT5" BU_ Inverter "";
+BA_ "CO_NVSEGMENT4" BU_ Inverter "";
+BA_ "CO_NVSEGMENT3" BU_ Inverter "";
+BA_ "CO_NVSEGMENT2" BU_ Inverter "";
+BA_ "CO_NVSEGMENT1" BU_ Inverter "";
+BA_ "CO_NVSEGMENT0" BU_ Inverter "";
+BA_ "CO_DCF" BU_ Inverter "..\eds_node_1.DCF";
+BA_ "CO_ID" BU_ Inverter 1;
 BA_ "CO_MsgCategory" BO_ 1813 505;
 BA_ "CO_MsgCategory" BO_ 1429 410;
 BA_ "CO_MsgCategory" BO_ 1557 405;
@@ -3495,9 +3530,14 @@ BA_ "CO_MsgCategory" BO_ 1802 505;
 BA_ "CO_MsgCategory" BO_ 1418 410;
 BA_ "CO_MsgCategory" BO_ 1546 405;
 BA_ "CO_MsgCategory" BO_ 138 205;
+BA_ "CO_MsgCategory" BO_ 1800 505;
+BA_ "CO_MsgCategory" BO_ 1416 410;
+BA_ "CO_MsgCategory" BO_ 1544 405;
+BA_ "CO_MsgCategory" BO_ 136 205;
 BA_ "CO_MsgCategory" BO_ 1793 505;
 BA_ "CO_MsgCategory" BO_ 1409 410;
 BA_ "CO_MsgCategory" BO_ 1537 405;
+BA_ "CO_MsgCategory" BO_ 129 205;
 BA_ "CO_MsgCategory" BO_ 1919 505;
 BA_ "CO_MsgCategory" BO_ 1535 410;
 BA_ "CO_MsgCategory" BO_ 1663 405;
@@ -3966,10 +4006,6 @@ BA_ "CO_MsgCategory" BO_ 1801 505;
 BA_ "CO_MsgCategory" BO_ 1417 410;
 BA_ "CO_MsgCategory" BO_ 1545 405;
 BA_ "CO_MsgCategory" BO_ 137 205;
-BA_ "CO_MsgCategory" BO_ 1800 505;
-BA_ "CO_MsgCategory" BO_ 1416 410;
-BA_ "CO_MsgCategory" BO_ 1544 405;
-BA_ "CO_MsgCategory" BO_ 136 205;
 BA_ "CO_MsgCategory" BO_ 1799 505;
 BA_ "CO_MsgCategory" BO_ 1415 410;
 BA_ "CO_MsgCategory" BO_ 1543 405;
@@ -3999,17 +4035,16 @@ BA_ "CO_MsgCategory" BO_ 128 110;
 BA_ "CO_MsgCategory" BO_ 0 105;
 BA_ "CO_MsgCategory" BO_ 2021 610;
 BA_ "CO_MsgCategory" BO_ 2020 605;
-BA_ "CO_MsgCategory" BO_ 1 205;
+BA_ "CO_MsgCategory" BO_ 1 705;
 BA_ "CO_MsgCategory" BO_ 1173 335;
 BA_ "CO_MsgCategory" BO_ 917 325;
 BA_ "CO_MsgCategory" BO_ 661 315;
 BA_ "CO_MsgCategory" BO_ 405 305;
+BA_ "CO_MsgCategory" BO_ 650 315;
+BA_ "CO_MsgCategory" BO_ 394 305;
+BA_ "CO_MsgCategory" BO_ 1160 335;
 BA_ "CO_MsgCategory" BO_ 648 315;
 BA_ "CO_MsgCategory" BO_ 392 305;
-BA_ "CO_MsgCategory" BO_ 1153 335;
-BA_ "CO_MsgCategory" BO_ 897 325;
-BA_ "CO_MsgCategory" BO_ 641 315;
-BA_ "CO_MsgCategory" BO_ 385 305;
 BA_ "GenSigStartValue" SG_ 1173 SIG2 0;
 BA_ "GenSigStartValue" SG_ 1173 SIG1 0;
 BA_ "GenSigStartValue" SG_ 1173 SIG0 0;
@@ -4026,24 +4061,17 @@ BA_ "GenSigStartValue" SG_ 405 BMS_Max_Cell_Voltage 0;
 BA_ "GenSigStartValue" SG_ 405 BMS_Min_Cell_Voltage_ID 0;
 BA_ "GenSigStartValue" SG_ 405 BMS_Min_Cell_Voltage 0;
 BA_ "GenSigStartValue" SG_ 405 BMS_Battery_Voltage 0;
+BA_ "GenSigStartValue" SG_ 650 Baseplate_temperature 0;
+BA_ "GenSigStartValue" SG_ 650 Output_voltage 0;
+BA_ "GenSigStartValue" SG_ 650 Input_voltage 0;
+BA_ "GenSigStartValue" SG_ 394 Statusword 0;
+BA_ "GenSigStartValue" SG_ 394 I_O_status 0;
+BA_ "GenSigStartValue" SG_ 1160 Voltage_Sensor_4 0;
+BA_ "GenSigStartValue" SG_ 1160 Voltage_Sensor_3 0;
 BA_ "GenSigStartValue" SG_ 648 Temp_4 0;
 BA_ "GenSigStartValue" SG_ 648 Temp_3 0;
 BA_ "GenSigStartValue" SG_ 392 Temp_2 0;
 BA_ "GenSigStartValue" SG_ 392 Temp_1 0;
-BA_ "GenSigStartValue" SG_ 1153 Velocity_actual_value 0;
-BA_ "GenSigStartValue" SG_ 1153 Number_of_entries 0;
-BA_ "GenSigStartValue" SG_ 1153 Torque_regulator_out 0;
-BA_ "GenSigStartValue" SG_ 897 Phase_A_current 0;
-BA_ "GenSigStartValue" SG_ 897 Electrical_angle 0;
-BA_ "GenSigStartValue" SG_ 897 Current_Torque_Actual_Value 0;
-BA_ "GenSigStartValue" SG_ 641 Current_demand 0;
-BA_ "GenSigStartValue" SG_ 641 Logic_power_supply_voltage 0;
-BA_ "GenSigStartValue" SG_ 641 DC_link_circuit_voltage 0;
-BA_ "GenSigStartValue" SG_ 641 Motor_temperature 0;
-BA_ "GenSigStartValue" SG_ 641 Controller_temperature 0;
-BA_ "GenSigStartValue" SG_ 385 Torque_actual_value 0;
-BA_ "GenSigStartValue" SG_ 385 Position_actual_value 0;
-BA_ "GenSigStartValue" SG_ 385 Statusword 0;
 VAL_ 1813 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1429 SCS 2 "Upload" 1 "Download" ;
 VAL_ 1557 CCS 2 "Upload" 1 "Download" ;
@@ -4052,9 +4080,14 @@ VAL_ 1802 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1418 SCS 2 "Upload" 1 "Download" ;
 VAL_ 1546 CCS 2 "Upload" 1 "Download" ;
 VAL_ 138 ErrorCode 33360 "RPDO timeout" 33344 "Unexpected SYNC data length" 33328 "DAM MPDO not processed, destination object not available" 33312 "PDO length exceeded" 33296 "PDO not processed due to length error" 33104 "Transmit COB-ID collision" 33088 "Recovered from bus off state" 33072 "Life guard error or heartbeat error" 33056 "CAN in error passive mode" 33040 "CAN overrun (objects lost)" ;
+VAL_ 1800 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
+VAL_ 1416 SCS 2 "Upload" 1 "Download" ;
+VAL_ 1544 CCS 2 "Upload" 1 "Download" ;
+VAL_ 136 ErrorCode 33360 "RPDO timeout" 33344 "Unexpected SYNC data length" 33328 "DAM MPDO not processed, destination object not available" 33312 "PDO length exceeded" 33296 "PDO not processed due to length error" 33104 "Transmit COB-ID collision" 33088 "Recovered from bus off state" 33072 "Life guard error or heartbeat error" 33056 "CAN in error passive mode" 33040 "CAN overrun (objects lost)" ;
 VAL_ 1793 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1409 SCS 2 "Upload" 1 "Download" ;
 VAL_ 1537 CCS 2 "Upload" 1 "Download" ;
+VAL_ 129 ErrorCode 61444 "(DS-402) Control error" 61443 "(DS-402) Control, stroke operation" 61442 "(DS-402) Control, sub-synchronous run" 61441 "(DS-402) Control, deceleration" 35072 "(DS-402) Winding controller - process data monitoring" 34816 "(DS-402) Winding controller" 34560 "(DS-402) Sync controller" 34322 "(DS-402) Positioning - reference limit" 34321 "(DS-402) Positioning - following error" 34304 "(DS-402) Positioning controller" 34048 "(DS-402) Position controller" 33792 "(DS-402) Velocity speed controller" 33585 "(DS-402) Torque fault" 33569 "(DS-402) Insufficient torque" 33555 "(DS-402) Standstill torque" 33554 "(DS-402) Difficult start up" 33553 "(DS-402) Excess torque" 33536 "(DS-402) Torque control" 30208 "(DS-402) Data storage (external)" 29984 "(DS-402) Serial interface no. 2" 29968 "(DS-402) Serial interface no. 1" 29952 "(DS-402) Communication" 29696 "(DS-402) Computation circuit" 29472 "(DS-402) Position" 29456 "(DS-402) Speed" 29447 "(DS-402) Incremental sensor 3 fault" 29446 "(DS-402) Incremental sensor 2 fault" 29445 "(DS-402) Incremental sensor 1 fault" 29444 "(DS-402) Resolver 2 fault" 29443 "(DS-402) Resolver 1 fault" 29442 "(DS-402) Tacho wrong polarity" 29441 "(DS-402) Tacho fault" 29440 "(DS-402) Sensor" 29184 "(DS-402) Measurement circuit  " 28963 "(DS-402) Motor tilted" 28962 "(DS-402) Motor error or commutation malfunction" 28961 "(DS-402) Motor blocked" 28960 "(DS-402) Motor" 28947 "(DS-402) Protective circuit brake chopper" 28946 "(DS-402) Over current brake chopper" 28945 "(DS-402) Failure brake chopper" 28944 "(DS-402) Brake chopper" 28928 "(DS-402) Power" 25376 "(DS-402) Parameter error" 25360 "(DS-402) Loss of parameters" 25359 "(DS-402) Reset watchdog - data record no. 15" 25358 "(DS-402) Reset watchdog - data record no. 14" 25357 "(DS-402) Reset watchdog - data record no. 13" 25356 "(DS-402) Reset watchdog - data record no. 12" 25355 "(DS-402) Reset watchdog - data record no. 11" 25354 "(DS-402) Reset watchdog - data record no. 10" 25353 "(DS-402) Reset watchdog - data record no. 9" 25352 "(DS-402) Reset watchdog - data record no. 8" 25351 "(DS-402) Reset watchdog - data record no. 7" 25350 "(DS-402) Reset watchdog - data record no. 6" 25349 "(DS-402) Reset watchdog - data record no. 5" 25348 "(DS-402) Reset watchdog - data record no. 4" 25347 "(DS-402) Reset watchdog - data record no. 3" 25346 "(DS-402) Reset watchdog - data record no. 2" 25345 "(DS-402) Reset watchdog - data record no. 1" 24592 "(DS-402) Software reset (watchdog)" 21808 "(DS-402) EEPROM" 21792 "(DS-402) ROM/EPROM" 21776 "(DS-402) RAM" 21760 "(DS-402) Hardware memory" 21593 "(DS-402) Fuses S9 = manufacturer-specific" 21592 "(DS-402) Fuses S8 = manufacturer-specific" 21591 "(DS-402) Fuses S7 = manufacturer-specific" 21590 "(DS-402) Fuses S6 = manufacturer-specific" 21589 "(DS-402) Fuses S5 = manufacturer-specific" 21588 "(DS-402) Fuses S4 = manufacturer-specific" 21587 "(DS-402) Fuses S3 = l3" 21586 "(DS-402) Fuses S2 = l2" 21585 "(DS-402) Fuses S1 = l1" 21584 "(DS-402) Fuses" 21573 "(DS-402) Contact 5 = manufacturer-specific" 21572 "(DS-402) Contact 4 = manufacturer-specific" 21571 "(DS-402) Contact 3 = manufacturer-specific" 21570 "(DS-402) Contact 2 = manufacturer-specific" 21569 "(DS-402) Contact 1 = manufacturer-specific" 21568 "(DS-402) Contacts" 21552 "(DS-402) Input stages" 21536 "(DS-402) Chopper" 21520 "(DS-402) Output stages" 21504 "(DS-402) Power section" 21248 "(DS-402) Operating unit" 21024 "(DS-402) Control, computing circuit" 21008 "(DS-402) Control, measurement circuit" 35328 "(DS-402) Control" 20768 "(DS-402) Supply intermediate circuit" 20761 "(DS-402) Supply low voltage U9 = manufacturer-specific" 20760 "(DS-402) Supply low voltage U8 = manufacturer-specific" 20759 "(DS-402) Supply low voltage U7 = manufacturer-specific" 20758 "(DS-402) Supply low voltage U6 = manufacturer-specific" 20757 "(DS-402) Supply low voltage U5 = manufacturer-specific" 20756 "(DS-402) Supply low voltage U4 = manufacturer-specific" 20755 "(DS-402) Supply low voltage U3 = supply +5 V" 20754 "(DS-402) Supply low voltage U2 = supply +24V" 20753 "(DS-402) Supply low voltage U1 = supply ±15V" 20752 "(DS-402) Supply low voltage" 20736 "(DS-402) Supply" 17440 "(DS-402) Too low temperature supply" 17424 "(DS-402) Excess temperature supply" 17408 "(DS-402) Temperature supply" 17184 "(DS-402) Too low temperature drive" 17168 "(DS-402) Excess temperature drive" 17152 "(DS-402) Temperature drive" 16928 "(DS-402) Field circ. interrupted, too low temperature device" 16912 "(DS-402) Field circ. interrupted, excess temperature device" 16704 "(DS-402) Field circ. interrupted, temperature air outlet" 16688 "(DS-402) Field circ. interrupted, temperature supply air" 16672 "(DS-402) Field circ. interrupted, too low ambient temperature" 16656 "(DS-402) Field circ. interrupted, Excess ambient temperature" 13105 "(DS-402) Field circuit interrupted" 13104 "(DS-402) Field circuit" 13089 "(DS-402) Armature circuit interrupted" 13088 "(DS-402) Armature circuit" 13075 "(DS-402) Output over-voltage phase W " 13074 "(DS-402) Output over-voltage phase V " 13073 "(DS-402) Output over-voltage phase U " 13072 "(DS-402) Output over-voltage" 12848 "(DS-402) Load error" 12834 "(DS-402) DC link under-voltage no. 2" 12833 "(DS-402) DC link under-voltage no. 1" 12832 "(DS-402) DC link under-voltage" 12818 "(DS-402) DC link over voltage no. 2" 12817 "(DS-402) DC link over-voltage no. 1" 12816 "(DS-402) DC link over-voltage" 12610 "(DS-402) Mains frequency too small" 12609 "(DS-402) Mains frequency too great" 12608 "(DS-402) Mains frequency" 12596 "(DS-402) Phase sequence" 12595 "(DS-402) Phase failure L3" 12594 "(DS-402) Phase failure L2" 12593 "(DS-402) Phase failure L1" 12592 "(DS-402) Phase failure" 12579 "(DS-402) Mains under-voltage phase L3" 12578 "(DS-402) Mains under-voltage phase L2" 12577 "(DS-402) Mains under-voltage phase L1" 12576 "(DS-402) Mains under-voltage" 12563 "(DS-402) Mains over-voltage phase L3 " 12562 "(DS-402) Mains over-voltage phase L2" 12561 "(DS-402) Mains over-voltage phase L1" 12560 "(DS-402) Mains over-voltage" 9041 "(DS-402) Load level warning (I2t, thermal state)" 9040 "(DS-402) Load level fault (I2t, thermal state)" 9027 "(DS-402) Earth leakage (motor-side) phase W-U" 9026 "(DS-402) Earth leakage (motor-side) phase V-W" 9025 "(DS-402) Short circuit (motor-side) phases U-V" 9024 "(DS-402) Short circuit (motor-side)" 9011 "(DS-402) Earth leakage (motor-side) phase W" 9010 "(DS-402) Earth leakage (motor-side) phase V" 9009 "(DS-402) Earth leakage (motor-side) phase U" 9008 "(DS-402) Earth leakage (motor-side)" 8992 "(DS-402) Short circuit/earth leakage (motor-side)" 8978 "(DS-402) Device internal, continuous over current no. 2" 8977 "(DS-402) Device internal, continuous over current no. 1" 8976 "(DS-402) Device internal, continuous over current" 8784 "(DS-402) Short circuit (device internal) " 8768 "(DS-402) Earth leakage (device internal)" 8752 "(DS-402) Short circuit/earth leakage (device internal)" 8738 "(DS-402) Continuous over current no.2" 8737 "(DS-402) Continuous over current no.1" 8736 "(DS-402) Continuous over current (device internal)" 8724 "(DS-402) Short circuit (input), over-current in the sequence" 8723 "(DS-402) Short circuit (input), over-current in ramp function" 8722 "(DS-402) Short circuit (input), internal current no.2" 8721 "(DS-402) Short circuit (input), internal current no.1" 8499 "(DS-402) Short circuit phases (input) L3-L1" 8498 "(DS-402) Short circuit phases (input) L2-L3" 8497 "(DS-402) Short circuit phases (input) L1-L2" 8496 "(DS-402) Short circuit (input)" 8483 "(DS-402) Earth leakage (input) phase L3" 8482 "(DS-402) Earth leakage (input) phase L2" 8481 "(DS-402) Earth leakage (input) phase L1" 8480 "(DS-402) Earth leakage (input)" 8464 "(DS-402) Short circuit/earth leakage (input)" 33360 "RPDO timeout" 33344 "Unexpected SYNC data length" 33328 "DAM MPDO not processed, destination object not available" 33312 "PDO length exceeded" 33296 "PDO not processed due to length error" 33104 "Transmit COB-ID collision" 33088 "Recovered from bus off state" 33072 "Life guard error or heartbeat error" 33056 "CAN in error passive mode" 33040 "CAN overrun (objects lost)" ;
 VAL_ 1919 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1918 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1917 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
@@ -4172,14 +4205,13 @@ VAL_ 1805 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1804 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1803 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1801 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
-VAL_ 1800 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1799 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1798 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1797 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1796 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1795 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1794 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
-VAL_ 0 Node_ID 21 "BMS_Battery_1" 10 "TMS" 1 "Inverter" 0 "All" ;
+VAL_ 0 Node_ID 21 "BMS_Battery_1" 10 "PVC" 8 "TMS" 1 "Inverter" 0 "All" ;
 VAL_ 0 CS 130 "Reset Communication" 129 "Reset Node" 128 "Enter Pre-Operational" 2 "Stop" 1 "Start" ;
 VAL_ 2021 LSS_TableIndex 8 "10" 7 "20" 6 "50" 5 "100" 4 "125" 3 "250" 2 "500" 1 "800" 0 "1000" ;
 VAL_ 2021 LSS_TableSelector 0 "Std_CiA_Table" ;
@@ -4189,5 +4221,4 @@ VAL_ 2020 LSS_StoreCfg_ErrCode 255 "Impl_spec_error" 2 "Storage_media_access_err
 VAL_ 2020 LSS_CfgBitTim_ErrCode 255 "Impl_spec_error" 1 "Not_supported" 0 "Success" ;
 VAL_ 2020 LSS_CfgNodeID_ErrCode 255 "Impl_spec_error" 1 "NodeID_Out_Of_Range" 0 "Success" ;
 VAL_ 2020 LSS_S_CS 94 "InquireNodeID" 93 "InquireSerial" 92 "InquireRevision" 91 "InquireProduct" 90 "InquireVendor" 76 "IdentifyNonConfSlave" 79 "IdentifySlave" 23 "StoreConfiguration" 19 "ConfigureBitTiming" 17 "ConfigureNodeID" 68 "SwitchModeSelectConfirm" ;
-VAL_ 1 ErrorCode 61444 "(DS-402) Control error" 61443 "(DS-402) Control, stroke operation" 61442 "(DS-402) Control, sub-synchronous run" 61441 "(DS-402) Control, deceleration" 35072 "(DS-402) Winding controller - process data monitoring" 34816 "(DS-402) Winding controller" 34560 "(DS-402) Sync controller" 34322 "(DS-402) Positioning - reference limit" 34321 "(DS-402) Positioning - following error" 34304 "(DS-402) Positioning controller" 34048 "(DS-402) Position controller" 33792 "(DS-402) Velocity speed controller" 33585 "(DS-402) Torque fault" 33569 "(DS-402) Insufficient torque" 33555 "(DS-402) Standstill torque" 33554 "(DS-402) Difficult start up" 33553 "(DS-402) Excess torque" 33536 "(DS-402) Torque control" 30208 "(DS-402) Data storage (external)" 29984 "(DS-402) Serial interface no. 2" 29968 "(DS-402) Serial interface no. 1" 29952 "(DS-402) Communication" 29696 "(DS-402) Computation circuit" 29472 "(DS-402) Position" 29456 "(DS-402) Speed" 29447 "(DS-402) Incremental sensor 3 fault" 29446 "(DS-402) Incremental sensor 2 fault" 29445 "(DS-402) Incremental sensor 1 fault" 29444 "(DS-402) Resolver 2 fault" 29443 "(DS-402) Resolver 1 fault" 29442 "(DS-402) Tacho wrong polarity" 29441 "(DS-402) Tacho fault" 29440 "(DS-402) Sensor" 29184 "(DS-402) Measurement circuit  " 28963 "(DS-402) Motor tilted" 28962 "(DS-402) Motor error or commutation malfunction" 28961 "(DS-402) Motor blocked" 28960 "(DS-402) Motor" 28947 "(DS-402) Protective circuit brake chopper" 28946 "(DS-402) Over current brake chopper" 28945 "(DS-402) Failure brake chopper" 28944 "(DS-402) Brake chopper" 28928 "(DS-402) Power" 25376 "(DS-402) Parameter error" 25360 "(DS-402) Loss of parameters" 25359 "(DS-402) Reset watchdog - data record no. 15" 25358 "(DS-402) Reset watchdog - data record no. 14" 25357 "(DS-402) Reset watchdog - data record no. 13" 25356 "(DS-402) Reset watchdog - data record no. 12" 25355 "(DS-402) Reset watchdog - data record no. 11" 25354 "(DS-402) Reset watchdog - data record no. 10" 25353 "(DS-402) Reset watchdog - data record no. 9" 25352 "(DS-402) Reset watchdog - data record no. 8" 25351 "(DS-402) Reset watchdog - data record no. 7" 25350 "(DS-402) Reset watchdog - data record no. 6" 25349 "(DS-402) Reset watchdog - data record no. 5" 25348 "(DS-402) Reset watchdog - data record no. 4" 25347 "(DS-402) Reset watchdog - data record no. 3" 25346 "(DS-402) Reset watchdog - data record no. 2" 25345 "(DS-402) Reset watchdog - data record no. 1" 24592 "(DS-402) Software reset (watchdog)" 21808 "(DS-402) EEPROM" 21792 "(DS-402) ROM/EPROM" 21776 "(DS-402) RAM" 21760 "(DS-402) Hardware memory" 21593 "(DS-402) Fuses S9 = manufacturer-specific" 21592 "(DS-402) Fuses S8 = manufacturer-specific" 21591 "(DS-402) Fuses S7 = manufacturer-specific" 21590 "(DS-402) Fuses S6 = manufacturer-specific" 21589 "(DS-402) Fuses S5 = manufacturer-specific" 21588 "(DS-402) Fuses S4 = manufacturer-specific" 21587 "(DS-402) Fuses S3 = l3" 21586 "(DS-402) Fuses S2 = l2" 21585 "(DS-402) Fuses S1 = l1" 21584 "(DS-402) Fuses" 21573 "(DS-402) Contact 5 = manufacturer-specific" 21572 "(DS-402) Contact 4 = manufacturer-specific" 21571 "(DS-402) Contact 3 = manufacturer-specific" 21570 "(DS-402) Contact 2 = manufacturer-specific" 21569 "(DS-402) Contact 1 = manufacturer-specific" 21568 "(DS-402) Contacts" 21552 "(DS-402) Input stages" 21536 "(DS-402) Chopper" 21520 "(DS-402) Output stages" 21504 "(DS-402) Power section" 21248 "(DS-402) Operating unit" 21024 "(DS-402) Control, computing circuit" 21008 "(DS-402) Control, measurement circuit" 35328 "(DS-402) Control" 20768 "(DS-402) Supply intermediate circuit" 20761 "(DS-402) Supply low voltage U9 = manufacturer-specific" 20760 "(DS-402) Supply low voltage U8 = manufacturer-specific" 20759 "(DS-402) Supply low voltage U7 = manufacturer-specific" 20758 "(DS-402) Supply low voltage U6 = manufacturer-specific" 20757 "(DS-402) Supply low voltage U5 = manufacturer-specific" 20756 "(DS-402) Supply low voltage U4 = manufacturer-specific" 20755 "(DS-402) Supply low voltage U3 = supply +5 V" 20754 "(DS-402) Supply low voltage U2 = supply +24V" 20753 "(DS-402) Supply low voltage U1 = supply ±15V" 20752 "(DS-402) Supply low voltage" 20736 "(DS-402) Supply" 17440 "(DS-402) Too low temperature supply" 17424 "(DS-402) Excess temperature supply" 17408 "(DS-402) Temperature supply" 17184 "(DS-402) Too low temperature drive" 17168 "(DS-402) Excess temperature drive" 17152 "(DS-402) Temperature drive" 16928 "(DS-402) Field circ. interrupted, too low temperature device" 16912 "(DS-402) Field circ. interrupted, excess temperature device" 16704 "(DS-402) Field circ. interrupted, temperature air outlet" 16688 "(DS-402) Field circ. interrupted, temperature supply air" 16672 "(DS-402) Field circ. interrupted, too low ambient temperature" 16656 "(DS-402) Field circ. interrupted, Excess ambient temperature" 13105 "(DS-402) Field circuit interrupted" 13104 "(DS-402) Field circuit" 13089 "(DS-402) Armature circuit interrupted" 13088 "(DS-402) Armature circuit" 13075 "(DS-402) Output over-voltage phase W " 13074 "(DS-402) Output over-voltage phase V " 13073 "(DS-402) Output over-voltage phase U " 13072 "(DS-402) Output over-voltage" 12848 "(DS-402) Load error" 12834 "(DS-402) DC link under-voltage no. 2" 12833 "(DS-402) DC link under-voltage no. 1" 12832 "(DS-402) DC link under-voltage" 12818 "(DS-402) DC link over voltage no. 2" 12817 "(DS-402) DC link over-voltage no. 1" 12816 "(DS-402) DC link over-voltage" 12610 "(DS-402) Mains frequency too small" 12609 "(DS-402) Mains frequency too great" 12608 "(DS-402) Mains frequency" 12596 "(DS-402) Phase sequence" 12595 "(DS-402) Phase failure L3" 12594 "(DS-402) Phase failure L2" 12593 "(DS-402) Phase failure L1" 12592 "(DS-402) Phase failure" 12579 "(DS-402) Mains under-voltage phase L3" 12578 "(DS-402) Mains under-voltage phase L2" 12577 "(DS-402) Mains under-voltage phase L1" 12576 "(DS-402) Mains under-voltage" 12563 "(DS-402) Mains over-voltage phase L3 " 12562 "(DS-402) Mains over-voltage phase L2" 12561 "(DS-402) Mains over-voltage phase L1" 12560 "(DS-402) Mains over-voltage" 9041 "(DS-402) Load level warning (I2t, thermal state)" 9040 "(DS-402) Load level fault (I2t, thermal state)" 9027 "(DS-402) Earth leakage (motor-side) phase W-U" 9026 "(DS-402) Earth leakage (motor-side) phase V-W" 9025 "(DS-402) Short circuit (motor-side) phases U-V" 9024 "(DS-402) Short circuit (motor-side)" 9011 "(DS-402) Earth leakage (motor-side) phase W" 9010 "(DS-402) Earth leakage (motor-side) phase V" 9009 "(DS-402) Earth leakage (motor-side) phase U" 9008 "(DS-402) Earth leakage (motor-side)" 8992 "(DS-402) Short circuit/earth leakage (motor-side)" 8978 "(DS-402) Device internal, continuous over current no. 2" 8977 "(DS-402) Device internal, continuous over current no. 1" 8976 "(DS-402) Device internal, continuous over current" 8784 "(DS-402) Short circuit (device internal) " 8768 "(DS-402) Earth leakage (device internal)" 8752 "(DS-402) Short circuit/earth leakage (device internal)" 8738 "(DS-402) Continuous over current no.2" 8737 "(DS-402) Continuous over current no.1" 8736 "(DS-402) Continuous over current (device internal)" 8724 "(DS-402) Short circuit (input), over-current in the sequence" 8723 "(DS-402) Short circuit (input), over-current in ramp function" 8722 "(DS-402) Short circuit (input), internal current no.2" 8721 "(DS-402) Short circuit (input), internal current no.1" 8499 "(DS-402) Short circuit phases (input) L3-L1" 8498 "(DS-402) Short circuit phases (input) L2-L3" 8497 "(DS-402) Short circuit phases (input) L1-L2" 8496 "(DS-402) Short circuit (input)" 8483 "(DS-402) Earth leakage (input) phase L3" 8482 "(DS-402) Earth leakage (input) phase L2" 8481 "(DS-402) Earth leakage (input) phase L1" 8480 "(DS-402) Earth leakage (input)" 8464 "(DS-402) Short circuit/earth leakage (input)" 33360 "RPDO timeout" 33344 "Unexpected SYNC data length" 33328 "DAM MPDO not processed, destination object not available" 33312 "PDO length exceeded" 33296 "PDO not processed due to length error" 33104 "Transmit COB-ID collision" 33088 "Recovered from bus off state" 33072 "Life guard error or heartbeat error" 33056 "CAN in error passive mode" 33040 "CAN overrun (objects lost)" ;
 
