@@ -34,6 +34,7 @@ NS_ :
 BS_:
 
 BU_: VirtualNMTMaster PVC BMS_Battery_1 TMS Inverter
+VAL_TABLE_ PVC_Statusword 7 "FORWARD_DISABLE" 6 "CONT_CLOSE" 5 "CONT_OPEN" 4 "DISCHARGE" 3 "PRECHARGE" 2 "ESTOPWAIT" 1 "MC_ON" 0 "MC_OFF" ;
 
 
 BO_ 1813 HBGuard_021: 1 BMS_Battery_1
@@ -3314,7 +3315,7 @@ BA_DEF_DEF_  "CO_NVSEGMENT43" "";
 BA_DEF_DEF_  "CO_NVSEGMENT44" "";
 BA_DEF_DEF_  "CO_NVSEGMENT45" "";
 BA_DEF_DEF_  "OptionLoadDCF" 0;
-BA_DEF_DEF_  "GenMsgSendType" "(null)";
+BA_DEF_DEF_  "GenMsgSendType" "";
 BA_DEF_DEF_  "GenMsgDelayTime" 0;
 BA_DEF_DEF_  "GenMsgCycleTime" 0;
 BA_DEF_DEF_  "GenSigStartValue" 0;
@@ -4221,4 +4222,6 @@ VAL_ 2020 LSS_StoreCfg_ErrCode 255 "Impl_spec_error" 2 "Storage_media_access_err
 VAL_ 2020 LSS_CfgBitTim_ErrCode 255 "Impl_spec_error" 1 "Not_supported" 0 "Success" ;
 VAL_ 2020 LSS_CfgNodeID_ErrCode 255 "Impl_spec_error" 1 "NodeID_Out_Of_Range" 0 "Success" ;
 VAL_ 2020 LSS_S_CS 94 "InquireNodeID" 93 "InquireSerial" 92 "InquireRevision" 91 "InquireProduct" 90 "InquireVendor" 76 "IdentifyNonConfSlave" 79 "IdentifySlave" 23 "StoreConfiguration" 19 "ConfigureBitTiming" 17 "ConfigureNodeID" 68 "SwitchModeSelectConfirm" ;
+VAL_ 394 Statusword 7 "FORWARD_DISABLE" 6 "CONT_CLOSE" 5 "CONT_OPEN" 4 "DISCHARGE" 3 "PRECHARGE" 2 "ESTOPWAIT" 1 "MC_ON" 0 "MC_OFF" ;
+VAL_ 394 I_O_status 9 "forwardStatus" 8 "apmStatus" 7 "contStatus" 6 "dcStatus" 5 "pcStatus" 4 "eStopStatus" 3 "batteryTwoOkStatus" 2 "batteryOneOKStatus" 1 "stoStatus" 0 "keyStatus" ;
 
