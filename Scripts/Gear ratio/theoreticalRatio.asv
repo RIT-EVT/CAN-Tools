@@ -25,8 +25,4 @@ minRPM = min(RPM);
 avgRPM = sum(RPM(2000:2500))/500;
 RPMscale = (1:5000);
 newRPMavg = avgRPM * newGearRatio / currentGearRatio;
-newRPMscale = RPMscale  .* newGearRatio ./ currentGearRatio;
-
-hold on;
-plot(RPMscale)
-plot(newRPMscale)
+newRPMscale = avgRPM *
