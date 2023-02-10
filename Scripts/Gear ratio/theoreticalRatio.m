@@ -18,9 +18,10 @@ currentGearRatio = currbackSproket/currfrontSproket;
 newfrontSproket = 12;
 newbackSproket = 72;
 newGearRatio = newbackSproket/newfrontSproket;
+
 RPM = GT.RPM_actual_;
-maxRPM = max(RPM);
-minRPM = min(RPM);
+% maxRPM = max(RPM);
+% minRPM = min(RPM);
 
 avgRPM = sum(RPM(2000:2500))/500;
 RPMscale = (1:5000);
