@@ -28,16 +28,20 @@ RPM = GT.RPM_actual_;
 avgRPM = sum(RPM(2000:2500))/500;
 RPMscale = (1:5000);
 newRPMavg = avgRPM * newGearRatio / currentGearRatio;
-newRPMscale = RPMscale  .* newGearRatio ./ currentGearRatio;
+newSpeed = (RPMscale ./ newGearRatio) .* (d * pi * 60/63360);
+oldSpeed = (RPMscale ./ currentGearRatio) .* (d * pi * 60 /63360);
+
+
 figure
-plot(RPMscale,RPMscale * d * pi * 60 /63360, 'r', RPMscale, (newRPMscale * d * pi * 60)/63360, 'b')
+plot(RPMscale, oldSpeed, 'r', RPMscale, newSpeed, 'b')
 xlabel('RPM')
 ylabel('Velocity (mph)')
 title('Projected RPM gain')
-
+legend(["New Ratio","Old Ratio"])
+legend("Position",[0.13776,0.79391,0.24861,0.10675])
 
 
 %figure
 
 
-comp = 5000 / (newGearRatio / currentGearRatio)
+comp = 5000 / (newGearRatio / currentGearRatio);
