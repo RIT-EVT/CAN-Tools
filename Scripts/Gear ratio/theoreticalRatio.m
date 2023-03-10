@@ -29,15 +29,16 @@ avgRPM = sum(RPM(2000:2500))/500;
 RPMscale = (1:5000);
 newRPMavg = avgRPM * newGearRatio / currentGearRatio;
 newSpeed = (RPMscale ./ newGearRatio) .* (d * pi * 60/63360);
-oldSpeed = (RPMscale ./ currentGearRatio) .* (d * pi * 60 /63360);
-
+originalSpeed = (RPMscale ./ currentGearRatio) .* (d * pi * 60 /63360);
+example1speed = (RPMscale ./ 5) .* (d * pi * 60 /63360);
+example2speed = (RPMscale ./ 3.5) .* (d * pi * 60 /63360);
 
 figure
-plot(RPMscale, oldSpeed, 'r', RPMscale, newSpeed, 'b')
+plot(RPMscale, originalSpeed, 'r', RPMscale, newSpeed, 'b',RPMscale, example1speed, 'g')
 xlabel('RPM')
 ylabel('Velocity (mph)')
 title('Projected RPM gain')
-legend(["New Ratio","Old Ratio"])
+legend(["New Ratio","Original Ratio"])
 legend("Position",[0.13776,0.79391,0.24861,0.10675])
 
 
