@@ -1,9 +1,9 @@
 [FileInfo]
 CreatedBy=Luke Schrom
-CreationTime=11:09PM
-CreationDate=10-29-2022
-ModificationTime=11:09PM
-ModificationDate=10-29-2022
+CreationTime=09:04PM
+CreationDate=03-27-2023
+ModificationTime=09:04PM
+ModificationDate=03-27-2023
 FileName=PVC.eds
 EDSVersion=4.0
 
@@ -173,17 +173,17 @@ PDOMapping=0
 [1A00]
 ParameterName=Transmit PDO Mapping Parameter 0
 ObjectType=0x9
-SubNumber=3
+SubNumber=18
 
 [1A00sub0]
 ParameterName=NrOfEntries
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
-DefaultValue=2
+DefaultValue=18
 PDOMapping=0
-LowLimit=1
-HighLimit=1
+LowLimit=0
+HighLimit=18
 
 [1A00sub1]
 ParameterName=PDOMapEntry
@@ -198,7 +198,127 @@ ParameterName=Transmit PDO Mapping Parameter 0_sub2
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20020108
+DefaultValue=0x20030B01
+PDOMapping=0
+
+[1A00sub3]
+ParameterName=Transmit PDO Mapping Parameter 0_sub3
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030B01
+PDOMapping=0
+
+[1A00sub4]
+ParameterName=Transmit PDO Mapping Parameter 0_sub4
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030B01
+PDOMapping=0
+
+[1A00sub5]
+ParameterName=Transmit PDO Mapping Parameter 0_sub5
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030B01
+PDOMapping=0
+
+[1A00sub6]
+ParameterName=Transmit PDO Mapping Parameter 0_sub6
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030B01
+PDOMapping=0
+
+[1A00sub7]
+ParameterName=Transmit PDO Mapping Parameter 0_sub7
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030001
+PDOMapping=0
+
+[1A00sub8]
+ParameterName=Transmit PDO Mapping Parameter 0_sub8
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030101
+PDOMapping=0
+
+[1A00sub9]
+ParameterName=Transmit PDO Mapping Parameter 0_sub9
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030201
+PDOMapping=0
+
+[1A00subA]
+ParameterName=Transmit PDO Mapping Parameter 0_subA
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030301
+PDOMapping=0
+
+[1A00subB]
+ParameterName=Transmit PDO Mapping Parameter 0_subB
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030401
+PDOMapping=0
+
+[1A00subC]
+ParameterName=Transmit PDO Mapping Parameter 0_subC
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030501
+PDOMapping=0
+
+[1A00subD]
+ParameterName=Transmit PDO Mapping Parameter 0_subD
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030601
+PDOMapping=0
+
+[1A00subE]
+ParameterName=Transmit PDO Mapping Parameter 0_subE
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030701
+PDOMapping=0
+
+[1A00subF]
+ParameterName=Transmit PDO Mapping Parameter 0_subF
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030801
+PDOMapping=0
+
+[1A00sub10]
+ParameterName=Transmit PDO Mapping Parameter 0_sub10
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030901
+PDOMapping=0
+
+[1A00sub11]
+ParameterName=Transmit PDO Mapping Parameter 0_sub11
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20030A01
 PDOMapping=0
 
 [1A01]
@@ -241,8 +361,9 @@ DefaultValue=0x20020410
 PDOMapping=0
 
 [ManufacturerObjects]
-SupportedObjects=1
+SupportedObjects=2
 1=0x2002
+2=0x2003
 
 [2002]
 ParameterName=PVC Signals
@@ -283,3 +404,93 @@ ObjectType=0x7
 DataType=0x0006
 AccessType=ro
 PDOMapping=1
+
+[2003]
+ParameterName=Statusword
+ObjectType=0x9
+SubNumber=12
+
+[2003sub0]
+ParameterName=gfdbStatus
+ObjectType=0x7
+DataType=0x0001
+AccessType=ro
+DefaultValue=11
+PDOMapping=0
+
+[2003sub1]
+ParameterName=keyInStatus
+ObjectType=0x7
+DataType=0x0001
+AccessType=ro
+PDOMapping=0
+
+[2003sub2]
+ParameterName=stoStatus
+ObjectType=0x7
+DataType=0x0001
+AccessType=ro
+PDOMapping=1
+
+[2003sub3]
+ParameterName=batteryOneOkStatus
+ObjectType=0x7
+DataType=0x0001
+AccessType=ro
+PDOMapping=1
+
+[2003sub4]
+ParameterName=batteryTwoOkStatus
+ObjectType=0x7
+DataType=0x0001
+AccessType=ro
+PDOMapping=1
+
+[2003sub5]
+ParameterName=eStopActiveStatus
+ObjectType=0x7
+DataType=0x0001
+AccessType=ro
+PDOMapping=0
+
+[2003sub6]
+ParameterName=forwardStatus
+ObjectType=0x7
+DataType=0x0001
+AccessType=ro
+PDOMapping=0
+
+[2003sub7]
+ParameterName=pcStatus
+ObjectType=0x7
+DataType=0x0001
+AccessType=ro
+PDOMapping=0
+
+[2003sub8]
+ParameterName=dcStatus
+ObjectType=0x7
+DataType=0x0001
+AccessType=ro
+PDOMapping=0
+
+[2003sub9]
+ParameterName=contStatus
+ObjectType=0x7
+DataType=0x0001
+AccessType=ro
+PDOMapping=0
+
+[2003subA]
+ParameterName=apmStatus
+ObjectType=0x7
+DataType=0x0001
+AccessType=ro
+PDOMapping=0
+
+[2003subB]
+ParameterName=dummy
+ObjectType=0x7
+DataType=0x0001
+AccessType=ro
+PDOMapping=0
