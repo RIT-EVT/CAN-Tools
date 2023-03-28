@@ -1,0 +1,176 @@
+VERSION "'0.8'"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: Host SIM100
+VAL_TABLE_ OpCode_mux 229 "'error flags'" 228 "'battery voltage'" 227 "'voltages Vp and Vn'" 226 "'isolation capacitances'" 225 "'isolation resistances'" 224 "'isolation state'" 11 "'Serial number 3'" 10 "'Serial number 2'" 9 "'Serial number 1'" 8 "'Serial number 0'" 7 "'Version 2'" 6 "'Version 1'" 5 "'Version 0'" 4 " 'Part name 3'" 3 "'Part name 2'" 2 "'Part name 1'" 1 "'Part name 0'" ;
+VAL_TABLE_ SIM100_Request_mux 229 "Request 'error flags'" 228 "Request 'battery voltage'" 227 "Request 'voltages Vp and Vn'" 226 "Request 'isolation capacitances'" 225 "Request 'isolation resistances'" 224 "Request 'isolation state'" 11 "Request 'Serial number 3'" 10 "Request 'Serial number 2'" 9 "Request 'Serial number 1'" 8 "Request 'Serial number 0'" 7 "Request 'Version 2'" 6 "Request 'Version 1'" 5 "Request 'Version 0'" 4 "Request 'Part name 3'" 3 "Request 'Part name 2'" 2 "Request 'Part name 1'" 1 "Request 'Part name 0'" 240 "Set max battery design voltage" 193 "Restart SIM100 " 98 "Turn excitation pulse off" ;
+VAL_TABLE_ Restart_SIM100 19088743 "Signal to restart SIM100" ;
+VAL_TABLE_ Excitation_signal_off -559038945 "Turn off excitation pulse" ;
+
+
+BO_ 2316304641 Request_from_Host: 5 Host
+ SG_ Restart m193 : 15|32@0+ (1,0) [0|0] ""  SIM100
+ SG_ Excitation_pulse_off m98 : 15|32@0+ (1,0) [0|0] ""  SIM100
+ SG_ Max_battery_working_voltage m240 : 15|16@0+ (1,0) [0|0] "V"  SIM100
+ SG_ Request_mux M : 7|8@0+ (1,0) [0|0] ""  SIM100
+
+BO_ 2316304640 SIM100_Report: 8 SIM100
+ SG_ Vp_hi_res m97 : 15|32@0- (1,0) [0|0] "µV"  Host
+ SG_ Vn_hi_res m96 : 15|32@0- (1,0) [0|0] "µV"  Host
+ SG_ Max_battery_working_voltage m240 : 15|16@0+ (1,0) [0|0] "V" Vector__XXX
+ SG_ Temperature m128 : 15|32@0- (1,0) [0|0] "mCelsius"  Host
+ SG_ Serial_number_3 m11 : 8|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Serial_number_2 m10 : 8|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Serial_number_1 m9 : 8|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Serial_number_0 m8 : 8|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Version_2 m7 : 8|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Version_1 m6 : 8|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Version_0 m5 : 8|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Part_name_3 m4 : 8|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Part_name_2 m3 : 8|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Part_name_1 m2 : 8|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Hardware_Error m224 : 15|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Part_name_0 m1 : 8|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Err_CH m229 : 21|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ No_New_Estimates m224 : 14|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ High_Uncertaintly m224 : 13|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ High_Battery_Voltage m224 : 11|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Low_Battery_Voltage m224 : 10|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Isolation_status_bits m224 : 9|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Err_Vpwr m229 : 18|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Err_Vexi m229 : 19|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Err_VxR m229 : 20|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Err_Vx1 m229 : 22|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Err_Vx2 m229 : 23|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Vb_max_uncertainty m228 : 63|8@0+ (1,0) [0|0] "%" Vector__XXX
+ SG_ Vb_max m228 : 47|16@0+ (1,0) [0|0] "V" Vector__XXX
+ SG_ Vb_uncertainty m228 : 39|8@0+ (1,0) [0|0] "%" Vector__XXX
+ SG_ Vb m228 : 23|16@0+ (1,0) [0|0] "V"  Host
+ SG_ Vn_uncertainty m227 : 63|8@0- (1,0) [0|0] "%"  Host
+ SG_ Vn m227 : 47|16@0- (1,0) [0|0] "V"  Host
+ SG_ Vp_uncertainty m227 : 39|8@0- (1,0) [0|0] "%"  Host
+ SG_ Vp m227 : 23|16@0- (1,0) [0|0] "V"  Host
+ SG_ Cn_uncertainty m226 : 63|8@0+ (1,0) [0|0] "%"  Host
+ SG_ Cn m226 : 47|16@0+ (1,0) [0|0] "nF"  Host
+ SG_ Cp_uncertainty m226 : 39|8@0+ (1,0) [0|0] "%"  Host
+ SG_ Cp m226 : 23|16@0+ (1,0) [0|0] "nF"  Host
+ SG_ Rn_uncertainty m225 : 63|8@0+ (1,0) [0|0] ""  Host
+ SG_ Rn m225 : 47|16@0+ (1,0) [0|0] "kOhm"  Host
+ SG_ Rp_uncertainty m225 : 39|8@0+ (1,0) [0|0] "%"  Host
+ SG_ Rp m225 : 23|16@0+ (1,0) [0|0] "kOhm"  Host
+ SG_ Energy_stored_uncertainty m224 : 63|8@0+ (1,0) [0|0] "%"  Host
+ SG_ Energy_stored m224 : 47|16@0+ (1,0) [0|0] "mJ"  Host
+ SG_ Electrical_isolation_uncertainty m224 : 39|8@0+ (1,0) [0|0] "%"  Host
+ SG_ Electrical_isolation m224 : 23|16@0+ (1,0) [0|0] "Ohm/V"  Host
+ SG_ OpCode_mux M : 7|8@0+ (1,0) [0|0] ""  Host
+
+
+
+CM_ SG_ 2316304641 Restart "Restarts the operation of SIM100.";
+CM_ SG_ 2316304641 Excitation_pulse_off "Sending 0xDEADBE1F with SIM_Request_mux = 0x62 disables the excitation pulse of the SIM100.   In order to re-enable it a Restart message has to be sent.";
+CM_ SG_ 2316304641 Max_battery_working_voltage "Sets the maximum battery operating voltage (in Volts)";
+CM_ BO_ 2316304640 "Response of SIM100 to Set Max_battery_working_voltage request from Host";
+CM_ SG_ 2316304640 Vp_hi_res "'Vp_hi_res' signal is the positive  terminal voltage with reference to chassis, reported in µV. It is calculated as the average over the last second and it is updated every 500 ms";
+CM_ SG_ 2316304640 Vn_hi_res "'Vn_hi_res' signal is the negative terminal voltage with reference to chassis, reported in µV. It is calculated as the average over the last second and it is updated every 500 ms";
+CM_ SG_ 2316304640 Max_battery_working_voltage "Sets the maximum battery operating voltage (in Volts)";
+CM_ SG_ 2316304640 Hardware_Error "0 – No hardware error
+1 – Hardware error. The host should perform a “Read SIM100 Error Flags” operation in order to resolve the issue";
+CM_ SG_ 2316304640 Err_CH "0 - CH1 and CH2 connections are good (chassis connections)
+1 - CH1 or CH2 connection is broken";
+CM_ SG_ 2316304640 No_New_Estimates "0 – The flag is zero when new and unread isolation values have been calculated.
+1 – Isolation values have not been updated since the last read. ";
+CM_ SG_ 2316304640 High_Uncertaintly "0 – Uncertainty of calculated values is less than 5%
+1 – Uncertainty values are higher than 5%.";
+CM_ SG_ 2316304640 High_Battery_Voltage "0 – Observed battery voltage is less than the specified Maximum Working Voltage.
+1 – The observed battery voltage value is higher than the specified maximum working voltage value.";
+CM_ SG_ 2316304640 Low_Battery_Voltage "0 – Observed battery voltage higher than 15 V
+1 – Observed battery voltage less than 15 V.";
+CM_ SG_ 2316304640 Isolation_status_bits "00 – Isolation status OK
+10 – Warning. Isolation resistance < 500 Ohm/V limit.
+11- Isolation fault. Isolation resistance <100 Ohm/V limit.";
+CM_ SG_ 2316304640 Err_Vpwr "0 - Power supply level is good
+1 - Power supply level is out of range";
+CM_ SG_ 2316304640 Err_Vexi "0 - Excitation voltage level is correct
+1 - Excitation voltage level is out of specs";
+CM_ SG_ 2316304640 Err_VxR "0 - VX1 and VX2 connections are correct
+1 - VX1 and VX2 connections are reversed";
+CM_ SG_ 2316304640 Err_Vx1 "0 - VX1 connection is good (SIM100 to battery positive terminal connection)
+1 - VX1 connection is brokenCH0";
+CM_ SG_ 2316304640 Err_Vx2 "0 - VX2 connection is good (SIM100 to battery negative terminal connection)
+1 - VX2 connection is broken";
+CM_ SG_ 2316304640 Vb_max "Maximum value of IT power supply.  Must be set by the Host.  If not set by Host it becomes the maximum actual value recorded by SIM100MOD.  ";
+CM_ SG_ 2316304640 Vb "Reports voltage of the monitored IT power system.  The reported value is averaged and updated every100 ms.";
+CM_ SG_ 2316304640 Vn "Potential between negative IT system power rail and chassis.  
+Value is the average between two readings by the Host.  It is updated every 10 ms. 
+If two successive readings occur faster than 10 ms  SIM100 will report the previous value.";
+CM_ SG_ 2316304640 Vp "Potential between positive IT system power rail and chassis.  
+Value is the average between two readings by the Host.  It is updated every 10 ms. 
+If two successive readings occur faster than 10 ms  SIM100 will report the previously calculated value.";
+CM_ SG_ 2316304640 Cn_uncertainty "Cn estimate uncertainty expressed in %";
+CM_ SG_ 2316304640 Cn "Estimated value of capacitances Cn in nF. 
+";
+CM_ SG_ 2316304640 Cp_uncertainty "Cp estimate uncertainty expressed in % 
+If the battery voltage is below 15 Volts or the battery is disconnected Cp returns the parallel combination value of Cp||Cn, and Cn returns 0xFFFF with uncertainty for Cn set to 0x00.";
+CM_ SG_ 2316304640 Cp "Estimated values of capacitance Cp.
+";
+CM_ SG_ 2316304640 Energy_stored "This is the maximum energy that can be stored in the parallel combination of Y capacitors between the battery and chassis at the maximum working voltage.";
+CM_ SG_ 2316304640 Electrical_isolation "Minimum resistance isolation path between the IT grounded system and the chassis. The value is calculated based on the battery’s Maximum Working Voltage.";
+CM_ SG_ 2316304640 OpCode_mux "Identifies the contents of the message";
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "ProtocolType" "CANopen";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "BusType" "CAN";
+VAL_ 2316304641 Restart 19088743 "Signal to restart SIM100" ;
+VAL_ 2316304641 Excitation_pulse_off -559038945 "Turn off excitation pulse" ;
+VAL_ 2316304641 Request_mux 97 "Request 'Vp high resolution'" 96 "Request 'Vn high resolution'" 128 "Request 'Temperature'" 229 "Request 'error flags'" 228 "Request 'battery voltage'" 227 "Request 'voltages Vp and Vn'" 226 "Request 'isolation capacitances'" 225 "Request 'isolation resistances'" 224 "Request 'isolation state'" 11 "Request 'Serial number 3'" 10 "Request 'Serial number 2'" 9 "Request 'Serial number 1'" 8 "Request 'Serial number 0'" 7 "Request 'Version 2'" 6 "Request 'Version 1'" 5 "Request 'Version 0'" 4 "Request 'Part name 3'" 3 "Request 'Part name 2'" 2 "Request 'Part name 1'" 1 "Request 'Part name 0'" 240 "Set max battery design voltage" 193 "Restart SIM100 " 98 "Turn excitation pulse off" ;
+VAL_ 2316304640 OpCode_mux 97 "'Vp high resolution'" 96 "'Vn high resolution'" 240 "'Max battery design voltage'" 128 "'Temperature'" 229 "'error flags'" 228 "'battery voltage'" 227 "'voltages Vp and Vn'" 226 "'isolation capacitances'" 225 "'isolation resistances'" 224 "'isolation state'" 11 "'Serial number 3'" 10 "'Serial number 2'" 9 "'Serial number 1'" 8 "'Serial number 0'" 7 "'Version 2'" 6 "'Version 1'" 5 "'Version 0'" 4 " 'Part name 3'" 3 "'Part name 2'" 2 "'Part name 1'" 1 "'Part name 0'" ;
+SIG_GROUP_ 2316304640 Serial_number 1 : Serial_number_3 Serial_number_2 Serial_number_1 Serial_number_0;
+SIG_GROUP_ 2316304640 Version 1 : Version_2 Version_1 Version_0;
+SIG_GROUP_ 2316304640 Part_number 1 : Part_name_3 Part_name_2 Part_name_1 Part_name_0;
+SIG_GROUP_ 2316304640 Error_flags 1 : Err_CH Err_Vpwr Err_Vexi Err_VxR Err_Vx1 Err_Vx2;
+SIG_GROUP_ 2316304640 battery_voltage 1 : Vb_max_uncertainty Vb_max Vb_uncertainty Vb;
+SIG_GROUP_ 2316304640 voltages_Vp_and_Vn 1 : Vn_uncertainty Vn Vp_uncertainty Vp;
+SIG_GROUP_ 2316304640 isolation_capacitances 1 : Cn_uncertainty Cn Cp_uncertainty Cp;
+SIG_GROUP_ 2316304640 isolation_resistances 1 : Rn_uncertainty Rn Rp_uncertainty Rp;
+SIG_GROUP_ 2316304640 isolation_state 1 : Energy_stored_uncertainty Energy_stored Electrical_isolation_uncertainty Electrical_isolation;
+SIG_GROUP_ 2316304640 Status_bits 1 : Hardware_Error No_New_Estimates High_Uncertaintly High_Battery_Voltage Low_Battery_Voltage Isolation_status_bits;
+
+SG_MUL_VAL_ 2316304640 Hardware_Error OpCode_mux 224-229;
+SG_MUL_VAL_ 2316304640 No_New_Estimates OpCode_mux 224-229;
+SG_MUL_VAL_ 2316304640 High_Uncertaintly OpCode_mux 224-229;
+SG_MUL_VAL_ 2316304640 High_Battery_Voltage OpCode_mux 224-229;
+SG_MUL_VAL_ 2316304640 Low_Battery_Voltage OpCode_mux 224-229;
+SG_MUL_VAL_ 2316304640 Isolation_status_bits OpCode_mux 224-229;
