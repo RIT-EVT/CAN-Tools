@@ -166,17 +166,17 @@ BO_ 145 EMCY_017: 8 IMU
  SG_ ErrorRegisterGeneric : 16|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1808 HBGuard_016: 1 PVC
+BO_ 1802 HBGuard_010: 1 PVC
  SG_ Toggle : 7|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ State : 0|7@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1424 SSDO_016: 8 PVC
+BO_ 1418 SSDO_010: 8 PVC
  SG_ SCS M : 5|3@1+ (1,0) [0|6] "" Vector__XXX
 
-BO_ 1552 CSDO_016: 8 Vector__XXX
+BO_ 1546 CSDO_010: 8 Vector__XXX
  SG_ CCS M : 5|3@1+ (1,0) [0|6] ""  PVC
 
-BO_ 144 EMCY_016: 8 PVC
+BO_ 138 EMCY_010: 8 PVC
  SG_ ManufacturerSpecific5 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ManufacturerSpecific4 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ManufacturerSpecific3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -2814,6 +2814,30 @@ BO_ 146 EMCY_018: 8 Vector__XXX
  SG_ ErrorRegisterGeneric : 16|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 1808 HBGuard_016: 1 Vector__XXX
+ SG_ Toggle : 7|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ State : 0|7@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1424 SSDO_016: 8 Vector__XXX
+
+BO_ 1552 CSDO_016: 8 Vector__XXX
+
+BO_ 144 EMCY_016: 8 Vector__XXX
+ SG_ ManufacturerSpecific5 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacturerSpecific4 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacturerSpecific3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacturerSpecific2 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ManufacturerSpecific1 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterManufSpecific : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterReserved : 22|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterProfileSpecific : 21|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterCommunication : 20|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterTemperature : 19|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterVoltage : 18|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterCurrent : 17|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorRegisterGeneric : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+
 BO_ 1807 HBGuard_015: 1 Vector__XXX
  SG_ Toggle : 7|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ State : 0|7@1+ (1,0) [0|0] "" Vector__XXX
@@ -2919,30 +2943,6 @@ BO_ 1419 SSDO_011: 8 Vector__XXX
 BO_ 1547 CSDO_011: 8 Vector__XXX
 
 BO_ 139 EMCY_011: 8 Vector__XXX
- SG_ ManufacturerSpecific5 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ManufacturerSpecific4 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ManufacturerSpecific3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ManufacturerSpecific2 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ManufacturerSpecific1 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterManufSpecific : 23|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterReserved : 22|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterProfileSpecific : 21|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterCommunication : 20|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterTemperature : 19|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterVoltage : 18|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterCurrent : 17|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorRegisterGeneric : 16|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
-
-BO_ 1802 HBGuard_010: 1 Vector__XXX
- SG_ Toggle : 7|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ State : 0|7@1+ (1,0) [0|0] "" Vector__XXX
-
-BO_ 1418 SSDO_010: 8 Vector__XXX
-
-BO_ 1546 CSDO_010: 8 Vector__XXX
-
-BO_ 138 EMCY_010: 8 Vector__XXX
  SG_ ManufacturerSpecific5 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ManufacturerSpecific4 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ ManufacturerSpecific3 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -3284,28 +3284,13 @@ BO_ 401 N17_TPDO0: 8 IMU
  SG_ VECTOR_GYROSCOPE_X : 16|16@1- (1,0) [0|0] "" Vector__XXX
  SG_ VECTOR_EULER_X : 0|16@1- (1,0) [0|0] "" Vector__XXX
 
-BO_ 656 N16_TPDO1: 6 PVC
+BO_ 650 N10_TPDO1: 6 PVC
  SG_ Baseplate_temperature : 32|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Output_voltage : 16|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Input_voltage : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 400 N16_TPDO0: 4 PVC
- SG_ apmStatus : 31|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ contStatus : 30|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ dcStatus : 29|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ pcStatus : 28|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ forwardStatus : 27|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ eStopActiveStatus : 26|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ batteryTwoOkStatus : 25|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ batteryOneOkStatus : 24|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ stoStatus : 23|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ keyInStatus : 22|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ gfdbStatus : 21|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ dummy_pos20 : 20|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ dummy_pos19 : 19|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ dummy_pos18 : 18|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ dummy_pos17 : 17|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ dummy_pos16 : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 394 N10_TPDO0: 3 PVC
+ SG_ Statusword : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ I_O_status : 0|16@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 393 N9_TPDO0: 8 Thermocouple
@@ -3693,8 +3678,8 @@ BA_ "CO_NVSEGMENT42" BU_ IMU "";
 BA_ "CO_NVSEGMENT43" BU_ IMU "";
 BA_ "CO_NVSEGMENT44" BU_ IMU "";
 BA_ "CO_NVSEGMENT45" BU_ IMU "";
-BA_ "CO_ID" BU_ PVC 16;
-BA_ "CO_DCF" BU_ PVC "..\D016.DCF";
+BA_ "CO_ID" BU_ PVC 10;
+BA_ "CO_DCF" BU_ PVC "..\D010.DCF";
 BA_ "CO_NVSEGMENT0" BU_ PVC "";
 BA_ "CO_NVSEGMENT1" BU_ PVC "";
 BA_ "CO_NVSEGMENT2" BU_ PVC "";
@@ -3905,10 +3890,10 @@ BA_ "CO_MsgCategory" BO_ 1809 505;
 BA_ "CO_MsgCategory" BO_ 1425 410;
 BA_ "CO_MsgCategory" BO_ 1553 405;
 BA_ "CO_MsgCategory" BO_ 145 205;
-BA_ "CO_MsgCategory" BO_ 1808 505;
-BA_ "CO_MsgCategory" BO_ 1424 410;
-BA_ "CO_MsgCategory" BO_ 1552 405;
-BA_ "CO_MsgCategory" BO_ 144 205;
+BA_ "CO_MsgCategory" BO_ 1802 505;
+BA_ "CO_MsgCategory" BO_ 1418 410;
+BA_ "CO_MsgCategory" BO_ 1546 405;
+BA_ "CO_MsgCategory" BO_ 138 205;
 BA_ "CO_MsgCategory" BO_ 1801 505;
 BA_ "CO_MsgCategory" BO_ 1417 410;
 BA_ "CO_MsgCategory" BO_ 1545 405;
@@ -4345,6 +4330,10 @@ BA_ "CO_MsgCategory" BO_ 1810 505;
 BA_ "CO_MsgCategory" BO_ 1426 410;
 BA_ "CO_MsgCategory" BO_ 1554 405;
 BA_ "CO_MsgCategory" BO_ 146 205;
+BA_ "CO_MsgCategory" BO_ 1808 505;
+BA_ "CO_MsgCategory" BO_ 1424 410;
+BA_ "CO_MsgCategory" BO_ 1552 405;
+BA_ "CO_MsgCategory" BO_ 144 205;
 BA_ "CO_MsgCategory" BO_ 1807 505;
 BA_ "CO_MsgCategory" BO_ 1423 410;
 BA_ "CO_MsgCategory" BO_ 1551 405;
@@ -4365,10 +4354,6 @@ BA_ "CO_MsgCategory" BO_ 1803 505;
 BA_ "CO_MsgCategory" BO_ 1419 410;
 BA_ "CO_MsgCategory" BO_ 1547 405;
 BA_ "CO_MsgCategory" BO_ 139 205;
-BA_ "CO_MsgCategory" BO_ 1802 505;
-BA_ "CO_MsgCategory" BO_ 1418 410;
-BA_ "CO_MsgCategory" BO_ 1546 405;
-BA_ "CO_MsgCategory" BO_ 138 205;
 BA_ "CO_MsgCategory" BO_ 1799 505;
 BA_ "CO_MsgCategory" BO_ 1415 410;
 BA_ "CO_MsgCategory" BO_ 1543 405;
@@ -4418,8 +4403,8 @@ BA_ "CO_MsgCategory" BO_ 416 305;
 BA_ "CO_MsgCategory" BO_ 913 325;
 BA_ "CO_MsgCategory" BO_ 657 315;
 BA_ "CO_MsgCategory" BO_ 401 305;
-BA_ "CO_MsgCategory" BO_ 656 315;
-BA_ "CO_MsgCategory" BO_ 400 305;
+BA_ "CO_MsgCategory" BO_ 650 315;
+BA_ "CO_MsgCategory" BO_ 394 305;
 BA_ "CO_MsgCategory" BO_ 393 305;
 BA_ "CO_MsgCategory" BO_ 1160 335;
 BA_ "CO_MsgCategory" BO_ 648 315;
@@ -4502,26 +4487,11 @@ BA_ "GenSigStartValue" SG_ 401 VECTOR_ACCELEROMETER_X 0;
 BA_ "GenSigStartValue" SG_ 401 VECTOR_LINEAR_ACCEL_X 0;
 BA_ "GenSigStartValue" SG_ 401 VECTOR_GYROSCOPE_X 0;
 BA_ "GenSigStartValue" SG_ 401 VECTOR_EULER_X 0;
-BA_ "GenSigStartValue" SG_ 656 Baseplate_temperature 0;
-BA_ "GenSigStartValue" SG_ 656 Output_voltage 0;
-BA_ "GenSigStartValue" SG_ 656 Input_voltage 0;
-BA_ "GenSigStartValue" SG_ 400 apmStatus 0;
-BA_ "GenSigStartValue" SG_ 400 contStatus 0;
-BA_ "GenSigStartValue" SG_ 400 dcStatus 0;
-BA_ "GenSigStartValue" SG_ 400 pcStatus 0;
-BA_ "GenSigStartValue" SG_ 400 forwardStatus 0;
-BA_ "GenSigStartValue" SG_ 400 eStopActiveStatus 0;
-BA_ "GenSigStartValue" SG_ 400 batteryTwoOkStatus 0;
-BA_ "GenSigStartValue" SG_ 400 batteryOneOkStatus 0;
-BA_ "GenSigStartValue" SG_ 400 stoStatus 0;
-BA_ "GenSigStartValue" SG_ 400 keyInStatus 0;
-BA_ "GenSigStartValue" SG_ 400 gfdbStatus 0;
-BA_ "GenSigStartValue" SG_ 400 dummy_pos20 0;
-BA_ "GenSigStartValue" SG_ 400 dummy_pos19 0;
-BA_ "GenSigStartValue" SG_ 400 dummy_pos18 0;
-BA_ "GenSigStartValue" SG_ 400 dummy_pos17 0;
-BA_ "GenSigStartValue" SG_ 400 dummy_pos16 0;
-BA_ "GenSigStartValue" SG_ 400 I_O_status 0;
+BA_ "GenSigStartValue" SG_ 650 Baseplate_temperature 0;
+BA_ "GenSigStartValue" SG_ 650 Output_voltage 0;
+BA_ "GenSigStartValue" SG_ 650 Input_voltage 0;
+BA_ "GenSigStartValue" SG_ 394 Statusword 0;
+BA_ "GenSigStartValue" SG_ 394 I_O_status 0;
 BA_ "GenSigStartValue" SG_ 393 Temp_3 0;
 BA_ "GenSigStartValue" SG_ 393 Temp_2 0;
 BA_ "GenSigStartValue" SG_ 393 Temp_1 0;
@@ -4552,10 +4522,10 @@ VAL_ 1809 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1425 SCS 2 "Upload" 1 "Download" ;
 VAL_ 1553 CCS 2 "Upload" 1 "Download" ;
 VAL_ 145 ErrorCode 33360 "RPDO timeout" 33344 "Unexpected SYNC data length" 33328 "DAM MPDO not processed, destination object not available" 33312 "PDO length exceeded" 33296 "PDO not processed due to length error" 33104 "Transmit COB-ID collision" 33088 "Recovered from bus off state" 33072 "Life guard error or heartbeat error" 33056 "CAN in error passive mode" 33040 "CAN overrun (objects lost)" ;
-VAL_ 1808 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
-VAL_ 1424 SCS 2 "Upload" 1 "Download" ;
-VAL_ 1552 CCS 2 "Upload" 1 "Download" ;
-VAL_ 144 ErrorCode 33360 "RPDO timeout" 33344 "Unexpected SYNC data length" 33328 "DAM MPDO not processed, destination object not available" 33312 "PDO length exceeded" 33296 "PDO not processed due to length error" 33104 "Transmit COB-ID collision" 33088 "Recovered from bus off state" 33072 "Life guard error or heartbeat error" 33056 "CAN in error passive mode" 33040 "CAN overrun (objects lost)" ;
+VAL_ 1802 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
+VAL_ 1418 SCS 2 "Upload" 1 "Download" ;
+VAL_ 1546 CCS 2 "Upload" 1 "Download" ;
+VAL_ 138 ErrorCode 33360 "RPDO timeout" 33344 "Unexpected SYNC data length" 33328 "DAM MPDO not processed, destination object not available" 33312 "PDO length exceeded" 33296 "PDO not processed due to length error" 33104 "Transmit COB-ID collision" 33088 "Recovered from bus off state" 33072 "Life guard error or heartbeat error" 33056 "CAN in error passive mode" 33040 "CAN overrun (objects lost)" ;
 VAL_ 1801 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1417 SCS 2 "Upload" 1 "Download" ;
 VAL_ 1545 CCS 2 "Upload" 1 "Download" ;
@@ -4674,19 +4644,20 @@ VAL_ 1813 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1812 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1811 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1810 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
+VAL_ 1808 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
+VAL_ 144 ErrorCode 33360 "RPDO timeout" 33344 "Unexpected SYNC data length" 33328 "DAM MPDO not processed, destination object not available" 33312 "PDO length exceeded" 33296 "PDO not processed due to length error" 33104 "Transmit COB-ID collision" 33088 "Recovered from bus off state" 33072 "Life guard error or heartbeat error" 33056 "CAN in error passive mode" 33040 "CAN overrun (objects lost)" ;
 VAL_ 1807 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1806 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1805 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1804 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1803 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
-VAL_ 1802 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1799 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1798 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1797 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1796 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1795 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1794 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
-VAL_ 0 Node_ID 36 "BMS_1_1" 35 "BMS_1_0" 33 "BMS_0_2" 32 "BMS_0_1" 17 "IMU" 16 "PVC" 9 "Thermocouple" 8 "TMS" 1 "MC" 0 "All" ;
+VAL_ 0 Node_ID 36 "BMS_1_1" 35 "BMS_1_0" 33 "BMS_0_2" 32 "BMS_0_1" 17 "IMU" 10 "PVC" 9 "Thermocouple" 8 "TMS" 1 "MC" 0 "All" ;
 VAL_ 0 CS 130 "Reset Communication" 129 "Reset Node" 128 "Enter Pre-Operational" 2 "Stop" 1 "Start" ;
 VAL_ 2021 LSS_TableIndex 8 "10" 7 "20" 6 "50" 5 "100" 4 "125" 3 "250" 2 "500" 1 "800" 0 "1000" ;
 VAL_ 2021 LSS_TableSelector 0 "Std_CiA_Table" ;
