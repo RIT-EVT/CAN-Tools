@@ -1,0 +1,101 @@
+figure
+subplot(4, 1, 1)
+plot(signalTimetable1.Time, signalTimetable1.Current_Torque_Actual_Value/1000, "r")
+title("{\itCurrent Torque Actual Value} Signal from {\itN1 TPDO2} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Torque")
+subplot(4, 1, 2)
+plot(signalTimetable2.Time, signalTimetable2.DC_link_circuit_voltage/10, "b")
+title("{\itDC link circuit voltage} Signal from {\itN1 TPDO1} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Voltage")
+subplot(4, 1, 3)
+plot(signalTimetable1.Time, signalTimetable1.Electrical_angle, "y")
+title("{\itElectrical angle} Signal from {\itN1 TPDO2} Message", "FontWeight", "bold")
+xlabel("Timestamp")
+ylabel("Angle")
+subplot(4, 1, 4)
+plot(signalTimetable3.Time, signalTimetable3.Position_actual_value, "g")
+title("{\itPosition Actual Value} Signal from {\itN1 TPDO0} Message", "FontWeight","bold")
+xlabel("Timestamp")
+ylabel("Postion")
+%%%
+figure
+subplot(4, 1, 1)
+plot(signalTimetable4.Time, signalTimetable4.Temp_1/1000, "r")
+title("{\itTemp 1} Signal from {\itN10 TPDO0} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Temp")
+
+subplot(4, 1, 2)
+plot(signalTimetable4.Time, signalTimetable4.Temp_2/1000, "b")
+title("{\itTemp 2} Signal from {\itN10 TPDO0} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Temp")
+
+subplot(4, 1, 3)
+plot(signalTimetable5.Time, signalTimetable5.Temp_3/1000, "y")
+title("{\itTemp 3} Signal from {\itN10 TPDO1} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Temp")
+
+subplot(4, 1, 4)
+plot(signalTimetable5.Time, signalTimetable5.Temp_4/1000, "g")
+title("{\itTemp 4} Signal from {\itN10 TPDO1} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Temp")
+
+%%%
+
+figure
+subplot(4, 1, 1)
+plot(signalTimetable6.Time, signalTimetable6.Volt_1/1000, "r")
+title("{\itVolt 1} Signal from {\itN10 TPDO2} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Volts")
+
+subplot(4, 1, 2)
+plot(signalTimetable6.Time, signalTimetable6.Volt_2/1000, "b")
+title("{\itVolt 2} Signal from {\itN10 TPDO2} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Volts")
+
+subplot(4, 1, 3)
+plot(signalTimetable7.Time, signalTimetable7.Volt_3/1000, "y")
+title("{\itVolt 3} Signal from {\itN10 TPDO3} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Volts")
+
+subplot(4, 1, 4)
+plot(signalTimetable7.Time, signalTimetable7.Volt_4/1000, "g")
+title("{\itVolt 4} Signal from {\itN10 TPDO3} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Volts")
+
+%%%
+
+figure
+subplot(4, 1, 1)
+plot(signalTimetable3.Time, signalTimetable3.Statusword, "r")
+title("{\itstatusword 1} Signal from {\itN1 TPDO2} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Volts")
+
+subplot(4, 1, 2)
+plot(signalTimetable3.Time, signalTimetable2.Motor_temperature, "b")
+title("{\itMotor Temperature} Signal from {\itN1 TPDO1} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Volts")
+
+subplot(4, 1, 3)
+plot(signalTimetable2.Time, signalTimetable2.Controller_temperature, "y")
+title("{\itController Temperature} Signal from {\itN1 TPDO2} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Volts")
+
+subplot(4, 1, 4)
+plot(signalTimetable7.Time, signalTimetable7.Volt_4/1000, "g")
+title("{\itVolt 4} Signal from {\itN10 TPDO3} Message", "FontWeight", "bold")
+% xlabel("Timestamp")
+ylabel("Volts")
+
