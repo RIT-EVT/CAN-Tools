@@ -11,7 +11,7 @@ end
 mdfFinalize(fullfile(path,file));
 
 mdfObj = mdf(fullfile(path,file));
-canDB = canDatabase("DEV1_4_1.dbc");
+canDB = canDatabase("DEV1_4_6.dbc");
 channelList(mdfObj, "CAN_DataFrame", "ExactMatch", true);
 
 canData = read(mdfObj, 8);
