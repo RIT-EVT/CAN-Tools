@@ -1,0 +1,7 @@
+%figure("Name","N1_TPDO0");stackedplot(signalTimetable.N1_TPDO0)
+%figure("Name","N1_TPDO1");stackedplot(signalTimetable.N1_TPDO1)
+%figure("Name","N1_TPDO2");stackedplot(signalTimetable.N1_TPDO2)
+%figure("Name","N10_TPDO0");stackedplot(signalTimetable.N10_TPDO0, "LineStyle","-","MarkerSize",2, "Units","points")
+%figure("Name","N10_TPDO1");stackedplot(signalTimetable.N10_TPDO1)
+%figure("Name","N10_TPDO2");stackedplot(signalTimetable.N10_TPDO2)
+%figure("Name","N10_TPDO3");stackedplot(signalTimetable.N10_TPDO3)

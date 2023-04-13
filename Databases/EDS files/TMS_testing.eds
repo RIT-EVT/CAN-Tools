@@ -2,10 +2,10 @@
 CreatedBy=Luke Schrom
 ModifiedBy=Luke Schrom
 Description=TMS EDS
-CreationTime=07:17PM
-CreationDate=11-28-2022
-ModificationTime=07:17PM
-ModificationDate=11-28-2022
+CreationTime=07:58PM
+CreationDate=04-06-2023
+ModificationTime=07:58PM
+ModificationDate=04-06-2023
 FileName=TMS_testing.eds
 EDSVersion=4.0
 
@@ -105,18 +105,16 @@ AccessType=ro
 PDOMapping=0
 
 [OptionalObjects]
-SupportedObjects=11
+SupportedObjects=9
 1=0x1800
 2=0x1801
 3=0x1802
-4=0x1803
-5=0x1A00
-6=0x1A01
-7=0x1A02
-8=0x1A03
-9=0x6001
-10=0x6002
-11=0x6003
+4=0x1A00
+5=0x1A01
+6=0x1A02
+7=0x6001
+8=0x6002
+9=0x6003
 
 [1800]
 ParameterName=Transmit PDO Communication Parameter 0
@@ -300,88 +298,27 @@ AccessType=rw
 DefaultValue=0
 PDOMapping=0
 
-[1803]
-ParameterName=Transmit PDO Communication Parameter 3
-ObjectType=0x9
-SubNumber=7
-
-[1803sub0]
-ParameterName=Highest sub-index supported
-ObjectType=0x7
-DataType=0x0005
-AccessType=ro
-DefaultValue=6
-PDOMapping=0
-LowLimit=0x02
-HighLimit=0x06
-
-[1803sub1]
-ParameterName=COB-ID
-ObjectType=0x7
-DataType=0x0007
-AccessType=ro
-DefaultValue=$NODEID+0x480
-PDOMapping=0
-
-[1803sub2]
-ParameterName=TransmissionType
-ObjectType=0x7
-DataType=0x0005
-AccessType=ro
-PDOMapping=0
-
-[1803sub3]
-ParameterName=Inhibit Time
-ObjectType=0x7
-DataType=0x0006
-AccessType=rw
-DefaultValue=0x0000
-PDOMapping=0
-
-[1803sub4]
-ParameterName=Compatibility Entry
-ObjectType=0x7
-DataType=0x0005
-AccessType=ro
-PDOMapping=0
-
-[1803sub5]
-ParameterName=Event Timer
-ObjectType=0x7
-DataType=0x0006
-AccessType=rw
-DefaultValue=0
-PDOMapping=0
-
-[1803sub6]
-ParameterName=SYNC start value
-ObjectType=0x7
-DataType=0x0005
-AccessType=rw
-DefaultValue=0
-PDOMapping=0
-
 [1A00]
 ParameterName=Transmit PDO Mapping Parameter 0
 ObjectType=0x9
-SubNumber=3
+SubNumber=5
 
 [1A00sub0]
 ParameterName=NrOfEntries_1
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
-DefaultValue=2
+DefaultValue=4
 PDOMapping=0
 LowLimit=0
-HighLimit=2
+HighLimit=4
 
 [1A00sub1]
 ParameterName=PDOMapEntry_1
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x60010020
+DefaultValue=0x60010010
 PDOMapping=0
 
 [1A00sub2]
@@ -389,16 +326,32 @@ ParameterName=PDOMapEntry_2
 ObjectType=0x7
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x60010120
+DefaultValue=0x60010110
+PDOMapping=0
+
+[1A00sub3]
+ParameterName=Transmit PDO Mapping Parameter 0_sub3
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60020010
+PDOMapping=0
+
+[1A00sub4]
+ParameterName=Transmit PDO Mapping Parameter 0_sub4
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60020110
 PDOMapping=0
 
 [1A01]
-ParameterName=Transmit PDO Mapping Parameter 1
+ParameterName=Transmit PDO Mapping Parameter 2
 ObjectType=0x9
 SubNumber=3
 
 [1A01sub0]
-ParameterName=NrOfEntries_2
+ParameterName=NrOfEntries_3
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
@@ -412,7 +365,7 @@ ParameterName=PDOMapEntry_1
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x60020020
+DefaultValue=0x60030020
 PDOMapping=0
 
 [1A01sub2]
@@ -420,16 +373,16 @@ ParameterName=PDOMapEntry_2
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x60020120
+DefaultValue=0x60030120
 PDOMapping=0
 
 [1A02]
-ParameterName=Transmit PDO Mapping Parameter 2
+ParameterName=Transmit PDO Mapping Parameter 3
 ObjectType=0x9
 SubNumber=3
 
 [1A02sub0]
-ParameterName=NrOfEntries_3
+ParameterName=NrOfEntries_4
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
@@ -443,41 +396,10 @@ ParameterName=PDOMapEntry_1
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x60030020
-PDOMapping=0
-
-[1A02sub2]
-ParameterName=PDOMapEntry_2
-ObjectType=0x7
-DataType=0x0007
-AccessType=ro
-DefaultValue=0x60030120
-PDOMapping=0
-
-[1A03]
-ParameterName=Transmit PDO Mapping Parameter 3
-ObjectType=0x9
-SubNumber=3
-
-[1A03sub0]
-ParameterName=NrOfEntries_4
-ObjectType=0x7
-DataType=0x0005
-AccessType=ro
-DefaultValue=2
-PDOMapping=0
-LowLimit=0
-HighLimit=2
-
-[1A03sub1]
-ParameterName=PDOMapEntry_1
-ObjectType=0x7
-DataType=0x0007
-AccessType=ro
 DefaultValue=0x60030220
 PDOMapping=0
 
-[1A03sub2]
+[1A02sub2]
 ParameterName=PDOMapEntry_2
 ObjectType=0x7
 DataType=0x0007
@@ -493,7 +415,7 @@ SubNumber=2
 [6001sub0]
 ParameterName=Temp_1
 ObjectType=0x7
-DataType=0x0007
+DataType=0x0006
 AccessType=ro
 PDOMapping=1
 LowLimit=0
@@ -502,7 +424,7 @@ HighLimit=494967295
 [6001sub1]
 ParameterName=Temp_2
 ObjectType=0x7
-DataType=0x0007
+DataType=0x0006
 AccessType=ro
 PDOMapping=1
 LowLimit=0
@@ -516,7 +438,7 @@ SubNumber=2
 [6002sub0]
 ParameterName=Temp_3
 ObjectType=0x7
-DataType=0x0007
+DataType=0x0006
 AccessType=ro
 PDOMapping=1
 LowLimit=0
@@ -525,7 +447,7 @@ HighLimit=494967295
 [6002sub1]
 ParameterName=Temp_4
 ObjectType=0x7
-DataType=0x0007
+DataType=0x0006
 AccessType=ro
 PDOMapping=1
 LowLimit=0

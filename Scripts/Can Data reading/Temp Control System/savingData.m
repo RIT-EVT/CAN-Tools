@@ -1,0 +1,7 @@
+save("N1_TPDO0.mat", "N1_TPDO0")
+save("N1_TPDO1.mat", "N1_TPDO1")
+save("N1_TPDO2.mat", "N1_TPDO2")
+save("N10_TPDO0.mat", "N10_TPDO0")
+save("N10_TPDO1.mat", "N10_TPDO1")
+save("N10_TPDO2.mat", "N10_TPDO2")
+save("N10_TPDO3.mat", "N10_TPDO3")
