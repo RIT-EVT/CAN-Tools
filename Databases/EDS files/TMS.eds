@@ -2,10 +2,10 @@
 CreatedBy=Luke Schrom
 ModifiedBy=Luke Schrom
 Description=TMS EDS
-CreationTime=10:15AM
-CreationDate=09-10-2022
-ModificationTime=10:15AM
-ModificationDate=09-10-2022
+CreationTime=05:25PM
+CreationDate=04-13-2023
+ModificationTime=05:25PM
+ModificationDate=04-13-2023
 FileName=TMS.eds
 EDSVersion=4.0
 
@@ -105,13 +105,14 @@ AccessType=ro
 PDOMapping=0
 
 [OptionalObjects]
-SupportedObjects=6
+SupportedObjects=7
 1=0x1800
 2=0x1801
 3=0x1A00
 4=0x1A01
 5=0x6001
 6=0x6002
+7=0x6003
 
 [1800]
 ParameterName=Transmit PDO Communication Parameter 0
@@ -231,14 +232,14 @@ PDOMapping=0
 [1A00]
 ParameterName=Transmit PDO Mapping Parameter 0
 ObjectType=0x9
-SubNumber=3
+SubNumber=5
 
 [1A00sub0]
 ParameterName=NrOfEntries_1
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
-DefaultValue=2
+DefaultValue=4
 PDOMapping=0
 LowLimit=0
 HighLimit=2
@@ -248,7 +249,7 @@ ParameterName=PDOMapEntry_1
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x60010020
+DefaultValue=0x60010010
 PDOMapping=0
 
 [1A00sub2]
@@ -256,20 +257,36 @@ ParameterName=PDOMapEntry_2
 ObjectType=0x7
 DataType=0x0007
 AccessType=rw
-DefaultValue=0x60010120
+DefaultValue=0x60010110
+PDOMapping=0
+
+[1A00sub3]
+ParameterName=Transmit PDO Mapping Parameter 0_sub3
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60020010
+PDOMapping=0
+
+[1A00sub4]
+ParameterName=Transmit PDO Mapping Parameter 0_sub4
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60020110
 PDOMapping=0
 
 [1A01]
 ParameterName=Transmit PDO Mapping Parameter 1
 ObjectType=0x9
-SubNumber=3
+SubNumber=4
 
 [1A01sub0]
 ParameterName=NrOfEntries_2
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
-DefaultValue=2
+DefaultValue=3
 PDOMapping=0
 LowLimit=0
 HighLimit=2
@@ -279,7 +296,7 @@ ParameterName=PDOMapEntry_1
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x60020020
+DefaultValue=0x60030008
 PDOMapping=0
 
 [1A01sub2]
@@ -287,7 +304,15 @@ ParameterName=PDOMapEntry_2
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x60020120
+DefaultValue=0x60030108
+PDOMapping=0
+
+[1A01sub3]
+ParameterName=PDOMapEntry
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x60030208
 PDOMapping=0
 
 [6001]
@@ -296,18 +321,18 @@ ObjectType=0x8
 SubNumber=2
 
 [6001sub0]
-ParameterName=Temp_1
+ParameterName=Temp_TMS_Internal
 ObjectType=0x7
-DataType=0x0007
+DataType=0x0006
 AccessType=ro
 PDOMapping=1
 LowLimit=0
 HighLimit=494967295
 
 [6001sub1]
-ParameterName=Temp_2
+ParameterName=Temp_Radiator_Fan_2
 ObjectType=0x7
-DataType=0x0007
+DataType=0x0006
 AccessType=ro
 PDOMapping=1
 LowLimit=0
@@ -319,22 +344,54 @@ ObjectType=0x8
 SubNumber=2
 
 [6002sub0]
-ParameterName=Temp_3
+ParameterName=Temp_Between_Motor_Inverter
 ObjectType=0x7
-DataType=0x0007
+DataType=0x0006
 AccessType=ro
 PDOMapping=1
 LowLimit=0
 HighLimit=494967295
 
 [6002sub1]
-ParameterName=Temp_4
+ParameterName=Temp_Radiator_Fan_1
 ObjectType=0x7
-DataType=0x0007
+DataType=0x0006
 AccessType=ro
 PDOMapping=1
 LowLimit=0
 HighLimit=494967295
+
+[6003]
+ParameterName=Duty_Cycle
+ObjectType=0x8
+SubNumber=3
+
+[6003sub0]
+ParameterName=Pump_Duty_Cycle
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+DefaultValue=2
+PDOMapping=1
+LowLimit=0
+HighLimit=494967295
+
+[6003sub1]
+ParameterName=Fan_1_Duty_Cycle
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+LowLimit=0
+HighLimit=494967295
+
+[6003sub2]
+ParameterName=Fan_1_Duty_Cycle
+ObjectType=0x7
+DataType=0x0005
+AccessType=rw
+DefaultValue=0xff
+PDOMapping=0
 
 [ManufacturerObjects]
 SupportedObjects=0

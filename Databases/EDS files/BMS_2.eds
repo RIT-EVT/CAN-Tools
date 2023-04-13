@@ -1,8 +1,8 @@
 [FileInfo]
-CreationTime=11:34AM
-CreationDate=03-25-2023
-ModificationTime=11:34AM
-ModificationDate=03-25-2023
+CreationTime=06:47PM
+CreationDate=04-13-2023
+ModificationTime=06:47PM
+ModificationDate=04-13-2023
 FileName=BMS_2.eds
 EDSVersion=4.0
 
@@ -41,15 +41,13 @@ Lines=0
 SupportedObjects=0
 
 [OptionalObjects]
-SupportedObjects=8
+SupportedObjects=6
 1=0x1800
 2=0x1801
 3=0x1802
-4=0x1803
-5=0x1A00
-6=0x1A01
-7=0x1A02
-8=0x1A03
+4=0x1A00
+5=0x1A01
+6=0x1A02
 
 [1800]
 ParameterName=Transmit PDO Communication Parameter 0
@@ -227,67 +225,6 @@ AccessType=rw
 DefaultValue=0
 PDOMapping=0
 
-[1803]
-ParameterName=Transmit PDO Communication Parameter 3
-ObjectType=0x9
-SubNumber=7
-
-[1803sub0]
-ParameterName=Highest sub-index supported
-ObjectType=0x7
-DataType=0x0005
-AccessType=ro
-DefaultValue=6
-PDOMapping=0
-LowLimit=0x02
-HighLimit=0x06
-
-[1803sub1]
-ParameterName=COB-ID
-ObjectType=0x7
-DataType=0x0007
-AccessType=ro
-DefaultValue=$NODEID+0x480
-PDOMapping=0
-
-[1803sub2]
-ParameterName=TransmissionType
-ObjectType=0x7
-DataType=0x0005
-AccessType=ro
-PDOMapping=0
-
-[1803sub3]
-ParameterName=Inhibit Time
-ObjectType=0x7
-DataType=0x0006
-AccessType=ro
-DefaultValue=0x0000
-PDOMapping=0
-
-[1803sub4]
-ParameterName=Compatibility Entry
-ObjectType=0x7
-DataType=0x0005
-AccessType=rw
-PDOMapping=0
-
-[1803sub5]
-ParameterName=Event Timer
-ObjectType=0x7
-DataType=0x0006
-AccessType=ro
-DefaultValue=0
-PDOMapping=0
-
-[1803sub6]
-ParameterName=SYNC start value
-ObjectType=0x7
-DataType=0x0005
-AccessType=rw
-DefaultValue=0
-PDOMapping=0
-
 [1A00]
 ParameterName=Transmit PDO Mapping Parameter 0
 ObjectType=0x9
@@ -355,7 +292,7 @@ ParameterName=PDOMapEntry
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20010110
+DefaultValue=0x20000510
 PDOMapping=0
 
 [1A01sub2]
@@ -363,7 +300,7 @@ ParameterName=PDOMapEntry
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20010210
+DefaultValue=0x20000610
 PDOMapping=0
 
 [1A01sub3]
@@ -371,7 +308,7 @@ ParameterName=PDOMapEntry
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20010310
+DefaultValue=0x20000710
 PDOMapping=0
 
 [1A01sub4]
@@ -379,20 +316,20 @@ ParameterName=Transmit PDO Mapping Parameter 1_sub4
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20010410
+DefaultValue=0x20000810
 PDOMapping=0
 
 [1A02]
 ParameterName=Transmit PDO Mapping Parameter 2
 ObjectType=0x9
-SubNumber=3
+SubNumber=5
 
 [1A02sub0]
 ParameterName=NrOfEntries
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
-DefaultValue=2
+DefaultValue=4
 PDOMapping=0
 LowLimit=1
 HighLimit=1
@@ -402,7 +339,7 @@ ParameterName=PDOMapEntry
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20020110
+DefaultValue=0x20000910
 PDOMapping=0
 
 [1A02sub2]
@@ -410,194 +347,122 @@ ParameterName=Transmit PDO Mapping Parameter 2_sub2
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20020210
+DefaultValue=0x20000A10
 PDOMapping=0
 
-[1A03]
-ParameterName=Transmit PDO Mapping Parameter 3
-ObjectType=0x9
-SubNumber=4
-
-[1A03sub0]
-ParameterName=NrOfEntries
-ObjectType=0x7
-DataType=0x0005
-AccessType=ro
-DefaultValue=3
-PDOMapping=0
-LowLimit=3
-HighLimit=3
-
-[1A03sub1]
-ParameterName=PDOMapEntry
+[1A02sub3]
+ParameterName=Transmit PDO Mapping Parameter 2_sub3
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030110
+DefaultValue=0x20000B10
 PDOMapping=0
 
-[1A03sub2]
-ParameterName=PDOMapEntry
+[1A02sub4]
+ParameterName=Transmit PDO Mapping Parameter 2_sub4
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030210
-PDOMapping=0
-
-[1A03sub3]
-ParameterName=PDOMapEntry
-ObjectType=0x7
-DataType=0x0007
-AccessType=ro
-DefaultValue=0x20030310
+DefaultValue=0x20000C10
 PDOMapping=0
 
 [ManufacturerObjects]
-SupportedObjects=4
+SupportedObjects=1
 1=0x2000
-2=0x2001
-3=0x2002
-4=0x2003
 
 [2000]
 ParameterName=BMS Voltage
 ObjectType=0x8
-SubNumber=5
+SubNumber=13
 
 [2000sub0]
 ParameterName=NrOfObjects
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
-DefaultValue=4
+DefaultValue=12
 PDOMapping=0
 
 [2000sub1]
-ParameterName=BMS Voltage Cell_8
+ParameterName=BMS Voltage Cell 1
 ObjectType=0x7
 DataType=0x0006
 AccessType=ro
 PDOMapping=1
 
 [2000sub2]
-ParameterName=BMS Voltage Cell_9
+ParameterName=BMS Voltage Cell 2
 ObjectType=0x7
 DataType=0x0006
 AccessType=ro
 PDOMapping=1
 
 [2000sub3]
-ParameterName=BMS Voltage Cell_10
+ParameterName=BMS Voltage Cell 3
 ObjectType=0x7
 DataType=0x0006
 AccessType=ro
 PDOMapping=1
 
 [2000sub4]
-ParameterName=BMS Voltage Cell_11
+ParameterName=BMS Voltage Cell 4
 ObjectType=0x7
 DataType=0x0006
 AccessType=ro
 PDOMapping=1
 
-[2001]
-ParameterName=BMS Temp_1
-ObjectType=0x8
-SubNumber=5
-
-[2001sub0]
-ParameterName=NrOfObjects
+[2000sub5]
+ParameterName=BMS Voltage_sub5
 ObjectType=0x7
-DataType=0x0005
+DataType=0x0006
 AccessType=ro
-DefaultValue=4
 PDOMapping=0
 
-[2001sub1]
-ParameterName=BMS Temp_0 Voltage
+[2000sub6]
+ParameterName=BMS Voltage_sub6
 ObjectType=0x7
 DataType=0x0006
 AccessType=ro
-PDOMapping=1
-
-[2001sub2]
-ParameterName=BMS Temp_1 Voltage
-ObjectType=0x7
-DataType=0x0006
-AccessType=ro
-PDOMapping=1
-
-[2001sub3]
-ParameterName=BMS Temp_2 Voltage
-ObjectType=0x7
-DataType=0x0006
-AccessType=ro
-PDOMapping=1
-
-[2001sub4]
-ParameterName=BMS Temp_3 Voltage
-ObjectType=0x7
-DataType=0x0006
-AccessType=ro
-PDOMapping=1
-
-[2002]
-ParameterName=BMS Temp_1
-ObjectType=0x8
-SubNumber=3
-
-[2002sub0]
-ParameterName=NrOfObjects
-ObjectType=0x7
-DataType=0x0005
-AccessType=ro
-DefaultValue=2
 PDOMapping=0
 
-[2002sub1]
-ParameterName=BMS Temp_4 Voltage
+[2000sub7]
+ParameterName=BMS Voltage_sub7
 ObjectType=0x7
 DataType=0x0006
 AccessType=ro
-PDOMapping=1
-
-[2002sub2]
-ParameterName=BMS Temp_5 Voltage
-ObjectType=0x7
-DataType=0x0006
-AccessType=ro
-PDOMapping=1
-
-[2003]
-ParameterName=BMS Temp_2
-ObjectType=0x8
-SubNumber=4
-
-[2003sub0]
-ParameterName=NrOfObjects
-ObjectType=0x7
-DataType=0x0005
-AccessType=ro
-DefaultValue=3
 PDOMapping=0
 
-[2003sub1]
-ParameterName=BMS BQ Temp
+[2000sub8]
+ParameterName=BMS Voltage_sub8
 ObjectType=0x7
 DataType=0x0006
 AccessType=ro
-PDOMapping=1
+PDOMapping=0
 
-[2003sub2]
-ParameterName=BMS Board Temp 1
+[2000sub9]
+ParameterName=BMS Voltage_sub9
 ObjectType=0x7
 DataType=0x0006
 AccessType=ro
-PDOMapping=1
+PDOMapping=0
 
-[2003sub3]
-ParameterName=BMS Board Temp 2
+[2000subA]
+ParameterName=BMS Voltage_subA
 ObjectType=0x7
 DataType=0x0006
 AccessType=ro
-PDOMapping=1
+PDOMapping=0
+
+[2000subB]
+ParameterName=BMS Voltage_subB
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
+
+[2000subC]
+ParameterName=BMS Voltage_subC
+ObjectType=0x7
+DataType=0x0006
+AccessType=ro
+PDOMapping=0
