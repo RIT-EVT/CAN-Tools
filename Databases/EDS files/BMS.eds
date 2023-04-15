@@ -1,8 +1,8 @@
 [FileInfo]
-CreationTime=07:30PM
-CreationDate=04-13-2023
-ModificationTime=07:30PM
-ModificationDate=04-13-2023
+CreationTime=10:10PM
+CreationDate=04-14-2023
+ModificationTime=10:10PM
+ModificationDate=04-14-2023
 FileName=BMS.eds
 EDSVersion=4.0
 
@@ -371,7 +371,7 @@ ParameterName=PDOMapEntry
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20010708
+DefaultValue=0x20040008
 PDOMapping=0
 
 [1A01sub3]
@@ -379,7 +379,7 @@ ParameterName=PDOMapEntry
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20010808
+DefaultValue=0x20040108
 PDOMapping=0
 
 [1A01sub4]
@@ -387,7 +387,7 @@ ParameterName=Transmit PDO Mapping Parameter 1_sub4
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20040108
+DefaultValue=0x20040208
 PDOMapping=0
 
 [1A01sub5]
@@ -395,7 +395,7 @@ ParameterName=Transmit PDO Mapping Parameter 1_sub5
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20040208
+DefaultValue=0x20040308
 PDOMapping=0
 
 [1A01sub6]
@@ -403,7 +403,7 @@ ParameterName=Transmit PDO Mapping Parameter 1_sub6
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20040308
+DefaultValue=0x20040408
 PDOMapping=0
 
 [1A01sub7]
@@ -417,14 +417,14 @@ PDOMapping=0
 [1A02]
 ParameterName=Transmit PDO Mapping Parameter 2
 ObjectType=0x9
-SubNumber=7
+SubNumber=9
 
 [1A02sub0]
 ParameterName=NrOfEntries
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
-DefaultValue=6
+DefaultValue=8
 PDOMapping=0
 LowLimit=1
 HighLimit=1
@@ -477,6 +477,22 @@ AccessType=ro
 DefaultValue=0x20020608
 PDOMapping=0
 
+[1A02sub7]
+ParameterName=Transmit PDO Mapping Parameter 2_sub7
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20020708
+PDOMapping=0
+
+[1A02sub8]
+ParameterName=Transmit PDO Mapping Parameter 2_sub8
+ObjectType=0x7
+DataType=0x0007
+AccessType=ro
+DefaultValue=0x20020808
+PDOMapping=0
+
 [1A03]
 ParameterName=Transmit PDO Mapping Parameter 3
 ObjectType=0x9
@@ -495,7 +511,7 @@ ParameterName=PDOMapEntry
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20050001
+DefaultValue=0x20050701
 PDOMapping=0
 
 [1A03sub2]
@@ -503,7 +519,7 @@ ParameterName=PDOMapEntry
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20050101
+DefaultValue=0x20050601
 PDOMapping=0
 
 [1A03sub3]
@@ -511,7 +527,7 @@ ParameterName=PDOMapEntry
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20050201
+DefaultValue=0x20050501
 PDOMapping=0
 
 [1A03sub4]
@@ -519,7 +535,7 @@ ParameterName=Transmit PDO Mapping Parameter 3_sub4
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20050301
+DefaultValue=0x20050401
 PDOMapping=0
 
 [1A03sub5]
@@ -527,7 +543,7 @@ ParameterName=Transmit PDO Mapping Parameter 3_sub5
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20050401
+DefaultValue=0x20050301
 PDOMapping=0
 
 [1A03sub6]
@@ -535,7 +551,7 @@ ParameterName=Transmit PDO Mapping Parameter 3_sub6
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20050501
+DefaultValue=0x20050201
 PDOMapping=0
 
 [1A03sub7]
@@ -543,7 +559,7 @@ ParameterName=Transmit PDO Mapping Parameter 3_sub7
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20050601
+DefaultValue=0x20050101
 PDOMapping=0
 
 [1A03sub8]
@@ -551,7 +567,7 @@ ParameterName=Transmit PDO Mapping Parameter 3_sub8
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20050701
+DefaultValue=0x20050001
 PDOMapping=0
 
 [1A03sub9]
@@ -618,14 +634,14 @@ PDOMapping=0
 [2001sub1]
 ParameterName=BMS Battery Voltage
 ObjectType=0x7
-DataType=0x0003
+DataType=0x0006
 AccessType=ro
 PDOMapping=1
 
 [2001sub2]
 ParameterName=BMS Min Cell Voltage
 ObjectType=0x7
-DataType=0x0003
+DataType=0x0006
 AccessType=ro
 PDOMapping=1
 
@@ -639,7 +655,7 @@ PDOMapping=1
 [2001sub4]
 ParameterName=BMS Max Cell Voltage
 ObjectType=0x7
-DataType=0x0003
+DataType=0x0006
 AccessType=ro
 PDOMapping=1
 
@@ -660,14 +676,14 @@ PDOMapping=1
 [2001sub7]
 ParameterName=BMS Battery Pack Min Temp
 ObjectType=0x7
-DataType=0x0002
+DataType=0x0005
 AccessType=ro
 PDOMapping=1
 
 [2001sub8]
 ParameterName=BMS Battery Pack Max Temp
 ObjectType=0x7
-DataType=0x0002
+DataType=0x0005
 AccessType=ro
 PDOMapping=1
 
@@ -681,87 +697,107 @@ PDOMapping=1
 [2002]
 ParameterName=BMS Pack Temp 1-6
 ObjectType=0x8
-SubNumber=7
+SubNumber=9
 
 [2002sub0]
 ParameterName=NrOfObjects
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
-DefaultValue=6
+DefaultValue=8
 PDOMapping=0
 
 [2002sub1]
 ParameterName=BMS Pack Temp 1
 ObjectType=0x7
-DataType=0x0006
+DataType=0x0005
 AccessType=ro
 PDOMapping=1
 
 [2002sub2]
 ParameterName=BMS Pack Temp 2
 ObjectType=0x7
-DataType=0x0006
+DataType=0x0005
 AccessType=ro
 PDOMapping=1
 
 [2002sub3]
 ParameterName=BMS Pack Temp 3
 ObjectType=0x7
-DataType=0x0006
+DataType=0x0005
 AccessType=ro
 PDOMapping=1
 
 [2002sub4]
 ParameterName=BMS Pack Temp 4
 ObjectType=0x7
-DataType=0x0006
+DataType=0x0005
 AccessType=ro
 PDOMapping=1
 
 [2002sub5]
 ParameterName=BMS Pack Temp 5
 ObjectType=0x7
-DataType=0x0006
+DataType=0x0005
 AccessType=ro
 PDOMapping=1
 
 [2002sub6]
 ParameterName=BMS Pack Temp 6
 ObjectType=0x7
-DataType=0x0006
+DataType=0x0005
 AccessType=ro
 PDOMapping=1
+
+[2002sub7]
+ParameterName=BMS Board Temp 1
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
+
+[2002sub8]
+ParameterName=BMS Board Temp 2
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=0
 
 [2004]
 ParameterName=Temps
 ObjectType=0x8
-SubNumber=4
+SubNumber=5
 
 [2004sub0]
-ParameterName=NrOfObjects
+ParameterName=Min Pack Temp
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
-DefaultValue=3
-PDOMapping=0
+PDOMapping=1
 
 [2004sub1]
-ParameterName=BQ Internal Temp
+ParameterName=Min PT ID
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
 PDOMapping=1
 
 [2004sub2]
-ParameterName=On Board Temp_1
+ParameterName=Max Pack Temp
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
 PDOMapping=1
 
 [2004sub3]
-ParameterName=On Board Temp_1
+ParameterName=Max PT ID
+ObjectType=0x7
+DataType=0x0005
+AccessType=ro
+PDOMapping=1
+
+[2004sub4]
+ParameterName=BQ Temp
 ObjectType=0x7
 DataType=0x0005
 AccessType=ro
