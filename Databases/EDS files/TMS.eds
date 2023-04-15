@@ -2,10 +2,10 @@
 CreatedBy=Luke Schrom
 ModifiedBy=Luke Schrom
 Description=TMS EDS
-CreationTime=05:25PM
-CreationDate=04-13-2023
-ModificationTime=05:25PM
-ModificationDate=04-13-2023
+CreationTime=11:44PM
+CreationDate=04-14-2023
+ModificationTime=11:44PM
+ModificationDate=04-14-2023
 FileName=TMS.eds
 EDSVersion=4.0
 
@@ -386,7 +386,7 @@ LowLimit=0
 HighLimit=494967295
 
 [6003sub2]
-ParameterName=Fan_1_Duty_Cycle
+ParameterName=Fan_2_Duty_Cycle
 ObjectType=0x7
 DataType=0x0005
 AccessType=rw
