@@ -3184,6 +3184,14 @@ BO_ 2020 LSS_S: 8 Vector__XXX
 
 BO_ 1 GFC: 0 Vector__XXX
 
+BO_ 1281 N1_RPDO3: 0 Vector__XXX
+
+BO_ 1025 N1_RPDO2: 0 Vector__XXX
+
+BO_ 769 N1_RPDO1: 0 Vector__XXX
+
+BO_ 513 N1_RPDO0: 0 Vector__XXX
+
 BO_ 931 N35_TPDO2: 8 BMS_5_1
  SG_ BMS_Voltage_subC : 48|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ BMS_Voltage_subB : 32|16@1+ (1,0) [0|0] "" Vector__XXX
@@ -3596,6 +3604,28 @@ BO_ 392 N8_TPDO0: 8 TMS
  SG_ Temp_Between_Motor_Inverter : 32|16@1+ (1,0) [0|494967295] "" Vector__XXX
  SG_ Temp_Radiator_Fan_2 : 16|16@1+ (1,0) [0|494967295] "" Vector__XXX
  SG_ Temp_TMS_Internal : 0|16@1+ (1,0) [0|494967295] "" Vector__XXX
+
+BO_ 1153 N1_TPDO3: 7 MC
+ SG_ Velocity_actual_value : 24|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Number_of_entries : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Torque_regulator_out : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 897 N1_TPDO2: 6 MC
+ SG_ Phase_A_current : 32|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Electrical_angle : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Current_Torque_Actual_Value : 0|16@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 641 N1_TPDO1: 8 MC
+ SG_ Current_demand : 48|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Logic_power_supply_voltage : 32|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ DC_link_circuit_voltage : 16|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Motor_temperature : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Controller_temperature : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 385 N1_TPDO0: 8 MC
+ SG_ Torque_actual_value : 48|16@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Position_actual_value : 16|32@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Statusword : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
 
 
 
@@ -5054,6 +5084,10 @@ BA_ "CO_MsgCategory" BO_ 0 105;
 BA_ "CO_MsgCategory" BO_ 2021 610;
 BA_ "CO_MsgCategory" BO_ 2020 605;
 BA_ "CO_MsgCategory" BO_ 1 705;
+BA_ "CO_MsgCategory" BO_ 1281 340;
+BA_ "CO_MsgCategory" BO_ 1025 330;
+BA_ "CO_MsgCategory" BO_ 769 320;
+BA_ "CO_MsgCategory" BO_ 513 310;
 BA_ "CO_MsgCategory" BO_ 931 325;
 BA_ "CO_MsgCategory" BO_ 675 315;
 BA_ "CO_MsgCategory" BO_ 419 305;
@@ -5104,6 +5138,10 @@ BA_ "CO_MsgCategory" BO_ 400 305;
 BA_ "CO_MsgCategory" BO_ 393 305;
 BA_ "CO_MsgCategory" BO_ 648 315;
 BA_ "CO_MsgCategory" BO_ 392 305;
+BA_ "CO_MsgCategory" BO_ 1153 335;
+BA_ "CO_MsgCategory" BO_ 897 325;
+BA_ "CO_MsgCategory" BO_ 641 315;
+BA_ "CO_MsgCategory" BO_ 385 305;
 BA_ "GenSigStartValue" SG_ 931 BMS_Voltage_subC 0;
 BA_ "GenSigStartValue" SG_ 931 BMS_Voltage_subB 0;
 BA_ "GenSigStartValue" SG_ 931 BMS_Voltage_subA 0;
@@ -5417,6 +5455,20 @@ BA_ "GenSigStartValue" SG_ 392 Temp_Radiator_Fan_1 0;
 BA_ "GenSigStartValue" SG_ 392 Temp_Between_Motor_Inverter 0;
 BA_ "GenSigStartValue" SG_ 392 Temp_Radiator_Fan_2 0;
 BA_ "GenSigStartValue" SG_ 392 Temp_TMS_Internal 0;
+BA_ "GenSigStartValue" SG_ 1153 Velocity_actual_value 0;
+BA_ "GenSigStartValue" SG_ 1153 Number_of_entries 0;
+BA_ "GenSigStartValue" SG_ 1153 Torque_regulator_out 0;
+BA_ "GenSigStartValue" SG_ 897 Phase_A_current 0;
+BA_ "GenSigStartValue" SG_ 897 Electrical_angle 0;
+BA_ "GenSigStartValue" SG_ 897 Current_Torque_Actual_Value 0;
+BA_ "GenSigStartValue" SG_ 641 Current_demand 0;
+BA_ "GenSigStartValue" SG_ 641 Logic_power_supply_voltage 0;
+BA_ "GenSigStartValue" SG_ 641 DC_link_circuit_voltage 0;
+BA_ "GenSigStartValue" SG_ 641 Motor_temperature 0;
+BA_ "GenSigStartValue" SG_ 641 Controller_temperature 0;
+BA_ "GenSigStartValue" SG_ 385 Torque_actual_value 0;
+BA_ "GenSigStartValue" SG_ 385 Position_actual_value 0;
+BA_ "GenSigStartValue" SG_ 385 Statusword 0;
 VAL_ 1827 State 127 "PreOperational" 5 "Operational" 4 "Stopped" 0 "Bootup" ;
 VAL_ 1443 SCS 2 "Upload" 1 "Download" ;
 VAL_ 1571 CCS 2 "Upload" 1 "Download" ;
