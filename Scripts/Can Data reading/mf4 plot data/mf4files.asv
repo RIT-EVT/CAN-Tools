@@ -11,20 +11,11 @@ end
 mdfFinalize(fullfile(path,file));
 
 mdfObj = mdf(fullfile(path,file));
-
-[file,path] = uigetfile('*.dbc');
-if isequal(file,0)
-   disp('User selected Cancel');
-else
-   disp(['User selected ', fullfile(path,file)]);
-
-end
-
-canDB = canDatabase(fullfile(path,file));
+canDB = canDatabase("DEV1_4_13.dbc");
 channelList(mdfObj, "CAN_DataFrame", "ExactMatch", true);
 
 canData = read(mdfObj, 8);
-canData.Time = canData.Time + mdfObj.InitialTimestamp - hours(4);
+canData.Time = canData.Time + mdfObj.InitialTimestamp - hours(7);
 
 msgTimetable = canFDMessageTimetable(canData, canDB);
 
