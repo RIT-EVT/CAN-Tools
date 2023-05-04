@@ -8,7 +8,7 @@
 close all
 clear
 %%
-test_date = "10/18/22"
+% test_date = "1/13/23"
 % test_description = "First test with the voltage set up. There is the two channels with the voltage connected to the test board with the channel 0 (Supply voltage to the divider) and channel 1 (Divided voltage). These are connected to the NI Daq"
 % test_description = "This has the thermistor that will be used on the actual TMS board"
 % test_description3 = "Then there's two thermocouple also connected to the NI Daq"
@@ -42,7 +42,7 @@ addAnalogInputChannel(s,'cDAQ1Mod8',2, 'Voltage'); % MuxOut
 
 
 s.Rate = 14 % Sample Rate   
-s.DurationInSeconds = 30; % Test Duration
+s.DurationInSeconds = 11; % Test Duration
 %% Configure Channel Properties
 % Many properties are configured on channels individually.  You can access
 % channels through the |Channels| property, and see a list of properties
@@ -65,22 +65,22 @@ tc2.Units = 'Celsius';
 tc1
 
 %% Get the CAN Database
-cd ../Databases/
-db = canDatabase("TMS_NODE2.dbc")
+% cd ../Databases/
+% db = canDatabase("TMS_NODE8.dbc")
 
 %% Start the CAN Channel
 % canch = canChannel("Vector", "VN1610 1", 1);
-canch = canChannel("PEAK-System", "PCAN_USBBUS1 1", 1);
-
-canch.Database = db;
-start(canch);
+% % canch = canChannel("PEAK-System", "PCAN_USBBUS1 1", 1);
+% 
+% canch.Database = db;
+% start(canch);
 
 %% Start TMS
-NMT_Op = canMessage(0,false,2);
-NMT_Op.Data = ([01 00]);
-% NMT_Op.Remote = false; % Possibly unneccessary
-
-transmit(canch,NMT_Op);
+% NMT_Op = canMessage(0,false,2);
+% NMT_Op.Data = ([01 00]);
+% % NMT_Op.Remote = false; % Possibly unneccessary
+% 
+% transmit(canch,NMT_Op);
 
 
 %% Start the Acquisition
@@ -88,10 +88,10 @@ transmit(canch,NMT_Op);
  [data,time] = s.startForeground();
 
 %% Get all CAN Data
-rxData = receive(canch, Inf, "OutputFormat", "timetable");
+% rxData = receive(canch, Inf, "OutputFormat", "timetable");
 
 %% Stop the Channel
-stop(canch);
+% stop(canch);
 
 %% Plot Data from NI daq
 plot(time, data)
@@ -99,6 +99,7 @@ ylim([10,110])
 xlabel('Time (secs)');
 ylabel('Temperature (Celsius)');
 
-cd ../Logs
+% cd ../Logs
 filename = "TMS-" + date()
-save filename
+% save filename
+% cd ../Scripts
