@@ -1,9 +1,9 @@
 [FileInfo]
 CreatedBy=Luke Schrom
-CreationTime=09:04PM
-CreationDate=03-27-2023
-ModificationTime=09:04PM
-ModificationDate=03-27-2023
+CreationTime=03:49PM
+CreationDate=05-05-2023
+ModificationTime=03:49PM
+ModificationDate=05-05-2023
 FileName=PVC.eds
 EDSVersion=4.0
 
@@ -68,7 +68,7 @@ ParameterName=COB-ID
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=$NODEID+0x180
+DefaultValue=$NODEID+0x480
 PDOMapping=0
 
 [1800sub2]
@@ -173,7 +173,7 @@ PDOMapping=0
 [1A00]
 ParameterName=Transmit PDO Mapping Parameter 0
 ObjectType=0x9
-SubNumber=18
+SubNumber=16
 
 [1A00sub0]
 ParameterName=NrOfEntries
@@ -190,7 +190,7 @@ ParameterName=PDOMapEntry
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20020010
+DefaultValue=0x20030A04
 PDOMapping=0
 
 [1A00sub2]
@@ -198,7 +198,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_sub2
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030B01
+DefaultValue=0x20030904
 PDOMapping=0
 
 [1A00sub3]
@@ -206,7 +206,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_sub3
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030B01
+DefaultValue=0x20030804
 PDOMapping=0
 
 [1A00sub4]
@@ -214,7 +214,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_sub4
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030B01
+DefaultValue=0x20030704
 PDOMapping=0
 
 [1A00sub5]
@@ -222,7 +222,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_sub5
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030B01
+DefaultValue=0x20030604
 PDOMapping=0
 
 [1A00sub6]
@@ -230,7 +230,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_sub6
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030B01
+DefaultValue=0x20030504
 PDOMapping=0
 
 [1A00sub7]
@@ -238,7 +238,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_sub7
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030001
+DefaultValue=0x20030404
 PDOMapping=0
 
 [1A00sub8]
@@ -246,7 +246,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_sub8
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030101
+DefaultValue=0x20030304
 PDOMapping=0
 
 [1A00sub9]
@@ -254,7 +254,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_sub9
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030201
+DefaultValue=0x20030204
 PDOMapping=0
 
 [1A00subA]
@@ -262,7 +262,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_subA
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030301
+DefaultValue=0x20030104
 PDOMapping=0
 
 [1A00subB]
@@ -270,7 +270,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_subB
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030401
+DefaultValue=0x20030004
 PDOMapping=0
 
 [1A00subC]
@@ -278,7 +278,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_subC
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030501
+DefaultValue=0x20030B04
 PDOMapping=0
 
 [1A00subD]
@@ -286,7 +286,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_subD
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030601
+DefaultValue=0x20030B04
 PDOMapping=0
 
 [1A00subE]
@@ -294,23 +294,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_subE
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030701
-PDOMapping=0
-
-[1A00subF]
-ParameterName=Transmit PDO Mapping Parameter 0_subF
-ObjectType=0x7
-DataType=0x0007
-AccessType=ro
-DefaultValue=0x20030801
-PDOMapping=0
-
-[1A00sub10]
-ParameterName=Transmit PDO Mapping Parameter 0_sub10
-ObjectType=0x7
-DataType=0x0007
-AccessType=ro
-DefaultValue=0x20030901
+DefaultValue=0x20030B04
 PDOMapping=0
 
 [1A00sub11]
@@ -318,7 +302,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_sub11
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20030A01
+DefaultValue=0x20020014
 PDOMapping=0
 
 [1A01]
@@ -413,15 +397,14 @@ SubNumber=12
 [2003sub0]
 ParameterName=gfdbStatus
 ObjectType=0x7
-DataType=0x0001
+DataType=0x000f
 AccessType=ro
-DefaultValue=11
 PDOMapping=0
 
 [2003sub1]
 ParameterName=keyInStatus
 ObjectType=0x7
-DataType=0x0001
+DataType=0x0005
 AccessType=ro
 PDOMapping=0
 
