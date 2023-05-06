@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>DEV1 Testing</title>
+
+    <style>
+      /* CSS Formatting for the page */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* use viewport-relative units to cover page fully */
+      body {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      /* include border and padding in element width and height */
+      * {
+        box-sizing: border-box;
+      }
+
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 70%; /* set the map to 70% of the window height*/
+        width: 100%;
+      }
+
+      #infoDiv {
+        height: 200px;
+        padding: 10px;
+        width: 280px;
+      }
+
+      #chartContainer {
+        height: 30%;  /* set the chart to 30% of the window height*/
+        width: 100%;
+      }
+
+      #infoDiv span {
+        color: #F9C653;
+        font-size: 12pt;
+        font-weight: bolder;
+      }
+    </style>
+    <!-- Charts JQuery -->
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>   
+    <!-- CanvasJS -->
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!-- ESRI Javascript API -->
+    <script src="https://js.arcgis.com/4.25/"></script>
+    <!-- Dark Theme CSS Sheet-->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/dark/main.css" />
+    <script>
+      // Render the graphs
+      window.onload = function () {
+      // Containers for the three plotted variables
+      var speed = [];
+      var motorTemp = [];
+      var batVolt = [];
+      // Instantiate the chart in its container
+      var chart = new CanvasJS.Chart("chartContainer", {
+        // enable animation of the tooltip
+        animationEnabled: true,
+      // dark theme
+        theme: "dark1",
+        axisY:[{
+          title: "Speed", // axis label
+          lineColor: "#C24642", //assign colors to the lines and fonts to be the same
+          tickColor: "#C24642",
+          labelFontColor: "#C24642",
+          titleFontColor: "#C24642",
+          includeZero: true, // allow zeros
+          suffix: "MPH" // set units for the axis
+        },
+        {
+          title: "Voltage",
+          lineColor: "#369EAD",
+          tickColor: "#369EAD",
+          labelFontColor: "#369EAD",
+          titleFontColor: "#369EAD",
+          includeZero: true,
+          suffix: "V" // volts
+        }], 
+        axisY2: { // right side y axis
+          title: "Temperature",
+          lineColor: "#7F6084",
+          tickColor: "#7F6084",
+          labelFontColor: "#7F6084",
+          titleFontColor: "#7F6084",
+          includeZero: true,
+          suffix: "C" // celcius
+        },
+        // }],
+        toolTip: {
+          shared: true
+        },
+        legend: {
+          cursor: "pointer",
+          itemclick: toggleDataSeries // when a legend entry is clicked, call that function
+        },
+        data: [
+        {
+          name: "Speed (MPH)",
+          color: "#C24642",
+          type: "line",
+          showInLegend: true,
+          axisYIndex: 0,
+          dataPoints: speed
+        },
+        {
+          type: "line",
+          name: "Battery Voltage (V)",
+          color: "#369EAD",
+          axisYIndex: 1,
+          showInLegend: true,
+          dataPoints: batVolt
+        },
+        {
+          type: "line",
+          name: "Motor Temperature (C)",
+          color: "#7F6084",
+          // axisYIndex: 0,
+          axisYType: "secondary",
+          showInLegend: true,
+          dataPoints: motorTemp
+        }
+
+      ]
+      });
+
+      $.getJSON("https://raw.githubusercontent.com/jlb1854/DEV1_TrackDay/main/DEV1_parking_lot_11_17_all_epoch.geojson",addData)
+
+      function toggleDataSeries(e) { // set the visibility of a chart axis
+        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+          e.dataSeries.visible = false;
+        } else {
+          e.dataSeries.visible = true;
+        }
+        e.chart.render();
+      }      
+
+      function addData(data) {
+        // console.log(data)
+        for (var i = 0; i < 10475; i++) {
+          speed.push({
+            x: new Date(data.features[i].properties.Timestamp),
+            y: data.features[i].properties.speed
+          });
+          batVolt.push({
+            x: new Date(data.features[i].properties.Timestamp),
+            y: data.features[i].properties.DC_link_cir
+          });
+          motorTemp.push({
+            x: new Date(data.features[i].properties.Timestamp),
+            y: data.features[i].properties.Motor_tempe
+          });
+        }
+
+        chart.render();
+
+      }
+    }
+
+      require([
+        "esri/Map",
+        "esri/views/MapView",
+        "esri/layers/GeoJSONLayer",
+        "esri/widgets/TimeSlider",
+        "esri/widgets/Expand",
+        "esri/widgets/Legend"
+      ], (Map, MapView, GeoJSONLayer, TimeSlider, Expand, Legend) => {
+        let layerView;
+
+        // set the timeInfo on GeoJSONLayer at the time initialization
+        const layer = new GeoJSONLayer({
+          // url: "https://raw.githubusercontent.com/jlb1854/DEV1_TrackDay/main/DEV1_parking_lot_11_17_combined.geojson",
+          url: "https://raw.githubusercontent.com/jlb1854/DEV1_TrackDay/main/DEV1_parking_lot_11_17_all_epoch.geojson",
+          copyright: "LJ Boone",
+          title: "RIT Electric Vehicle Team Testing",
+          // set the CSVLayer's timeInfo based on the date field
+          // timeInfo: {
+          //   startField: "time", // name of the date field
+          //   interval: {
+          //     // set time interval to one day
+          //     unit: "minutes",
+          //     value: 1
+          //   }
+          // },
+          orderBy: {
+            field: "speed"
+          },
+          renderer: {
+            type: "simple",
+            symbol: {
+              type: "simple-marker",
+              // field: "DC_link_cir",
+              size: 2,
+              outline: null
+            },
+            visualVariables: [
+                {
+                  type: "color",
+                  field: "speed",
+                  stops: [
+                    { value: 1, color: "#2b83ba" },
+                    { value: 60, color: "#d7191c" }
+                  ]
+                }
+              ]
+            },
+          popupTemplate: {  // popup for when a data point is clicked
+            title: "Data Point",
+            content: [
+              {
+                type: "fields",
+                fieldInfos: [
+                  {
+                    fieldName: "RPM_actual_",
+                    label: "Motor Speed (RPM)",
+                    visible: true
+                  },
+                  {
+                    fieldName: "speed",
+                    label: "Bike Speed (MPH)",
+                    visible: true
+                  },
+                  {
+                    fieldName: "Statusword",
+                    label: "Statusword",
+                    visible: true
+                  },
+                  {
+                    fieldName: "DC_link_cir",
+                    label: "Battery Voltage (V)",
+                    visible: true
+                  },
+                  {
+                    fieldName: "Motor_tempe",
+                    label: "Motor temperature (C)",
+                    visible: true
+                  },
+                  {
+                    fieldName: "Controller_",
+                    label: "Controller temperature (C)",
+                    visible: true
+                  },
+                  {
+                    fieldName: "altitude",
+                    label: "Bike altitude (m)",
+                    visible: true
+                  }
+                ]
+              }
+            ]
+          }
+        });
+
+        const map = new Map({
+          basemap: "dark-gray-vector", // basemap
+          layers: [layer] // feature layer on the map
+          
+        });
+
+        const view = new MapView({
+          map: map,
+          container: "viewDiv",
+          center: [-77.679266, 43.087209], //RIT longitude, latitude
+          zoom: 16
+        });
+
+
+        // create a new time slider widget
+        // set other properties when the layer view is loaded
+        // by default timeSlider.mode is "time-window" - shows
+        // data falls within time range
+        // const timeSlider = new TimeSlider({
+        //   container: "timeSlider",
+        //   playRate: 50,
+        //   stops: {
+        //     interval: {
+        //       value: 1,
+        //       unit: "minutes"
+        //     }
+        //   }
+        // });
+        // view.ui.add(timeSlider, "bottom-left");
+
+        // wait till the layer view is loaded
+        view.whenLayerView(layer).then((lv) => {
+          layerView = lv;
+
+          const statQuery = layerView.createQuery();
+          statQuery.outStatistics = [
+            speedAvg,
+            speedMax,
+            voltMax,
+            voltMin
+            // avgDepth
+          ];
+          layer.queryFeatures(statQuery).then((result) => {
+              let htmls = [];
+              statsDiv.innerHTML = "";
+              if (result.error) {
+                return result.error;
+              } else {
+                if (result.features.length >= 1) {
+                  const attributes = result.features[0].attributes;
+                  console.log(attributes)
+                  for (name in statsFields) {
+                    if (attributes[name] && attributes[name] != null) {
+                      const html =
+                        "<br/>" +
+                        statsFields[name] +
+                        ": <b><span> " +
+                        attributes[name].toFixed(2) +
+                        "</span></b>";
+                      htmls.push(html);
+                      // console.log(html)
+                    }
+                  }
+                  // console.log(htmls)
+                  statsDiv.innerHTML = htmls
+
+                  // const yearHtml =
+                  //   "<span>" +
+                  //   result.features[0].attributes["tremor_count"] +
+                  //   "</span> earthquakes were recorded between " +
+                  //   timeSlider.timeExtent.start.toLocaleDateString() +
+                  //   " - " +
+                  //   timeSlider.timeExtent.end.toLocaleDateString() +
+                  //   ".<br/>";
+
+                  // if (htmls[0] == undefined) {
+                  //   statsDiv.innerHTML = yearHtml;
+                  // } else {
+                  //   statsDiv.innerHTML =
+                  //     yearHtml + htmls[0] + htmls[1] + htmls[2] + htmls[3];
+                  // }
+                }
+              }
+            })
+            .catch((error) => {
+              console.log(error);
+            });
+
+          // // start time of the time slider - 5/25/2019
+          // const start = new Date(2022, 11, 17);
+          // // set time slider's full extent to
+          // // 5/25/5019 - until end date of layer's fullTimeExtent
+          // timeSlider.fullTimeExtent = {
+          //   start: start,
+          //   end: layer.timeInfo.fullTimeExtent.end
+          // };
+
+          // We will be showing earthquakes with one day interval
+          // when the app is loaded we will show earthquakes that
+          // happened between 5/25 - 5/26.
+          // let end = new Date(start);
+          // end of current time extent for time slider
+          // showing earthquakes with one day interval
+          // end.setDate(end.getDate() + 1);
+
+          // timeExtent property is set so that timeslider
+          // widget show the first day. We are setting
+          // the thumbs positions.
+          // timeSlider.timeExtent = {start, end};
+        });
+
+
+        // watch for time slider timeExtent change
+        // timeSlider.watch("timeExtent", () => {
+        //   // only show earthquakes happened up until the end of
+        //   // timeSlider's current time extent.
+        //   layer.definitionExpression =
+        //     "time <= " + timeSlider.timeExtent.end.getTime();
+
+        //   // now gray out earthquakes that happened before the time slider's current
+        //   // timeExtent... leaving footprint of earthquakes that already happened
+        //   layerView.featureEffect = {
+        //     filter: {
+        //       timeExtent: timeSlider.timeExtent,
+        //       geometry: view.extent
+        //     },
+        //     excludedEffect: "grayscale(20%) opacity(12%)"
+        //   };
+
+        //   // run statistics on earthquakes fall within the current time extent
+        //   const statQuery = layerView.featureEffect.filter.createQuery();
+        //   statQuery.outStatistics = [
+        //     speedAvg,
+        //     speedMax,
+        //     voltMax,
+        //     voltMin
+        //     // avgDepth
+        //   ];
+
+        //   layer.queryFeatures(statQuery).then((result) => {
+        //       let htmls = [];
+        //       statsDiv.innerHTML = "";
+        //       if (result.error) {
+        //         return result.error;
+        //       } else {
+        //         if (result.features.length >= 1) {
+        //           const attributes = result.features[0].attributes;
+        //           for (name in statsFields) {
+        //             if (attributes[name] && attributes[name] != null) {
+        //               const html =
+        //                 "<br/>" +
+        //                 statsFields[name] +
+        //                 ": <b><span> " +
+        //                 attributes[name].toFixed(2) +
+        //                 "</span></b>";
+        //               htmls.push(html);
+        //             }
+        //           }
+        //           // const yearHtml =
+        //           //   "<span>" +
+        //           //   result.features[0].attributes["tremor_count"] +
+        //           //   "</span> earthquakes were recorded between " +
+        //           //   timeSlider.timeExtent.start.toLocaleDateString() +
+        //           //   " - " +
+        //           //   timeSlider.timeExtent.end.toLocaleDateString() +
+        //           //   ".<br/>";
+
+        //           if (htmls[0] == undefined) {
+        //             statsDiv.innerHTML = yearHtml;
+        //           } else {
+        //             statsDiv.innerHTML =
+        //               yearHtml + htmls[0] + htmls[1] + htmls[2] + htmls[3];
+        //           }
+        //         }
+        //       }
+        //     })
+        //     .catch((error) => {
+        //       console.log(error);
+        //     });
+        // });
+
+        const speedMax = {   // gather statistics to display
+          onStatisticField: "speed",  // field
+          outStatisticFieldName: "Max_Speed", //name
+          statisticType: "max" // type of statistic
+        };
+
+        const speedAvg = {
+          onStatisticField: "speed",
+          outStatisticFieldName: "Average_Speed",
+          statisticType: "avg"
+        };
+
+        const voltMax = {
+          onStatisticField: "DC_link_cir",
+          outStatisticFieldName: "Max_Volt",
+          statisticType: "max"
+        };
+
+        const voltMin = {
+          onStatisticField: "DC_link_cir",
+          outStatisticFieldName: "Min_Volt",
+          statisticType: "min"
+        };
+
+        const statsFields = {
+          Max_Speed: "Max Speed",
+          Average_Speed: "Average Speed",
+          Max_Volt: "Max Battery Voltage",
+          Min_Volt: "Min Battery Voltage"
+        };
+
+        // add a legend for the layer
+        const legendExpand = new Expand({
+          collapsedIconClass: "esri-icon-collapse",
+          expandIconClass: "esri-icon-expand",
+          expandTooltip: "Legend",
+          view: view,
+          content: new Legend({
+            view: view
+          }),
+          expanded: false
+        });
+        view.ui.add(legendExpand, "top-left");
+
+        const statsDiv = document.getElementById("statsDiv");
+        const infoDiv = document.getElementById("infoDiv");
+        const infoDivExpand = new Expand({
+          collapsedIconClass: "esri-icon-collapse",
+          expandIconClass: "esri-icon-expand",
+          expandTooltip: "Expand info",
+          view: view,
+          content: infoDiv,
+          expanded: false
+        });
+        view.ui.add(infoDivExpand, "top-right");
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="viewDiv"></div>
+    <div id="infoDiv" class="esri-widget">
+      <div> <b>RIT Electric Vehicle Team Track Testing</b></div><br/>
+      <div id="statsDiv" class="esri-widget"></div>
+    </div>
+    <div id="chartContainer"></div>
+</body>
+</html>
