@@ -1,8 +1,8 @@
 [FileInfo]
 CreatedBy=Luke Schrom
-CreationTime=03:49PM
+CreationTime=11:39PM
 CreationDate=05-05-2023
-ModificationTime=03:49PM
+ModificationTime=11:39PM
 ModificationDate=05-05-2023
 FileName=PVC.eds
 EDSVersion=4.0
@@ -302,7 +302,7 @@ ParameterName=Transmit PDO Mapping Parameter 0_sub11
 ObjectType=0x7
 DataType=0x0007
 AccessType=ro
-DefaultValue=0x20020014
+DefaultValue=0x20020010
 PDOMapping=0
 
 [1A01]
@@ -397,14 +397,14 @@ SubNumber=12
 [2003sub0]
 ParameterName=gfdbStatus
 ObjectType=0x7
-DataType=0x000f
+DataType=0x0001
 AccessType=ro
 PDOMapping=0
 
 [2003sub1]
 ParameterName=keyInStatus
 ObjectType=0x7
-DataType=0x0005
+DataType=0x0001
 AccessType=ro
 PDOMapping=0
 
