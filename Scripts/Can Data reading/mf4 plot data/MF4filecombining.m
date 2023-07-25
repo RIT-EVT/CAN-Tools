@@ -33,9 +33,7 @@ for i = 1:numel(fileNames)
     mdfObj = mdf(currentFileName);
     canData = read(mdfObj, 8);
     canData.Time = canData.Time + mdfObj.InitialTimestamp - hours(4);
-
     msgTimetable = canFDMessageTimetable(canData, canDB);
-
     
     % Concatenate the current data with the combined data
     combinedData = [combinedData; msgTimetable];
