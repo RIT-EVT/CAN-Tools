@@ -1,32 +1,46 @@
 clear;
 
-[file,path] = uigetfile('*.MF4');
+[file,path] = uigetfile({'*.mat';'*.MF4'});
+[a,b,ext] = fileparts(fullfile(path, file));
 if isequal(file,0)
    disp('User selected Cancel');
 else
-   disp(['User selected ', fullfile(path,file)]);
+   disp(['User selected ', fullfile(path,file,ext)]);
 
 end
 
-mdfFinalize(fullfile(path,file));
+switch ext
+    case '.MF4'
+        mdfFinalize(fullfile(path,file));
 
-mdfObj = mdf(fullfile(path,file));
+        mdfObj = mdf(fullfile(path,file));
 
-[file,path] = uigetfile('*.dbc');
-if isequal(file,0)
-   disp('User selected Cancel');
-else
-   disp(['User selected ', fullfile(path,file)]);
+        [file,path] = uigetfile('*.dbc');
+        if isequal(file,0)
+            disp('User selected Cancel');
+        else
+        disp(['User selected ', fullfile(path,file)]);
 
+        end
+
+        canDB = canDatabase(fullfile(path,file));
+        channelList(mdfObj, "CAN_DataFrame", "ExactMatch", true);
+
+        canData = read(mdfObj, 8);
+        canData.Time = canData.Time + mdfObj.InitialTimestamp - hours(4);
+
+        msgTimetable = canFDMessageTimetable(canData, canDB);
+    case '.mat'
+        load(fullfile(path,file))
+        msgTimetable = combinedData;
+
+    otherwise
+        error('wrong file type')
 end
+          
 
-canDB = canDatabase(fullfile(path,file));
-channelList(mdfObj, "CAN_DataFrame", "ExactMatch", true);
 
-canData = read(mdfObj, 8);
-canData.Time = canData.Time + mdfObj.InitialTimestamp - hours(4);
 
-msgTimetable = canFDMessageTimetable(canData, canDB);
 
 signalTimetable = canSignalTimetable(msgTimetable);
 N1_TPDO3 = canSignalTimetable(msgTimetable, "N1_TPDO3"); 
