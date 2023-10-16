@@ -7,3 +7,4 @@ Scripts/Can Data reading/mf4 plot data/CandbDev1.ini
 Scripts/Can Data reading/mf4 plot data/DEV1_db.dbc
 Scripts/Can Data reading/mf4 plot data/DEV1_db.ini
 *.ini
+*.mat
