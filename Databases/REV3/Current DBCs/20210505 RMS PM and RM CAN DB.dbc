@@ -33,8 +33,12 @@ NS_ :
 
 BS_:
 
-BU_: INV U2C VCU BMS
+BU_: GFDB HIB INV U2C VCU BMS
 
+
+BO_ 208 Throttle_Postion_and_Errors: 8 HIB
+ SG_ Break_Voltage : 32|32@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Throttle_Voltage : 0|32@1+ (1,0) [0|0] "V" Vector__XXX
 
 BO_ 173 M173_Modulation_And_Flux_Info: 8 INV
  SG_ D4_Iq_Command : 48|16@1- (0.1,0) [-3276.8|3276.7] "A" Vector__XXX
@@ -180,7 +184,7 @@ BO_ 471 M187_U2C_Command_Txd: 8 INV
  SG_ D2_Setpoint_Calc : 8|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 469 M188_U2C_Message_Rxd: 8 U2C
- SG_ D1_HV_Input_Current_Sensor_Validity : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ D1_HV_Input_Current_Sensor_Valid : 4|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ D2_14V_Master_Fault : 7|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ D3_HV_Input_Current : 8|8@1+ (1,0) [0|255] "" Vector__XXX
  SG_ D4_DTC_Status : 16|3@1+ (1,0) [0|7] "" Vector__XXX
@@ -201,6 +205,10 @@ BO_ 176 M176_Fast_Info: 8 INV
 
 
 
+CM_ BU_ GFDB "Ground Fault Detection Board
+";
+CM_ BU_ HIB "Handle Bar Interface Board
+";
 CM_ BU_ INV "The Cascadia Motion inverter";
 CM_ BU_ U2C "Delphi DC/DC Converter";
 CM_ BU_ VCU "The system vehicle control unit";
@@ -285,7 +293,6 @@ CM_ SG_ 164 D1_Digital_Input_1 "Status of Digital Input #1";
 CM_ SG_ 164 D6_Digital_Input_6 "Status of Digital Input #6";
 CM_ SG_ 164 D7_Digital_Input_7 "Status of Digital Input #7";
 CM_ SG_ 164 D8_Digital_Input_8 "Status of Digital Input #8";
-CM_ BO_ 163 "";
 CM_ SG_ 163 D4_Analog_Input_4 "Voltage on Analog Input #4";
 CM_ SG_ 163 D3_Analog_Input_3 "Voltage on Analog Input #3";
 CM_ SG_ 163 D2_Analog_Input_2 "Voltage on Analog Input #2";
@@ -316,8 +323,10 @@ CM_ SG_ 176 Fast_Motor_Speed "Motor speed";
 CM_ SG_ 176 Fast_DC_Bus_Voltage "DC Bus Voltage";
 BA_DEF_ BO_  "GenMsgCycleTime" INT 0 100000;
 BA_DEF_  "BusType" STRING ;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 0;
 BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "GenMsgCycleTime" BO_ 172 10;
 BA_ "GenMsgCycleTime" BO_ 194 0;
 BA_ "GenMsgCycleTime" BO_ 193 0;
@@ -335,6 +344,7 @@ BA_ "GenMsgCycleTime" BO_ 162 100;
 BA_ "GenMsgCycleTime" BO_ 161 100;
 BA_ "GenMsgCycleTime" BO_ 160 100;
 BA_ "GenMsgCycleTime" BO_ 176 3;
+BA_ "SystemSignalLongSymbol" SG_ 469 D1_HV_Input_Current_Sensor_Valid "D1_HV_Input_Current_Sensor_Validity";
 VAL_ 192 Inverter_Enable 0 "Turn the inverter OFF" 1 "Turn the Inverter ON" ;
 VAL_ 192 Direction_Command 0 "CW" 1 "CCW" ;
 VAL_ 192 Inverter_Discharge 0 "Discharge Disable" 1 "Discharge Enable (if EEPROM parameter is set)" ;

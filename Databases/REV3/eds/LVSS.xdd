@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ISO15745ProfileContainer xmlns="http://www.canopen.org/xml/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.canopen.org/xml/1.0 CANopen.xsd">
+  <ISO15745Profile>
+    <ProfileHeader>
+      <ProfileIdentification>CAN device profile</ProfileIdentification>
+      <ProfileRevision>1</ProfileRevision>
+      <ProfileName></ProfileName>
+      <ProfileSource></ProfileSource>
+      <ProfileClassID>Device</ProfileClassID>
+      <ISO15745Reference>
+        <ISO15745Part>1</ISO15745Part>
+        <ISO15745Edition>1</ISO15745Edition>
+        <ProfileTechnology>CANopen</ProfileTechnology>
+      </ISO15745Reference>
+    </ProfileHeader>
+    <ProfileBody xsi:type="ProfileBody_Device_CANopen" fileName="LVSS.xdd" fileCreator="Luke Schrom" fileCreationDate="2025-05-08" fileCreationTime="15:45:00" fileModificationDate="2025-05-08" fileModificationTime="15:45:19" fileModifiedBy="Luke Schrom" fileVersion="Womp Womp" supportedLanguages="en-us">
+      <DeviceIdentity>
+        <vendorName readOnly="true"></vendorName>
+        <vendorID readOnly="true"></vendorID>
+        <vendorText readOnly="true">
+          <label lang="en-us" />
+        </vendorText>
+        <deviceFamily readOnly="true">
+          <label lang="en-us" />
+        </deviceFamily>
+        <productFamily readOnly="true"></productFamily>
+        <productName readOnly="true"></productName>
+        <productID readOnly="true"></productID>
+        <productText readOnly="true">
+          <description lang="en-us">FileDescription=LVSS EDS|EdsVersion=4.0|FileRevison=|LastEDS=LVSS.eds|RevisionNum=|</description>
+        </productText>
+        <orderNumber readOnly="true"></orderNumber>
+        <version versionType="SW" readOnly="true"></version>
+        <version versionType="FW" readOnly="true"></version>
+        <version versionType="HW" readOnly="true"></version>
+        <specificationRevision readOnly="true"></specificationRevision>
+        <instanceName readOnly="true"></instanceName>
+      </DeviceIdentity>
+      <DeviceManager>
+        <indicatorList>
+          <LEDList>
+            <LED LEDcolors="monocolor" LEDtype="device">
+              <label lang="en-us" />
+              <LEDstate uniqueID="LED_State_1" state="off" LEDcolor="green">
+                <label lang="en-us" />
+              </LEDstate>
+            </LED>
+          </LEDList>
+        </indicatorList>
+      </DeviceManager>
+      <DeviceFunction>
+        <capabilities>
+          <characteristicsList>
+            <characteristic>
+              <characteristicName>
+                <label lang="en-us" />
+              </characteristicName>
+              <characteristicContent>
+                <label lang="en-us" />
+              </characteristicContent>
+            </characteristic>
+          </characteristicsList>
+        </capabilities>
+      </DeviceFunction>
+      <ApplicationProcess>
+        <dataTypeList>
+          <derived uniqueID="UID.VCO.TYPE.UINT16" name="VCOUINT16">
+            <count uniqueID="UID.VCO.TYPE.UINT16.COUNT" access="read">
+              <defaultValue value="16" />
+            </count>
+            <BITSTRING />
+          </derived>
+          <struct uniqueID="UID.VCO.SIGNALLIST.OBJ6001sub2" name="Signal layout for object 0x6001sub2">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub2.1" name="Current">
+              <dataTypeIDRef uniqueIDRef="UID.VCO.TYPE.UINT16" />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNAL.OBJ6001sub2.1.ATTR" name="">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub2.1.ATTR.UNIT" name="mA">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub2.1.ATTR.FACTOR" name="1.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub2.1.ATTR.OFFSET" name="0.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub2.1.ATTR.LOWLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub2.1.ATTR.HIGHLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub2.1.ATTR.DEFVALUE" name="">
+              <STRING />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNALLIST.OBJ6001sub3" name="Signal layout for object 0x6001sub3">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub3.1" name="Current">
+              <dataTypeIDRef uniqueIDRef="UID.VCO.TYPE.UINT16" />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNAL.OBJ6001sub3.1.ATTR" name="">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub3.1.ATTR.UNIT" name="mA">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub3.1.ATTR.FACTOR" name="1.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub3.1.ATTR.OFFSET" name="0.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub3.1.ATTR.LOWLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub3.1.ATTR.HIGHLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub3.1.ATTR.DEFVALUE" name="">
+              <STRING />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNALLIST.OBJ6001sub4" name="Signal layout for object 0x6001sub4">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub4.1" name="Current">
+              <dataTypeIDRef uniqueIDRef="UID.VCO.TYPE.UINT16" />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNAL.OBJ6001sub4.1.ATTR" name="">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub4.1.ATTR.UNIT" name="mA">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub4.1.ATTR.FACTOR" name="1.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub4.1.ATTR.OFFSET" name="0.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub4.1.ATTR.LOWLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub4.1.ATTR.HIGHLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub4.1.ATTR.DEFVALUE" name="">
+              <STRING />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNALLIST.OBJ6001sub5" name="Signal layout for object 0x6001sub5">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub5.1" name="Current">
+              <dataTypeIDRef uniqueIDRef="UID.VCO.TYPE.UINT16" />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNAL.OBJ6001sub5.1.ATTR" name="">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub5.1.ATTR.UNIT" name="mA">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub5.1.ATTR.FACTOR" name="1.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub5.1.ATTR.OFFSET" name="0.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub5.1.ATTR.LOWLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub5.1.ATTR.HIGHLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub5.1.ATTR.DEFVALUE" name="">
+              <STRING />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNALLIST.OBJ6001sub6" name="Signal layout for object 0x6001sub6">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub6.1" name="Current">
+              <dataTypeIDRef uniqueIDRef="UID.VCO.TYPE.UINT16" />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNAL.OBJ6001sub6.1.ATTR" name="">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub6.1.ATTR.UNIT" name="mA">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub6.1.ATTR.FACTOR" name="1.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub6.1.ATTR.OFFSET" name="0.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub6.1.ATTR.LOWLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub6.1.ATTR.HIGHLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub6.1.ATTR.DEFVALUE" name="">
+              <STRING />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNALLIST.OBJ6001sub7" name="Signal layout for object 0x6001sub7">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub7.1" name="Current">
+              <dataTypeIDRef uniqueIDRef="UID.VCO.TYPE.UINT16" />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNAL.OBJ6001sub7.1.ATTR" name="">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub7.1.ATTR.UNIT" name="mA">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub7.1.ATTR.FACTOR" name="1.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub7.1.ATTR.OFFSET" name="0.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub7.1.ATTR.LOWLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub7.1.ATTR.HIGHLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub7.1.ATTR.DEFVALUE" name="">
+              <STRING />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNALLIST.OBJ6001sub8" name="Signal layout for object 0x6001sub8">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub8.1" name="Tempurature">
+              <dataTypeIDRef uniqueIDRef="UID.VCO.TYPE.UINT16" />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNAL.OBJ6001sub8.1.ATTR" name="">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub8.1.ATTR.UNIT" name="mC">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub8.1.ATTR.FACTOR" name="1.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub8.1.ATTR.OFFSET" name="0.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub8.1.ATTR.LOWLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub8.1.ATTR.HIGHLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub8.1.ATTR.DEFVALUE" name="">
+              <STRING />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNALLIST.OBJ6001sub9" name="Signal layout for object 0x6001sub9">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub9.1" name="Temperature">
+              <dataTypeIDRef uniqueIDRef="UID.VCO.TYPE.UINT16" />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNAL.OBJ6001sub9.1.ATTR" name="">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub9.1.ATTR.UNIT" name="mC">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub9.1.ATTR.FACTOR" name="1.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub9.1.ATTR.OFFSET" name="0.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub9.1.ATTR.LOWLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub9.1.ATTR.HIGHLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001sub9.1.ATTR.DEFVALUE" name="">
+              <STRING />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNALLIST.OBJ6001subA" name="Signal layout for object 0x6001subA">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subA.1" name="Temperature">
+              <dataTypeIDRef uniqueIDRef="UID.VCO.TYPE.UINT16" />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNAL.OBJ6001subA.1.ATTR" name="">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subA.1.ATTR.UNIT" name="mC">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subA.1.ATTR.FACTOR" name="1.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subA.1.ATTR.OFFSET" name="0.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subA.1.ATTR.LOWLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subA.1.ATTR.HIGHLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subA.1.ATTR.DEFVALUE" name="">
+              <STRING />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNALLIST.OBJ6001subB" name="Signal layout for object 0x6001subB">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subB.1" name="Current">
+              <dataTypeIDRef uniqueIDRef="UID.VCO.TYPE.UINT16" />
+            </varDeclaration>
+        </struct>
+          <struct uniqueID="UID.VCO.SIGNAL.OBJ6001subB.1.ATTR" name="">
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subB.1.ATTR.UNIT" name="mA">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subB.1.ATTR.FACTOR" name="1.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subB.1.ATTR.OFFSET" name="0.0">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subB.1.ATTR.LOWLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subB.1.ATTR.HIGHLIMIT" name="">
+              <STRING />
+            </varDeclaration>
+            <varDeclaration uniqueID="UID.VCO.SIGNAL.OBJ6001subB.1.ATTR.DEFVALUE" name="">
+              <STRING />
+            </varDeclaration>
+        </struct>
+        </dataTypeList>
+        <parameterList>
+          <parameter uniqueID="UID_PARAM_1000" access="read">
+            <label lang="en-us">Device Type</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="419" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_1001" access="read">
+            <label lang="en-us">Error Register</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_101801" access="read">
+            <label lang="en-us">Vendor Id</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_101802" access="read">
+            <label lang="en-us">Product Code</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_101803" access="read">
+            <label lang="en-us">Revision number</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_101804" access="read">
+            <label lang="en-us">Serial number</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180001" access="read">
+            <label lang="en-us">COB-ID</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x188" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180002" access="read">
+            <label lang="en-us">TransmissionType</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180003" access="read">
+            <label lang="en-us">Inhibit Time</label>
+            <UINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x0000" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180004" access="readWrite">
+            <label lang="en-us">Compatibility Entry</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180005" access="read">
+            <label lang="en-us">Event Timer</label>
+            <UINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180006" access="readWrite">
+            <label lang="en-us">SYNC start value</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180101" access="read">
+            <label lang="en-us">COB-ID</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x288" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180102" access="read">
+            <label lang="en-us">TransmissionType</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180103" access="read">
+            <label lang="en-us">Inhibit Time</label>
+            <UINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x0000" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180104" access="readWrite">
+            <label lang="en-us">Compatibility Entry</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180105" access="read">
+            <label lang="en-us">Event Timer</label>
+            <UINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180106" access="readWrite">
+            <label lang="en-us">SYNC start value</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180201" access="read">
+            <label lang="en-us">COB-ID</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x388" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180202" access="read">
+            <label lang="en-us">TransmissionType</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180203" access="read">
+            <label lang="en-us">Inhibit Time</label>
+            <UINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x0000" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180204" access="readWrite">
+            <label lang="en-us">Compatibility Entry</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180205" access="read">
+            <label lang="en-us">Event Timer</label>
+            <UINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180206" access="readWrite">
+            <label lang="en-us">SYNC start value</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180301" access="read">
+            <label lang="en-us">COB-ID</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x488" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180302" access="read">
+            <label lang="en-us">TransmissionType</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180303" access="read">
+            <label lang="en-us">Inhibit Time</label>
+            <UINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x0000" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180304" access="readWrite">
+            <label lang="en-us">Compatibility Entry</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180305" access="read">
+            <label lang="en-us">Event Timer</label>
+            <UINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_180306" access="readWrite">
+            <label lang="en-us">SYNC start value</label>
+            <USINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_1a0001" access="readWrite">
+            <label lang="en-us">PDOMapEntry_1</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x60010B10" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_1a0002" access="readWrite">
+            <label lang="en-us">PDOMapEntry_2</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x60010110" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_1a0101" access="read">
+            <label lang="en-us">PDOMapEntry</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x60010210" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_1a0102" access="read">
+            <label lang="en-us">PDOMapEntry</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x60010310" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_1a0103" access="read">
+            <label lang="en-us">PDOMapEntry</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x60010410" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_1a0104" access="read">
+            <label lang="en-us">Transmit PDO Mapping Parameter 0_sub4</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x60010510" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_1a0201" access="read">
+            <label lang="en-us">PDOMapEntry</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x60010610" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_1a0202" access="read">
+            <label lang="en-us">PDOMapEntry</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x60010710" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_1a0301" access="read">
+            <label lang="en-us">PDOMapEntry</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x60010810" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_1a0302" access="read">
+            <label lang="en-us">PDOMapEntry</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x60010910" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_1a0303" access="read">
+            <label lang="en-us">PDOMapEntry</label>
+            <UDINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <defaultValue value="0x60010a10" />
+          </parameter>
+          <parameter uniqueID="UID_PARAM_600101" access="read">
+            <label lang="en-us">Power Switch Fault Status</label>
+            <UINT />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+            <allowedValues>
+              <range>
+                <minValue value="0" />
+                <maxValue value="494967295" />
+              </range>
+            </allowedValues>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_600102" access="read">
+            <label lang="en-us">Battery Current</label>
+            <dataTypeIDRef uniqueIDRef="UID.VCO.SIGNALLIST.OBJ6001sub2" />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_600103" access="read">
+            <label lang="en-us">HIB Current</label>
+            <dataTypeIDRef uniqueIDRef="UID.VCO.SIGNALLIST.OBJ6001sub3" />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_600104" access="read">
+            <label lang="en-us">TMS Current</label>
+            <dataTypeIDRef uniqueIDRef="UID.VCO.SIGNALLIST.OBJ6001sub4" />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_600105" access="read">
+            <label lang="en-us">HUDL Current</label>
+            <dataTypeIDRef uniqueIDRef="UID.VCO.SIGNALLIST.OBJ6001sub5" />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_600106" access="read">
+            <label lang="en-us">ACC Current</label>
+            <dataTypeIDRef uniqueIDRef="UID.VCO.SIGNALLIST.OBJ6001sub6" />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_600107" access="read">
+            <label lang="en-us">GUB Current</label>
+            <dataTypeIDRef uniqueIDRef="UID.VCO.SIGNALLIST.OBJ6001sub7" />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_600108" access="read">
+            <label lang="en-us">Switch 1 Temp</label>
+            <dataTypeIDRef uniqueIDRef="UID.VCO.SIGNALLIST.OBJ6001sub8" />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_600109" access="read">
+            <label lang="en-us">Switch 2 Temp</label>
+            <dataTypeIDRef uniqueIDRef="UID.VCO.SIGNALLIST.OBJ6001sub9" />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_60010a" access="read">
+            <label lang="en-us">Swtich 3 Temp</label>
+            <dataTypeIDRef uniqueIDRef="UID.VCO.SIGNALLIST.OBJ6001subA" />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+          <parameter uniqueID="UID_PARAM_60010b" access="read">
+            <label lang="en-us">HV Current</label>
+            <dataTypeIDRef uniqueIDRef="UID.VCO.SIGNALLIST.OBJ6001subB" />
+            <denotation>
+              <label lang="en-us"></label>
+            </denotation>
+          </parameter>
+        </parameterList>
+      </ApplicationProcess>
+    </ProfileBody>
+  </ISO15745Profile>
+  <ISO15745Profile>
+    <ProfileHeader>
+      <ProfileIdentification>CAN comm net profile</ProfileIdentification>
+      <ProfileRevision>1</ProfileRevision>
+      <ProfileName></ProfileName>
+      <ProfileSource></ProfileSource>
+      <ProfileClassID>CommunicationNetwork</ProfileClassID>
+      <ISO15745Reference>
+        <ISO15745Part>1</ISO15745Part>
+        <ISO15745Edition>1</ISO15745Edition>
+        <ProfileTechnology>CANopen</ProfileTechnology>
+      </ISO15745Reference>
+    </ProfileHeader>
+    <ProfileBody xsi:type="ProfileBody_CommunicationNetwork_CANopen" fileName="LVSS.xdd" fileCreator="Luke Schrom" fileCreationDate="2025-05-08" fileCreationTime="15:45:00" fileModificationDate="2025-05-08" fileModificationTime="15:45:19" fileModifiedBy="Luke Schrom" fileVersion="Womp Womp" supportedLanguages="en-us">
+      <ApplicationLayers>
+        <identity>
+        </identity>
+        <CANopenObjectList>
+          <CANopenObject index="1000" name="Device Type" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_1000" />
+          <CANopenObject index="1001" name="Error Register" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_1001" />
+          <CANopenObject index="1018" name="Identity Object" objectType="9" subNumber="5">
+            <CANopenSubObject subIndex="00" name="Highest sub-index supported" objectType="7" dataType="0005" lowLimit="1" highLimit="4" accessType="ro" defaultValue="4" PDOmapping="no" />
+            <CANopenSubObject subIndex="01" name="Vendor Id" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_101801" />
+            <CANopenSubObject subIndex="02" name="Product Code" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_101802" />
+            <CANopenSubObject subIndex="03" name="Revision number" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_101803" />
+            <CANopenSubObject subIndex="04" name="Serial number" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_101804" />
+          </CANopenObject>
+          <CANopenObject index="1800" name="Transmit PDO Communication Parameter 0" objectType="9" subNumber="7">
+            <CANopenSubObject subIndex="00" name="Highest sub-index supported" objectType="7" dataType="0005" lowLimit="0x02" highLimit="0x06" accessType="ro" defaultValue="6" PDOmapping="no" />
+            <CANopenSubObject subIndex="01" name="COB-ID" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_180001" />
+            <CANopenSubObject subIndex="02" name="TransmissionType" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_180002" />
+            <CANopenSubObject subIndex="03" name="Inhibit Time" objectType="7" dataType="0006" PDOmapping="no" uniqueIDRef="UID_PARAM_180003" />
+            <CANopenSubObject subIndex="04" name="Compatibility Entry" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_180004" />
+            <CANopenSubObject subIndex="05" name="Event Timer" objectType="7" dataType="0006" PDOmapping="no" uniqueIDRef="UID_PARAM_180005" />
+            <CANopenSubObject subIndex="06" name="SYNC start value" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_180006" />
+          </CANopenObject>
+          <CANopenObject index="1801" name="Transmit PDO Communication Parameter 1" objectType="9" subNumber="7">
+            <CANopenSubObject subIndex="00" name="Highest sub-index supported" objectType="7" dataType="0005" lowLimit="0x02" highLimit="0x06" accessType="ro" defaultValue="6" PDOmapping="no" />
+            <CANopenSubObject subIndex="01" name="COB-ID" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_180101" />
+            <CANopenSubObject subIndex="02" name="TransmissionType" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_180102" />
+            <CANopenSubObject subIndex="03" name="Inhibit Time" objectType="7" dataType="0006" PDOmapping="no" uniqueIDRef="UID_PARAM_180103" />
+            <CANopenSubObject subIndex="04" name="Compatibility Entry" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_180104" />
+            <CANopenSubObject subIndex="05" name="Event Timer" objectType="7" dataType="0006" PDOmapping="no" uniqueIDRef="UID_PARAM_180105" />
+            <CANopenSubObject subIndex="06" name="SYNC start value" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_180106" />
+          </CANopenObject>
+          <CANopenObject index="1802" name="Transmit PDO Communication Parameter 2" objectType="9" subNumber="7">
+            <CANopenSubObject subIndex="00" name="Highest sub-index supported" objectType="7" dataType="0005" lowLimit="0x02" highLimit="0x06" accessType="ro" defaultValue="6" PDOmapping="no" />
+            <CANopenSubObject subIndex="01" name="COB-ID" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_180201" />
+            <CANopenSubObject subIndex="02" name="TransmissionType" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_180202" />
+            <CANopenSubObject subIndex="03" name="Inhibit Time" objectType="7" dataType="0006" PDOmapping="no" uniqueIDRef="UID_PARAM_180203" />
+            <CANopenSubObject subIndex="04" name="Compatibility Entry" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_180204" />
+            <CANopenSubObject subIndex="05" name="Event Timer" objectType="7" dataType="0006" PDOmapping="no" uniqueIDRef="UID_PARAM_180205" />
+            <CANopenSubObject subIndex="06" name="SYNC start value" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_180206" />
+          </CANopenObject>
+          <CANopenObject index="1803" name="Transmit PDO Communication Parameter 3" objectType="9" subNumber="7">
+            <CANopenSubObject subIndex="00" name="Highest sub-index supported" objectType="7" dataType="0005" lowLimit="0x02" highLimit="0x06" accessType="ro" defaultValue="6" PDOmapping="no" />
+            <CANopenSubObject subIndex="01" name="COB-ID" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_180301" />
+            <CANopenSubObject subIndex="02" name="TransmissionType" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_180302" />
+            <CANopenSubObject subIndex="03" name="Inhibit Time" objectType="7" dataType="0006" PDOmapping="no" uniqueIDRef="UID_PARAM_180303" />
+            <CANopenSubObject subIndex="04" name="Compatibility Entry" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_180304" />
+            <CANopenSubObject subIndex="05" name="Event Timer" objectType="7" dataType="0006" PDOmapping="no" uniqueIDRef="UID_PARAM_180305" />
+            <CANopenSubObject subIndex="06" name="SYNC start value" objectType="7" dataType="0005" PDOmapping="no" uniqueIDRef="UID_PARAM_180306" />
+          </CANopenObject>
+          <CANopenObject index="1A00" name="Transmit PDO Mapping Parameter 0" objectType="9" subNumber="3">
+            <CANopenSubObject subIndex="00" name="NrOfEntries_1" objectType="7" dataType="0005" lowLimit="0" highLimit="2" accessType="ro" defaultValue="2" PDOmapping="no" />
+            <CANopenSubObject subIndex="01" name="PDOMapEntry_1" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_1a0001" />
+            <CANopenSubObject subIndex="02" name="PDOMapEntry_2" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_1a0002" />
+          </CANopenObject>
+          <CANopenObject index="1A01" name="Transmit PDO Mapping Parameter 0" objectType="9" subNumber="5">
+            <CANopenSubObject subIndex="00" name="NrOfEntries_1" objectType="7" dataType="0005" lowLimit="0" highLimit="2" accessType="ro" defaultValue="4" PDOmapping="no" />
+            <CANopenSubObject subIndex="01" name="PDOMapEntry" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_1a0101" />
+            <CANopenSubObject subIndex="02" name="PDOMapEntry" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_1a0102" />
+            <CANopenSubObject subIndex="03" name="PDOMapEntry" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_1a0103" />
+            <CANopenSubObject subIndex="04" name="Transmit PDO Mapping Parameter 0_sub4" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_1a0104" />
+          </CANopenObject>
+          <CANopenObject index="1A02" name="Transmit PDO Mapping Parameter 0" objectType="9" subNumber="3">
+            <CANopenSubObject subIndex="00" name="NrOfEntries_1" objectType="7" dataType="0005" lowLimit="0" highLimit="2" accessType="ro" defaultValue="2" PDOmapping="no" />
+            <CANopenSubObject subIndex="01" name="PDOMapEntry" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_1a0201" />
+            <CANopenSubObject subIndex="02" name="PDOMapEntry" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_1a0202" />
+          </CANopenObject>
+          <CANopenObject index="1A03" name="Transmit PDO Mapping Parameter 0" objectType="9" subNumber="4">
+            <CANopenSubObject subIndex="00" name="NrOfEntries_1" objectType="7" dataType="0005" lowLimit="0" highLimit="2" accessType="ro" defaultValue="3" PDOmapping="no" />
+            <CANopenSubObject subIndex="01" name="PDOMapEntry" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_1a0301" />
+            <CANopenSubObject subIndex="02" name="PDOMapEntry" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_1a0302" />
+            <CANopenSubObject subIndex="03" name="PDOMapEntry" objectType="7" dataType="0007" PDOmapping="no" uniqueIDRef="UID_PARAM_1a0303" />
+          </CANopenObject>
+          <CANopenObject index="6001" name="LVSS signals" objectType="8" subNumber="12">
+            <CANopenSubObject subIndex="00" name="Number of Items" objectType="7" dataType="0006" accessType="ro" defaultValue="11" PDOmapping="TPDO" />
+            <CANopenSubObject subIndex="01" name="Power Switch Fault Status" objectType="7" dataType="0006" PDOmapping="TPDO" uniqueIDRef="UID_PARAM_600101" />
+            <CANopenSubObject subIndex="02" name="Battery Current" objectType="7" dataType="0006" PDOmapping="TPDO" uniqueIDRef="UID_PARAM_600102" />
+            <CANopenSubObject subIndex="03" name="HIB Current" objectType="7" dataType="0006" PDOmapping="TPDO" uniqueIDRef="UID_PARAM_600103" />
+            <CANopenSubObject subIndex="04" name="TMS Current" objectType="7" dataType="0006" PDOmapping="TPDO" uniqueIDRef="UID_PARAM_600104" />
+            <CANopenSubObject subIndex="05" name="HUDL Current" objectType="7" dataType="0006" PDOmapping="TPDO" uniqueIDRef="UID_PARAM_600105" />
+            <CANopenSubObject subIndex="06" name="ACC Current" objectType="7" dataType="0006" PDOmapping="TPDO" uniqueIDRef="UID_PARAM_600106" />
+            <CANopenSubObject subIndex="07" name="GUB Current" objectType="7" dataType="0006" PDOmapping="TPDO" uniqueIDRef="UID_PARAM_600107" />
+            <CANopenSubObject subIndex="08" name="Switch 1 Temp" objectType="7" dataType="0003" PDOmapping="TPDO" uniqueIDRef="UID_PARAM_600108" />
+            <CANopenSubObject subIndex="09" name="Switch 2 Temp" objectType="7" dataType="0003" PDOmapping="TPDO" uniqueIDRef="UID_PARAM_600109" />
+            <CANopenSubObject subIndex="0a" name="Swtich 3 Temp" objectType="7" dataType="0003" PDOmapping="no" uniqueIDRef="UID_PARAM_60010a" />
+            <CANopenSubObject subIndex="0b" name="HV Current" objectType="7" dataType="0006" PDOmapping="no" uniqueIDRef="UID_PARAM_60010b" />
+          </CANopenObject>
+        </CANopenObjectList>
+        <dummyUsage>
+          <dummy entry="Dummy0001=0" />
+          <dummy entry="Dummy0002=0" />
+          <dummy entry="Dummy0003=0" />
+          <dummy entry="Dummy0004=0" />
+          <dummy entry="Dummy0005=0" />
+          <dummy entry="Dummy0006=0" />
+          <dummy entry="Dummy0007=0" />
+        </dummyUsage>
+      </ApplicationLayers>
+      <TransportLayers>
+        <PhysicalLayer>
+          <baudRate>
+            <supportedBaudRate value="500 Kbps" />
+          </baudRate>
+        </PhysicalLayer>
+      </TransportLayers>
+      <NetworkManagement>
+        <CANopenGeneralFeatures groupMessaging="false" dynamicChannels="0" selfStartingDevice="false" SDORequestingDevice="false" granularity="8" nrOfRxPDO="0" nrOfTxPDO="2" bootUpSlave="false" layerSettingServiceSlave="false" />
+        <CANopenMasterFeatures bootUpMaster="false" flyingMaster="false" SDOManager="false" configurationManager="false" layerSettingServiceMaster="false" />
+        <deviceCommissioning nodeID="0" nodeName="" actualBaudRate="125" networkNumber="0" networkName="" CANopenManager="false" />
+      </NetworkManagement>
+    </ProfileBody>
+  </ISO15745Profile>
+</ISO15745ProfileContainer>
